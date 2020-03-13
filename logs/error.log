@@ -1,0 +1,16 @@
+[2020-02-23 22:01:32.994]  ERROR com.graduate.society.filter.CheckLoginFilter destroy-168 - CheckLoginFilter destroy......
+[2020-02-23 22:01:33.020]  ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter report-40 - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+[2020-02-23 22:10:33.994]  ERROR com.graduate.society.exception.GlobalExceptionHandler exceptionGet-46 - [Unknown error] errMSg=org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public com.graduate.society.vo.ResultVO com.graduate.society.api.UserApi.findUser(com.graduate.society.vo.UserVO): [Field error in object 'userVO' on field 'random': rejected value [null]; codes [NotBlank.userVO.random,NotBlank.random,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userVO.random,random]; arguments []; default message [random]]; default message [不能为空]] 
