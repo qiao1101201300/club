@@ -1,12 +1,12 @@
-package com.graduate.society.api;
+package com.graduate.club.api;
 
-import com.graduate.society.entity.User;
-import com.graduate.society.enums.ResultEnum;
-import com.graduate.society.exception.ServerException;
-import com.graduate.society.service.UserService;
-import com.graduate.society.util.*;
-import com.graduate.society.vo.ResultVO;
-import com.graduate.society.vo.UserVO;
+import com.graduate.club.entity.User;
+import com.graduate.club.enums.ResultEnum;
+import com.graduate.club.exception.ServerException;
+import com.graduate.club.service.UserService;
+import com.graduate.club.util.*;
+import com.graduate.club.vo.ResultVO;
+import com.graduate.club.vo.UserVO;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

@@ -4,11 +4,11 @@
     <modelVersion>4.0.0</modelVersion>
     <packaging>pom</packaging>
     <modules>
-        <module>society-auth</module>
-        <module>society-common</module>
-        <module>society-model</module>
-        <module>society-server</module>
-        <module>society-service</module>
+        <module>club-auth</module>
+        <module>club-common</module>
+        <module>club-model</module>
+        <module>club-server</module>
+        <module>club-service</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -17,10 +17,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
-    <groupId>com.graduate.society</groupId>
-    <artifactId>graduate-society</artifactId>
+    <groupId>com.graduate.club</groupId>
+    <artifactId>graduate-club</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>graduate-society</name>
+    <name>graduate-club</name>
 
     <description>Demo project for Spring Boot</description>
 
