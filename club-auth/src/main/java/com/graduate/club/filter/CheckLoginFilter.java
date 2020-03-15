@@ -8,6 +8,7 @@ import com.graduate.club.vo.ResultVO;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 
 import javax.servlet.*;
 import javax.servlet.http.HttpServletRequest;
@@ -28,6 +29,8 @@ public class CheckLoginFilter implements Filter {
     private String default_excludeURL = "login,upload,register";
     private String[] url_array = null;
     private String forward = "system.html";
+    @Value("${filter.exclude.url}")
+    private String filterExcludeUrl;
     @Autowired
     UserService userService;
 
@@ -40,7 +43,7 @@ public class CheckLoginFilter implements Filter {
     public void init(FilterConfig filterConfig) throws ServletException {
         System.out.println("");
         //设置过滤请求路径
-        String url = StringUtils.trim(ConfigHelper.getString("filter.exclude.url"));
+        String url = StringUtils.trim(filterExcludeUrl);
         if (StringUtils.isBlank(url)) {
             excludeURL = default_excludeURL;
         } else {

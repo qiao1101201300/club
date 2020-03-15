@@ -5,18 +5,19 @@ import com.graduate.club.enums.ResultEnum;
 import com.graduate.club.exception.ServerException;
 import com.graduate.club.service.UserService;
 import com.graduate.club.util.AesUtils;
-import com.graduate.club.util.ConfigHelper;
 import org.apache.shiro.authc.*;
 import org.apache.shiro.authz.AuthorizationInfo;
 import org.apache.shiro.authz.SimpleAuthorizationInfo;
 import org.apache.shiro.realm.AuthorizingRealm;
 import org.apache.shiro.subject.PrincipalCollection;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 
 import java.util.Set;
 
 public class ShiroRealm extends AuthorizingRealm {
-
+    @Value("${aes.key}")
+    private String aesKey;
     @Autowired
     UserService userService;
 
@@ -32,7 +33,7 @@ public class ShiroRealm extends AuthorizingRealm {
         String password = user.getPassword();
         String saltPassword = null;
         try {
-            saltPassword = AesUtils.Encrypt(user.getPassword(), ConfigHelper.getString("aes.key"));
+            saltPassword = AesUtils.Encrypt(user.getPassword(), aesKey);
         } catch (Exception e) {
             throw new ServerException(ResultEnum.INTERNAL_SERVER_ERROR);
         }
