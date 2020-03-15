@@ -8,6 +8,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
+import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 import javax.servlet.Filter;
 
@@ -15,6 +16,7 @@ import javax.servlet.Filter;
 @MapperScan("com.graduate.club.mapper")
 @Slf4j
 @EnableTransactionManagement
+@EnableSwagger2
 public class ClubApplication {
 
     public static void main(String[] args) {
