@@ -4,7 +4,8 @@
     <!--定义日志文件的存储地址 勿在 LogBack 的配置中使用相对路径 -->
     <property name="LOG_HOME" value="./logs"/>
     <!--日志的形式-->
-    <property name="LogPattern" value="[%date{yyyy-MM-dd HH:mm:ss.SSS}] %X{logthreadId} %-5level %logger{80} %M-%L - %msg%n"/>
+    <property name="LogPattern"
+              value="[%date{yyyy-MM-dd HH:mm:ss.SSS}] %X{logthreadId} %-5level %logger{80} %M-%L - %msg%n"/>
     <property name="CHARSET" value="UTF-8"/>
     <!--日志保留的最长时间-->
     <property name="MaxHistory" value="30"/>
@@ -25,19 +26,18 @@
     <!-- 控制台输出INFO级别日志 -->
     <appender name="FILEDEBUG" class="ch.qos.logback.core.rolling.RollingFileAppender">
         <file>${LOG_HOME}/debug.log</file>
-          <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-              <!-- 日志文件保留天数-->
-              <MaxHistory>${MaxHistory}</MaxHistory>
-<!--              日志文件输出的文件名-->
-             <FileNamePattern>${LOG_HOME}/debug_%d{yyyy-MM-dd}.%i.log</FileNamePattern>
-             <timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
-                 <maxFileSize>${MaxFileSize}</maxFileSize>
-             </timeBasedFileNamingAndTriggeringPolicy>
-         </rollingPolicy>
-         <append>true</append>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <!-- 日志文件保留天数-->
+            <MaxHistory>${MaxHistory}</MaxHistory>
+            <!--              日志文件输出的文件名-->
+            <FileNamePattern>${LOG_HOME}/debug_%d{yyyy-MM-dd}.%i.log</FileNamePattern>
+            <timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+                <maxFileSize>${MaxFileSize}</maxFileSize>
+            </timeBasedFileNamingAndTriggeringPolicy>
+        </rollingPolicy>
+        <append>true</append>
         <!-- 日志文件的文件最大大小和文件总数目 -->
-        <encoder
-                class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
             <pattern>${LogPattern}</pattern>
             <charset>${CHARSET}</charset>
         </encoder>
@@ -110,7 +110,8 @@
             </timeBasedFileNamingAndTriggeringPolicy>
         </rollingPolicy>
         <append>true</append>
-        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder"> <!--格式化输出：%d表示日期，%thread表示线程名，%-5level：级别从左显示5个字符宽度%msg：日志消息，%n是换行符 -->
+        <encoder
+                class="ch.qos.logback.classic.encoder.PatternLayoutEncoder"> <!--格式化输出：%d表示日期，%thread表示线程名，%-5level：级别从左显示5个字符宽度%msg：日志消息，%n是换行符 -->
             <pattern>${LogPattern}</pattern>
             <charset>${CHARSET}</charset>
         </encoder>
@@ -123,8 +124,8 @@
 
 
     <!-- mybatis日志打印-->
-    <logger name="org.apache.ibatis" level="DEBUG" />
-    <logger name="java.sql" level="DEBUG" />
+    <logger name="org.apache.ibatis" level="DEBUG"/>
+    <logger name="java.sql" level="DEBUG"/>
 
     <!--Mybatis log configure -->
     <logger name="java.sql" level="DEBUG" additivity="false">
