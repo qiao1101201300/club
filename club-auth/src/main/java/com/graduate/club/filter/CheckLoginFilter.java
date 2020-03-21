@@ -5,6 +5,7 @@ import com.graduate.club.entity.User;
 import com.graduate.club.service.UserService;
 import com.graduate.club.util.*;
 import com.graduate.club.vo.ResultVO;
+import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,11 +20,11 @@ import java.io.PrintWriter;
 import java.util.Date;
 import java.util.Map;
 
+@Slf4j
 public class CheckLoginFilter implements Filter {
     /**
      * 检查用户登录状态
      */
-    private Logger log = LoggerFactory.getLogger(this.getClass());
     //排除需要过滤的请求
     private String excludeURL = "";
     private String default_excludeURL = "login,upload,register";

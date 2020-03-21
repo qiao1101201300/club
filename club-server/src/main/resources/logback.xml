@@ -23,7 +23,8 @@
         </encoder>
     </appender>
 
-    <!-- 控制台输出INFO级别日志 -->
+    <!-- 控制台输出DEBUGd fwherp0
+    级别日志 -->
     <appender name="FILEDEBUG" class="ch.qos.logback.core.rolling.RollingFileAppender">
         <file>${LOG_HOME}/debug.log</file>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">

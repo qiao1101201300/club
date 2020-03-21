@@ -1,4 +1,4 @@
-package com.graduate.club.config;
+package com.graduate.club.swagger;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
