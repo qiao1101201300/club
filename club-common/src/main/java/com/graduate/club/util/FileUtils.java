@@ -1,16 +1,13 @@
 package com.graduate.club.util;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.*;
 import java.net.URL;
 import java.util.*;
-
+@Slf4j
 public class FileUtils {
-    private static Logger LOG = LoggerFactory.getLogger(FileUtils.class);
-
     public static boolean fileExists(String filename) {
         File file = new File(filename);
         return file.exists();
@@ -450,7 +447,7 @@ public class FileUtils {
         if (filePath == null || "".equals(filePath)) {
             URL url = FileUtils.class.getClassLoader().getResource(propertyName + fileName);
             if (url == null) {
-                LOG.error("failed to find file: " + propertyName + fileName);
+                log.error("failed to find file: " + propertyName + fileName);
                 throw new FileNotFoundException(fileName + " not found!");
             }
             System.out.println("url: " + url.getPath());
@@ -524,15 +521,15 @@ public class FileUtils {
             content = new byte[fis.available()];
             fis.read(content);
         } catch (FileNotFoundException e) {
-            LOG.error(e.getMessage(), e);
+            log.error(e.getMessage(), e);
         } catch (IOException e) {
-            LOG.error(e.getMessage(), e);
+            log.error(e.getMessage(), e);
         } finally {
             if (fis != null) {
                 try {
                     fis.close();
                 } catch (IOException e) {
-                    LOG.error(e.getMessage(), e);
+                    log.error(e.getMessage(), e);
                 }
                 fis = null;
             }
@@ -573,7 +570,7 @@ public class FileUtils {
         List<Map<String, String>> mapList = new ArrayList<Map<String, String>>();
         File file = new File(dir);
         if (!file.exists()) {
-            LOG.info("文件名称不存在!");
+            log.info("文件名称不存在!");
         } else {
             Map<String, String> hm = new HashMap<String, String>();
             if (file.isFile()) {
@@ -660,7 +657,7 @@ public class FileUtils {
 
     private static List<Map<String, String>> listChild(File file, String[] extArr, List<Map<String, String>> mapList) {
         if (!file.exists()) {
-            LOG.info("文件名称不存在!");
+            log.info("文件名称不存在!");
         } else {
             Map<String, String> hm = new HashMap<String, String>();
             if (file.isFile()) {
@@ -785,7 +782,7 @@ public class FileUtils {
             content = new byte[inputStream.available()];
             inputStream.read(content);
         } catch (IOException e) {
-            LOG.error(e.getMessage(), e);
+            log.error(e.getMessage(), e);
         }
         return content;
     }

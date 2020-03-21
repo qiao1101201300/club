@@ -17,6 +17,8 @@ public class BaseDaoImpl<T extends BaseEntity, I extends BaseMapper<T>> implemen
     @Autowired
     private I mapper;
 
+    private Date nowTime = DateUtils.toDatetime(new Date());
+
     @Override
     public int deleteByPrimaryKey(String id) {
         return mapper.deleteByPrimaryKey(id);
@@ -24,17 +26,18 @@ public class BaseDaoImpl<T extends BaseEntity, I extends BaseMapper<T>> implemen
 
     @Override
     public int insert(T record) {
+
         record.setId(UUIDUtils.getUUID());
-        record.setCreateAt(DateUtils.toDatetime(new Date()));
-        record.setUpdateAt(DateUtils.toDatetime(new Date()));
+        record.setCreateAt(nowTime);
+        record.setUpdateAt(nowTime);
         return mapper.insert(record);
     }
 
     @Override
     public int insertSelective(T record) {
         record.setId(UUIDUtils.getUUID());
-        record.setCreateAt(DateUtils.toDatetime(new Date()));
-        record.setUpdateAt(DateUtils.toDatetime(new Date()));
+        record.setCreateAt(nowTime);
+        record.setUpdateAt(nowTime);
         return mapper.insertSelective(record);
     }
 
@@ -50,13 +53,13 @@ public class BaseDaoImpl<T extends BaseEntity, I extends BaseMapper<T>> implemen
 
     @Override
     public int updateByPrimaryKeySelective(T record) {
-        record.setUpdateAt(DateUtils.toDatetime(new Date()));
+        record.setUpdateAt(nowTime);
         return mapper.updateByPrimaryKeySelective(record);
     }
 
     @Override
     public int updateByPrimaryKey(T record) {
-        record.setUpdateAt(DateUtils.toDatetime(new Date()));
+        record.setUpdateAt(nowTime);
         return mapper.updateByPrimaryKey(record);
     }
 
