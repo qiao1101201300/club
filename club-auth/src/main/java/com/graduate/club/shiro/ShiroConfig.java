@@ -23,8 +23,8 @@ public class ShiroConfig {
 
     private String host = "localhost";
     private int port = 6379;
-    private String password;
-    private Duration timeout;
+    private String password = "123456";
+    private int timeout = 12;
 
     /**
      * 一.请求拦截
@@ -115,7 +115,7 @@ public class ShiroConfig {
         RedisManager redisManager = new RedisManager();
         redisManager.setHost(host);
         redisManager.setPort(port);
-        redisManager.setTimeout((int) timeout.toMillis());
+        redisManager.setTimeout(timeout);
         redisManager.setPassword(password);
         return redisManager;
     }
