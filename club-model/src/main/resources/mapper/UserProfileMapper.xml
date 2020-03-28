@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.graduate.club.mapper.UserProfileMapper">
+    <resultMap id="BaseResultMap" type="com.graduate.club.entity.UserProfile">
+        <!--@mbg.generated-->
+        <id column="id" jdbcType="VARCHAR" property="id"/>
+        <result column="userid" jdbcType="VARCHAR" property="userid"/>
+        <result column="name" jdbcType="VARCHAR" property="name"/>
+        <result column="level" jdbcType="INTEGER" property="level"/>
+        <result column="cardno" jdbcType="VARCHAR" property="cardno"/>
+        <result column="classname" jdbcType="VARCHAR" property="classname"/>
+        <result column="phone" jdbcType="VARCHAR" property="phone"/>
+        <result column="introduction" jdbcType="LONGVARCHAR" property="introduction"/>
+        <result column="create_at" jdbcType="TIMESTAMP" property="createAt"/>
+        <result column="update_at" jdbcType="TIMESTAMP" property="updateAt"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+        <!--@mbg.generated-->
+        id, userid, `name`, `level`, cardno, classname, phone, introduction, create_at, update_at
+    </sql>
+    <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+        <!--@mbg.generated-->
+        select
+        <include refid="Base_Column_List"/>
+        from t_user_profile
+        where id = #{id,jdbcType=VARCHAR}
+    </select>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+        <!--@mbg.generated-->
+        delete from t_user_profile
+        where id = #{id,jdbcType=VARCHAR}
+    </delete>
+    <insert id="insert" parameterType="com.graduate.club.entity.UserProfile">
+        <!--@mbg.generated-->
+        insert into t_user_profile (id, userid, `name`,
+        `level`, cardno, classname,
+        phone, introduction, create_at,
+        update_at)
+        values (#{id,jdbcType=VARCHAR}, #{userid,jdbcType=VARCHAR}, #{name,jdbcType=VARCHAR},
+        #{level,jdbcType=INTEGER}, #{cardno,jdbcType=VARCHAR}, #{classname,jdbcType=VARCHAR},
+        #{phone,jdbcType=VARCHAR}, #{introduction,jdbcType=LONGVARCHAR}, #{createAt,jdbcType=TIMESTAMP},
+        #{updateAt,jdbcType=TIMESTAMP})
+    </insert>
+    <insert id="insertSelective" parameterType="com.graduate.club.entity.UserProfile">
+        <!--@mbg.generated-->
+        insert into t_user_profile
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                id,
+            </if>
+            <if test="userid != null">
+                userid,
+            </if>
+            <if test="name != null">
+                `name`,
+            </if>
+            <if test="level != null">
+                `level`,
+            </if>
+            <if test="cardno != null">
+                cardno,
+            </if>
+            <if test="classname != null">
+                classname,
+            </if>
+            <if test="phone != null">
+                phone,
+            </if>
+            <if test="introduction != null">
+                introduction,
+            </if>
+            <if test="createAt != null">
+                create_at,
+            </if>
+            <if test="updateAt != null">
+                update_at,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                #{id,jdbcType=VARCHAR},
+            </if>
+            <if test="userid != null">
+                #{userid,jdbcType=VARCHAR},
+            </if>
+            <if test="name != null">
+                #{name,jdbcType=VARCHAR},
+            </if>
+            <if test="level != null">
+                #{level,jdbcType=INTEGER},
+            </if>
+            <if test="cardno != null">
+                #{cardno,jdbcType=VARCHAR},
+            </if>
+            <if test="classname != null">
+                #{classname,jdbcType=VARCHAR},
+            </if>
+            <if test="phone != null">
+                #{phone,jdbcType=VARCHAR},
+            </if>
+            <if test="introduction != null">
+                #{introduction,jdbcType=LONGVARCHAR},
+            </if>
+            <if test="createAt != null">
+                #{createAt,jdbcType=TIMESTAMP},
+            </if>
+            <if test="updateAt != null">
+                #{updateAt,jdbcType=TIMESTAMP},
+            </if>
+        </trim>
+    </insert>
+    <update id="updateByPrimaryKeySelective" parameterType="com.graduate.club.entity.UserProfile">
+        <!--@mbg.generated-->
+        update t_user_profile
+        <set>
+            <if test="userid != null">
+                userid = #{userid,jdbcType=VARCHAR},
+            </if>
+            <if test="name != null">
+                `name` = #{name,jdbcType=VARCHAR},
+            </if>
+            <if test="level != null">
+                `level` = #{level,jdbcType=INTEGER},
+            </if>
+            <if test="cardno != null">
+                cardno = #{cardno,jdbcType=VARCHAR},
+            </if>
+            <if test="classname != null">
+                classname = #{classname,jdbcType=VARCHAR},
+            </if>
+            <if test="phone != null">
+                phone = #{phone,jdbcType=VARCHAR},
+            </if>
+            <if test="introduction != null">
+                introduction = #{introduction,jdbcType=LONGVARCHAR},
+            </if>
+            <if test="createAt != null">
+                create_at = #{createAt,jdbcType=TIMESTAMP},
+            </if>
+            <if test="updateAt != null">
+                update_at = #{updateAt,jdbcType=TIMESTAMP},
+            </if>
+        </set>
+        where id = #{id,jdbcType=VARCHAR}
+    </update>
+    <update id="updateByPrimaryKey" parameterType="com.graduate.club.entity.UserProfile">
+        <!--@mbg.generated-->
+        update t_user_profile
+        set userid = #{userid,jdbcType=VARCHAR},
+        `name` = #{name,jdbcType=VARCHAR},
+        `level` = #{level,jdbcType=INTEGER},
+        cardno = #{cardno,jdbcType=VARCHAR},
+        classname = #{classname,jdbcType=VARCHAR},
+        phone = #{phone,jdbcType=VARCHAR},
+        introduction = #{introduction,jdbcType=LONGVARCHAR},
+        create_at = #{createAt,jdbcType=TIMESTAMP},
+        update_at = #{updateAt,jdbcType=TIMESTAMP}
+        where id = #{id,jdbcType=VARCHAR}
+    </update>
+    <select id="selectAll" resultMap="BaseResultMap">
+        select <include refid="Base_Column_List"/> from t_user_profile
+    </select>
+</mapper>

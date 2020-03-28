@@ -11,7 +11,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import java.util.Date;
 import java.util.List;
 
-@Slf4j
 public class BaseDaoImpl<T extends BaseEntity, I extends BaseMapper<T>> implements BaseDao<T> {
 
     @Autowired

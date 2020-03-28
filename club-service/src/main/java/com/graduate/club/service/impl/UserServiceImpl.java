@@ -1,6 +1,7 @@
 package com.graduate.club.service.impl;
 
 import com.graduate.club.dao.UserDao;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -10,6 +11,7 @@ import com.graduate.club.service.UserService;
 import java.util.Set;
 
 @Service
+@Slf4j
 public class UserServiceImpl extends BaseServiceImpl<User, UserDao> implements UserService {
 
     @Autowired
