@@ -1,7 +1,10 @@
 package com.graduate.club.filter;
 
 import com.alibaba.fastjson.JSON;
+import com.graduate.club.entity.Admin;
 import com.graduate.club.entity.User;
+import com.graduate.club.enums.ResultEnum;
+import com.graduate.club.service.AdminService;
 import com.graduate.club.service.UserService;
 import com.graduate.club.util.*;
 import com.graduate.club.vo.ResultVO;
@@ -34,6 +37,8 @@ public class CheckLoginFilter implements Filter {
     private String filterExcludeUrl;
     @Autowired
     UserService userService;
+    @Autowired
+    AdminService adminService;
 
     /**
      * 初始化
@@ -96,28 +101,42 @@ public class CheckLoginFilter implements Filter {
                 String jwtStr = token;
 
                 Map<String, Object> jwtMap = JwtUtils.verifyToken(jwtStr);
-                String userId = jwtMap.get("userid").toString();
+                String id = jwtMap.get("id").toString();
                 Date expireAt = (Date) jwtMap.get("expiresAt");
 
                 if (expireAt.compareTo(new Date()) < 0) {
                     log.warn("token expired: " + expireAt);
-                    errorResp(response, "token expired", Constants.ResCode.TOKEN_EXPIRED);
+                    errorResp(response, "token expired", ResultEnum.TOKEN_EXPIRED.getCode());
                 }
 
-                User user = userService.selectByPrimaryKey(userId);
+                User user = userService.selectByPrimaryKey(id);
+                Admin admin = adminService.selectByPrimaryKey(id);
                 if (user != null && user.getStatus() == Constants.UserStatus.NORMAL) {
                     session.setAttribute(Constants.User.COOKIE_USER, user);
+                    chain.doFilter(request, response);
+                } else if (admin != null && admin.getStatus() == Constants.UserStatus.NORMAL) {
+                    session.setAttribute(Constants.User.COOKIE_ADMIN, admin);
                     chain.doFilter(request, response);
                 } else {
                     if (user == null) {
                         log.warn("No user found");
-                        errorResp(response, "No user found", Constants.ResCode.USER_NOT_FOUND);
-                    } else if (user != null && user.getStatus() == Constants.UserStatus.FORBID) {
+                        errorResp(response, "No user found", ResultEnum.USER_NOT_FOUND.getCode());
+                    } else if (user.getStatus() == Constants.UserStatus.FORBID) {
                         log.warn("JwUser is forbid");
-                        errorResp(response, "JwUser is forbid", Constants.ResCode.USER_FORBID);
+                        errorResp(response, "JwUser is forbid", ResultEnum.USER_FORBID.getCode());
                     } else {
                         log.warn("unknown error");
-                        errorResp(response, "unknown error", Constants.ResCode.USER_FORBID);
+                        errorResp(response, "unknown error", ResultEnum.USER_FORBID.getCode());
+                    }
+                    if (admin == null) {
+                        log.warn("No admin found");
+                        errorResp(response, "No admin found", ResultEnum.USER_NOT_FOUND.getCode());
+                    } else if (admin.getStatus() == Constants.UserStatus.FORBID) {
+                        log.warn("JwUser is forbid");
+                        errorResp(response, "JwUser is forbid", ResultEnum.USER_FORBID.getCode());
+                    } else {
+                        log.warn("unknown error");
+                        errorResp(response, "unknown error", ResultEnum.USER_FORBID.getCode());
                     }
                 }
             } catch (Exception e) {
@@ -128,7 +147,7 @@ public class CheckLoginFilter implements Filter {
             if (!StringUtils.isBlank(lastUrl) && checkNoneLoginUrl(lastUrl)) {
                 chain.doFilter(request, response);
             } else {
-                errorResp(response, "you are not login, please login first", Constants.ResCode.NOT_LOGIN);
+                errorResp(response, "you are not login, please login first", ResultEnum.NOT_LOGIN.getCode());
                 log.info("用户未登陆，请登陆!");
             }
         }

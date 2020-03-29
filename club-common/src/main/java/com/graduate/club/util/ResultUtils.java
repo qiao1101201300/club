@@ -45,4 +45,7 @@ public class ResultUtils {
         return new ResultVO(ResultEnum.ERROR.getCode(), ResultEnum.ERROR.getMsg(), data);
     }
 
+    public static ResultVO error(ResultEnum resultEnum) {
+        return error(resultEnum.getCode(), resultEnum.getMsg());
+    }
 }

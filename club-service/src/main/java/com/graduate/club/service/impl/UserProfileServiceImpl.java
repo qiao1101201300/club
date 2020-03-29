@@ -13,5 +13,9 @@ public class UserProfileServiceImpl extends BaseServiceImpl<UserProfile, UserPro
     @Resource
     private UserProfileDao userProfileDao;
 
+    @Override
+    public UserProfile selectByUserId(String userId) {
+        return userProfileDao.selectByUserId(userId);
+    }
 }
 

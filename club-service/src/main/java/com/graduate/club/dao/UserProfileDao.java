@@ -4,5 +4,6 @@ import com.graduate.club.entity.UserProfile;
 
 public interface UserProfileDao extends BaseDao<UserProfile>{
 
+    UserProfile selectByUserId(String userId);
 }
 

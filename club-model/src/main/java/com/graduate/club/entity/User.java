@@ -19,4 +19,6 @@ public class User extends BaseEntity {
     */
     private Integer status;
 
+    private String random;
+
 }
