@@ -59,7 +59,7 @@ public class UserServiceImpl extends BaseServiceImpl<User, UserDao> implements U
             JSONObject ret = new JSONObject();
             ret.put("token", token);
             ret.put("username", user.getUsername());
-            ret.put("level",userProfile.getLevel());
+            ret.put("level", userProfile.getLevel());
             return ResultUtils.success(ret);
         } catch (Exception e) {
             log.error("[login password decrypt error] password={}", user.getPassword());
@@ -70,13 +70,13 @@ public class UserServiceImpl extends BaseServiceImpl<User, UserDao> implements U
     @Override
     public ResultVO create(User user) {
         User user1 = userDao.getUserByUserName(user.getUsername());
-        if (user1 != null){
+        if (user1 != null) {
             return ResultUtils.error(ResultEnum.USERNAME_EXISTS);
         }
         try {
-            user.setPassword(AesUtils.Encrypt(user.getPassword(),aesKey));
-            userDao.insertSelective(user);
-            return ResultUtils.success();
+            user.setPassword(AesUtils.Encrypt(user.getPassword(), aesKey));
+            boolean b = insertSelective(user);
+            return b ? ResultUtils.success() : ResultUtils.error(ResultEnum.ERROR);
         } catch (Exception e) {
             log.error("[create password encrypt error] password={}", user.getPassword());
             throw new ServerException(ResultEnum.ERROR.getCode(), ErrorUtils.getStackTrace(e));
