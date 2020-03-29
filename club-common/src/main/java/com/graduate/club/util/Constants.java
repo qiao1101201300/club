@@ -17,12 +17,6 @@ public final class Constants {
         public static final int SUCCESS = 2; //成功
     }
 
-    public final class Role {
-        public static final String SYSTEMADMIN = "系统管理员";
-        public static final String CLUBMADMIN = "社团管理员";
-        public static final String ORDINARYADMIN = "普通用户";
-    }
-
     public final class User {
         public static final String COOKIE_USER = "USER";
         public static final String COOKIE_ADMIN = "ADMIN";

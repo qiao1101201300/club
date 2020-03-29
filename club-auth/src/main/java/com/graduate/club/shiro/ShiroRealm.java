@@ -50,20 +50,6 @@ public class ShiroRealm extends AuthorizingRealm {
     protected AuthorizationInfo doGetAuthorizationInfo(PrincipalCollection principalCollection) {
         String username = (String) principalCollection.getPrimaryPrincipal();
         SimpleAuthorizationInfo simpleAuthorizationInfo = new SimpleAuthorizationInfo();
-
-        // 根据 用户名称 获取用户的 角色信息
-        Set<String> roles = userService.findUserRolesByUserName(username);
-        // 设置该用户拥有的角色 @RequiresRoles
-        if (roles.size() > 0) {
-            simpleAuthorizationInfo.setRoles(roles);
-        }
-
-        // 设置用户的权限列表 @RequiresPermissions
-        Set<String> userPermissions = userService.findUserPermissionsByUserName(username);
-        if (userPermissions.size() > 0) {
-            simpleAuthorizationInfo.setStringPermissions(userPermissions);
-        }
-
         return simpleAuthorizationInfo;
     }
 }

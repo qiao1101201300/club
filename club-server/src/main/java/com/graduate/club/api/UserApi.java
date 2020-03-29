@@ -27,4 +27,11 @@ public class UserApi {
         BeanUtils.copyProperties(userVO, user);
         return userService.login(user);
     }
+
+    @PostMapping("create")
+    public ResultVO create(@RequestBody @Valid UserVO userVO) {
+        User user = new User();
+        BeanUtils.copyProperties(userVO, user);
+        return userService.create(user);
+    }
 }

@@ -4,6 +4,7 @@ import com.alibaba.fastjson.JSONObject;
 import com.graduate.club.dao.UserDao;
 import com.graduate.club.entity.UserProfile;
 import com.graduate.club.enums.ResultEnum;
+import com.graduate.club.enums.RoleEnum;
 import com.graduate.club.exception.ServerException;
 import com.graduate.club.service.UserProfileService;
 import com.graduate.club.util.*;
@@ -42,9 +43,11 @@ public class UserServiceImpl extends BaseServiceImpl<User, UserDao> implements U
         User user1 = null;
         try {
             user1 = userDao.getUserByUserName(user.getUsername());
+
             if (user1 == null) {
                 return ResultUtils.error(ResultEnum.USER_NOT_FOUND);
             }
+            UserProfile userProfile = userProfileService.selectByUserId(user1.getId());
             String password = AesUtils.Decrypt(user1.getPassword(), aesKey);
             password = MD5Utils.hmacMd5(password, user.getRandom());
             if (!user.getPassword().equals(password)) {
@@ -56,9 +59,26 @@ public class UserServiceImpl extends BaseServiceImpl<User, UserDao> implements U
             JSONObject ret = new JSONObject();
             ret.put("token", token);
             ret.put("username", user.getUsername());
+            ret.put("level",userProfile.getLevel());
             return ResultUtils.success(ret);
         } catch (Exception e) {
-            log.error("[login password decrypt error] password={}", user1.getPassword());
+            log.error("[login password decrypt error] password={}", user.getPassword());
+            throw new ServerException(ResultEnum.ERROR.getCode(), ErrorUtils.getStackTrace(e));
+        }
+    }
+
+    @Override
+    public ResultVO create(User user) {
+        User user1 = userDao.getUserByUserName(user.getUsername());
+        if (user1 != null){
+            return ResultUtils.error(ResultEnum.USERNAME_EXISTS);
+        }
+        try {
+            user.setPassword(AesUtils.Encrypt(user.getPassword(),aesKey));
+            userDao.insertSelective(user);
+            return ResultUtils.success();
+        } catch (Exception e) {
+            log.error("[create password encrypt error] password={}", user.getPassword());
             throw new ServerException(ResultEnum.ERROR.getCode(), ErrorUtils.getStackTrace(e));
         }
     }
