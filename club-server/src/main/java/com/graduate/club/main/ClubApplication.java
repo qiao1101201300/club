@@ -23,10 +23,10 @@ public class ClubApplication {
         SpringApplication.run(ClubApplication.class, args);
     }
 
-    @Bean(name = "sessionFilter")
-    public Filter sessionFilter() {
-        return new CheckLoginFilter();
-    }
+//    @Bean(name = "sessionFilter")
+//    public Filter sessionFilter() {
+//        return new CheckLoginFilter();
+//    }
 
     @Bean(name = "shiroRealm")
     public ShiroRealm customRealm() {

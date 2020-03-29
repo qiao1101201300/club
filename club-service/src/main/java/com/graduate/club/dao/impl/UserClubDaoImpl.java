@@ -1,6 +1,7 @@
 package com.graduate.club.dao.impl;
 
 import com.graduate.club.dao.UserClubDao;
+import com.graduate.club.entity.User;
 import com.graduate.club.entity.UserClub;
 import com.graduate.club.mapper.UserClubMapper;
 import com.graduate.club.service.UserClubService;
@@ -16,4 +17,8 @@ public class UserClubDaoImpl extends BaseDaoImpl<UserClub,UserClubMapper> implem
     @Autowired
     private UserClubMapper userClubMapper;
 
+    @Override
+    public UserClub selectMyClub(User user) {
+        return userClubMapper.selectByPrimaryKey(user.getId());
+    }
 }
