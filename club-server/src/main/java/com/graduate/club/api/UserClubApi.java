@@ -1,7 +1,10 @@
 package com.graduate.club.api;
 
+import com.graduate.club.entity.Club;
 import com.graduate.club.entity.User;
 import com.graduate.club.entity.UserClub;
+import com.graduate.club.service.ActivityService;
+import com.graduate.club.service.ClubService;
 import com.graduate.club.service.UserClubService;
 import com.graduate.club.vo.ResultVO;
 import com.graduate.club.vo.UserVO;
@@ -23,11 +26,18 @@ public class UserClubApi {
     @Autowired
     private UserClubService userClubService;
 
-    @ApiOperation(value = "查询用户社团")
+    @Autowired
+    private ActivityService activityService;
+    @Autowired
+    private ClubService clubService;
+
+    @ApiOperation(value = "查询用户加入的社团")
     @RequestMapping(value = "selectMyClub",method = RequestMethod.POST)
     public ResultVO selectMyClub(@ApiParam(name = "userId",value = "用户id",required = true) String userId ) {
         ResultVO resultVO = userClubService.selectMyClub(userId);
         return resultVO;
     }
+
+
 
 }

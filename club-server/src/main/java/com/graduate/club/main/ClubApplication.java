@@ -28,8 +28,8 @@ public class ClubApplication {
 //        return new CheckLoginFilter();
 //    }
 
-    @Bean(name = "shiroRealm")
-    public ShiroRealm customRealm() {
-        return new ShiroRealm();
-    }
+//    @Bean(name = "shiroRealm")
+//    public ShiroRealm customRealm() {
+//        return new ShiroRealm();
+//    }
 }

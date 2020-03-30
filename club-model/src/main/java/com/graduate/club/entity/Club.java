@@ -14,6 +14,10 @@ public class Club extends BaseEntity {
      * 审批人（admin id）
      */
     private String adminid;
+    /**
+     * 社团负责人
+     */
+    private String principalid;
 
     /**
      * 社团名称

@@ -13,4 +13,8 @@ public class ActivityDaoImpl extends BaseDaoImpl<Activity, ActivityMapper> imple
     private ActivityMapper activityMapper;
 
 
+    @Override
+    public int sumActivity(String clubId) {
+        return activityMapper.sumActivity(clubId);
+    }
 }

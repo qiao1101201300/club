@@ -16,6 +16,12 @@ public class UserVO {
     private String password;
 
     /**
+     * 用户id
+     */
+    @NotBlank
+    private String userid;
+
+    /**
      * 用户状态
      */
     @NotBlank

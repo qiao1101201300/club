@@ -5,10 +5,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import javax.annotation.Resource;
-
 import com.graduate.club.entity.Activity;
-import com.graduate.club.mapper.ActivityMapper;
 import com.graduate.club.service.ActivityService;
 
 @Service
@@ -17,4 +14,10 @@ public class ActivityServiceImpl extends BaseServiceImpl<Activity, ActivityDao> 
 
     @Autowired
     private ActivityDao activityDao;
+
+    @Override
+    public int sumActivity(String clubId) {
+
+        return activityDao.sumActivity(clubId);
+    }
 }
