@@ -1,8 +1,9 @@
 package com.graduate.club.entity;
 
 import java.util.Date;
-
 import lombok.Data;
+
+import javax.validation.constraints.NotBlank;
 
 @Data
 public class Activity extends BaseEntity {
@@ -10,6 +11,7 @@ public class Activity extends BaseEntity {
     /**
      * 活动名称
      */
+    @NotBlank(message = "名称不能为空")
     private String name;
 
     /**
@@ -30,7 +32,8 @@ public class Activity extends BaseEntity {
     /**
      * 发起人名称
      */
-    private String founder;
+    @NotBlank(message = "发起人不能为空")
+    private String userid;
 
     /**
      * 活动图片
@@ -50,16 +53,17 @@ public class Activity extends BaseEntity {
     /**
      * 开始时间
      */
+    @NotBlank(message = "开始时间不能为空")
     private Date openDate;
 
     /**
      * 结束时间
      */
+    @NotBlank(message = "结束时间不能为空")
     private Date closeDate;
 
     /**
      * 审批人（admin id）
      */
     private String approver;
-
 }

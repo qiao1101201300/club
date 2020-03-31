@@ -8,7 +8,7 @@
         <result column="status" jdbcType="INTEGER" property="status"/>
         <result column="clubid" jdbcType="VARCHAR" property="clubid"/>
         <result column="introduction" jdbcType="LONGVARCHAR" property="introduction"/>
-        <result column="founder" jdbcType="VARCHAR" property="founder"/>
+        <result column="userid" jdbcType="VARCHAR" property="userid"/>
         <result column="img" jdbcType="VARCHAR" property="img"/>
         <result column="scale_num" jdbcType="INTEGER" property="scaleNum"/>
         <result column="actual_num" jdbcType="INTEGER" property="actualNum"/>
@@ -20,8 +20,8 @@
     </resultMap>
     <sql id="Base_Column_List">
         <!--@mbg.generated-->
-        id, `name`, `status`, clubid, introduction, founder, img, scale_num, actual_num,
-        open_date, close_date, approver, create_at, update_at
+        id, `name`, `status`, clubid, introduction, userid, img, scale_num, actual_num, open_date,
+        close_date, approver, create_at, update_at
     </sql>
     <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
         <!--@mbg.generated-->
@@ -38,12 +38,12 @@
     <insert id="insert" parameterType="com.graduate.club.entity.Activity">
         <!--@mbg.generated-->
         insert into t_activity (id, `name`, `status`,
-        clubid, introduction, founder,
+        clubid, introduction, userid,
         img, scale_num, actual_num,
         open_date, close_date, approver,
         create_at, update_at)
         values (#{id,jdbcType=VARCHAR}, #{name,jdbcType=VARCHAR}, #{status,jdbcType=INTEGER},
-        #{clubid,jdbcType=VARCHAR}, #{introduction,jdbcType=LONGVARCHAR}, #{founder,jdbcType=VARCHAR},
+        #{clubid,jdbcType=VARCHAR}, #{introduction,jdbcType=LONGVARCHAR}, #{userid,jdbcType=VARCHAR},
         #{img,jdbcType=VARCHAR}, #{scaleNum,jdbcType=INTEGER}, #{actualNum,jdbcType=INTEGER},
         #{openDate,jdbcType=TIMESTAMP}, #{closeDate,jdbcType=TIMESTAMP}, #{approver,jdbcType=VARCHAR},
         #{createAt,jdbcType=TIMESTAMP}, #{updateAt,jdbcType=TIMESTAMP})
@@ -67,8 +67,8 @@
             <if test="introduction != null">
                 introduction,
             </if>
-            <if test="founder != null">
-                founder,
+            <if test="userid != null">
+                userid,
             </if>
             <if test="img != null">
                 img,
@@ -111,8 +111,8 @@
             <if test="introduction != null">
                 #{introduction,jdbcType=LONGVARCHAR},
             </if>
-            <if test="founder != null">
-                #{founder,jdbcType=VARCHAR},
+            <if test="userid != null">
+                #{userid,jdbcType=VARCHAR},
             </if>
             <if test="img != null">
                 #{img,jdbcType=VARCHAR},
@@ -156,8 +156,8 @@
             <if test="introduction != null">
                 introduction = #{introduction,jdbcType=LONGVARCHAR},
             </if>
-            <if test="founder != null">
-                founder = #{founder,jdbcType=VARCHAR},
+            <if test="userid != null">
+                userid = #{userid,jdbcType=VARCHAR},
             </if>
             <if test="img != null">
                 img = #{img,jdbcType=VARCHAR},
@@ -193,7 +193,7 @@
         `status` = #{status,jdbcType=INTEGER},
         clubid = #{clubid,jdbcType=VARCHAR},
         introduction = #{introduction,jdbcType=LONGVARCHAR},
-        founder = #{founder,jdbcType=VARCHAR},
+        userid = #{userid,jdbcType=VARCHAR},
         img = #{img,jdbcType=VARCHAR},
         scale_num = #{scaleNum,jdbcType=INTEGER},
         actual_num = #{actualNum,jdbcType=INTEGER},
@@ -205,6 +205,37 @@
         where id = #{id,jdbcType=VARCHAR}
     </update>
     <select id="selectAll" resultMap="BaseResultMap">
-        select <include refid="Base_Column_List"/> from t_activity
+        select
+        <include refid="Base_Column_List"/>
+        from t_activity
+    </select>
+    <select id="selectActivity" parameterType="map" resultType="map">
+        select t.id, t.`name`,a.name username,t.scale_num,t.actual_num,t.open_date, t.close_date
+        from t_activity t
+        join t_user_profile a on t.userid = a.userid
+        <where>
+            t.status = #{status}
+            <if test="openDate != null ">
+                <![CDATA[
+                  and t.open_date = #{openDate,jdbcType=TIMESTAMP}
+                ]]>
+            </if>
+            <if test="closeDate != null ">
+                <![CDATA[
+                  and t.close_date = #{openDate,jdbcType=TIMESTAMP}
+                ]]>
+            </if>
+            <if test="userid != null ">
+                <![CDATA[
+                  and t.userid = #{userid,jdbcType=TIMESTAMP}
+                ]]>
+            </if>
+            <if test="name != null ">
+                <![CDATA[
+                  and t.name like %#{name,jdbcType=VARCHAR}%
+                ]]>
+            </if>
+        </where>
+        order by t.create_date desc
     </select>
 </mapper>
