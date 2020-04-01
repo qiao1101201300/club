@@ -1,6 +1,7 @@
 package com.graduate.club.mapper;
 
 import com.graduate.club.entity.Club;
+import com.graduate.club.vo.PageVO;
 import com.graduate.club.vo.ResultVO;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
@@ -14,5 +15,5 @@ public interface ClubMapper extends BaseMapper<Club>{
      * @return
      */
     @Select("SELECT * FROM t_user_club WHERE clubid ='#{clubid}' AND `status`=#{status};")
-    ResultVO selectClubUserByClubid(String clubid,int status);
+    PageVO selectClubUserByClubid(String clubid, int status);
 }

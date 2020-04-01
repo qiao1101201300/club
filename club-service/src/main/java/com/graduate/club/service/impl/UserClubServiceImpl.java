@@ -1,9 +1,9 @@
 package com.graduate.club.service.impl;
 
 import com.graduate.club.dao.UserClubDao;
-import com.graduate.club.entity.Activity;
-import com.graduate.club.entity.Club;
-import com.graduate.club.entity.User;
+import com.graduate.club.dao.UserProfileDao;
+import com.graduate.club.dao.impl.UserProfileDaoImpl;
+import com.graduate.club.entity.*;
 import com.graduate.club.enums.ResultEnum;
 import com.graduate.club.exception.ServerException;
 import com.graduate.club.service.ActivityService;
@@ -19,7 +19,6 @@ import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 
-import com.graduate.club.entity.UserClub;
 import com.graduate.club.mapper.UserClubMapper;
 import com.graduate.club.service.UserClubService;
 
@@ -37,6 +36,8 @@ public class UserClubServiceImpl extends BaseServiceImpl<UserClub, UserClubDao> 
     private ActivityService activityService;
     @Autowired
     private ClubService clubService;
+    @Autowired
+    private UserClubDao userClubDaoImpl;
 
     /**
      * 根据用户查询所有的社团
@@ -68,4 +69,10 @@ public class UserClubServiceImpl extends BaseServiceImpl<UserClub, UserClubDao> 
         }
 
     }
+
+    @Override
+    public ResultVO selectClubUser(UserProfile userProfile) {
+        return userClubDaoImpl.selectClubUser(userProfile);
+    }
+
 }

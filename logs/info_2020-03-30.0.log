@@ -1,0 +1,65 @@
+[2020-03-30 20:43:29.531]  INFO  com.graduate.club.main.ClubApplication logStarting-55 - Starting ClubApplication on xiatian with PID 12808 (started by 夏天 in D:\Graduation Project\club)
+[2020-03-30 20:43:29.587]  INFO  com.graduate.club.main.ClubApplication logStartupProfileInfo-651 - No active profile set, falling back to default profiles: default
+[2020-03-30 20:44:52.999]  INFO  com.graduate.club.main.ClubApplication logStarting-55 - Starting ClubApplication on xiatian with PID 14392 (started by 夏天 in D:\Graduation Project\club)
+[2020-03-30 20:44:53.026]  INFO  com.graduate.club.main.ClubApplication logStartupProfileInfo-651 - No active profile set, falling back to default profiles: default
+[2020-03-30 20:46:47.970]  INFO  com.graduate.club.main.ClubApplication logStarting-55 - Starting ClubApplication on xiatian with PID 13052 (started by 夏天 in D:\Graduation Project\club)
+[2020-03-30 20:46:47.981]  INFO  com.graduate.club.main.ClubApplication logStartupProfileInfo-651 - No active profile set, falling back to default profiles: default
+[2020-03-30 20:48:37.487]  INFO  com.graduate.club.main.ClubApplication logStarting-55 - Starting ClubApplication on xiatian with PID 15700 (started by 夏天 in D:\Graduation Project\club)
+[2020-03-30 20:48:37.507]  INFO  com.graduate.club.main.ClubApplication logStartupProfileInfo-651 - No active profile set, falling back to default profiles: default
+[2020-03-30 20:48:45.474]  INFO  org.apache.coyote.http11.Http11NioProtocol log-173 - Initializing ProtocolHandler ["http-nio-8080"]
+[2020-03-30 20:48:45.475]  INFO  org.apache.catalina.core.StandardService log-173 - Starting service [Tomcat]
+[2020-03-30 20:48:45.476]  INFO  org.apache.catalina.core.StandardEngine log-173 - Starting Servlet engine: [Apache Tomcat/9.0.29]
+[2020-03-30 20:48:45.828]  INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] log-173 - Initializing Spring embedded WebApplicationContext
+[2020-03-30 20:48:48.869]  INFO  springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper start-120 - Context refreshed
+[2020-03-30 20:48:48.948]  INFO  springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper start-123 - Found 1 custom documentation plugin(s)
+[2020-03-30 20:48:48.989]  INFO  springfox.documentation.spring.web.scanners.ApiListingReferenceScanner scan-41 - Scanning for api listing references
+[2020-03-30 20:48:49.643]  INFO  org.apache.coyote.http11.Http11NioProtocol log-173 - Starting ProtocolHandler ["http-nio-8080"]
+[2020-03-30 20:48:49.750]  INFO  com.graduate.club.main.ClubApplication logStarted-61 - Started ClubApplication in 14.346 seconds (JVM running for 19.53)
+[2020-03-30 20:49:17.063]  INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] log-173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2020-03-30 21:13:18.904]  INFO  com.graduate.club.main.ClubApplication logStarting-55 - Starting ClubApplication on xiatian with PID 5908 (started by 夏天 in D:\Graduation Project\club)
+[2020-03-30 21:13:18.919]  INFO  com.graduate.club.main.ClubApplication logStartupProfileInfo-651 - No active profile set, falling back to default profiles: default
+[2020-03-30 21:13:25.740]  INFO  org.apache.coyote.http11.Http11NioProtocol log-173 - Initializing ProtocolHandler ["http-nio-8080"]
+[2020-03-30 21:13:25.741]  INFO  org.apache.catalina.core.StandardService log-173 - Starting service [Tomcat]
+[2020-03-30 21:13:25.742]  INFO  org.apache.catalina.core.StandardEngine log-173 - Starting Servlet engine: [Apache Tomcat/9.0.29]
+[2020-03-30 21:13:26.020]  INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] log-173 - Initializing Spring embedded WebApplicationContext
+[2020-03-30 21:13:27.309]  INFO  springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper start-120 - Context refreshed
+[2020-03-30 21:13:27.351]  INFO  springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper start-123 - Found 1 custom documentation plugin(s)
+[2020-03-30 21:13:27.384]  INFO  springfox.documentation.spring.web.scanners.ApiListingReferenceScanner scan-41 - Scanning for api listing references
+[2020-03-30 21:13:27.825]  INFO  org.apache.coyote.http11.Http11NioProtocol log-173 - Starting ProtocolHandler ["http-nio-8080"]
+[2020-03-30 21:13:27.892]  INFO  com.graduate.club.main.ClubApplication logStarted-61 - Started ClubApplication in 10.726 seconds (JVM running for 15.611)
+[2020-03-30 22:03:46.238]  INFO  com.graduate.club.main.ClubApplication logStarting-55 - Starting ClubApplication on xiatian with PID 15392 (started by 夏天 in D:\Graduation Project\club)
+[2020-03-30 22:03:46.250]  INFO  com.graduate.club.main.ClubApplication logStartupProfileInfo-651 - No active profile set, falling back to default profiles: default
+[2020-03-30 22:03:57.444]  INFO  org.apache.coyote.http11.Http11NioProtocol log-173 - Initializing ProtocolHandler ["http-nio-8080"]
+[2020-03-30 22:03:57.446]  INFO  org.apache.catalina.core.StandardService log-173 - Starting service [Tomcat]
+[2020-03-30 22:03:57.446]  INFO  org.apache.catalina.core.StandardEngine log-173 - Starting Servlet engine: [Apache Tomcat/9.0.29]
+[2020-03-30 22:03:57.727]  INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] log-173 - Initializing Spring embedded WebApplicationContext
+[2020-03-30 22:03:59.300]  INFO  springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper start-120 - Context refreshed
+[2020-03-30 22:03:59.359]  INFO  springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper start-123 - Found 1 custom documentation plugin(s)
+[2020-03-30 22:03:59.401]  INFO  springfox.documentation.spring.web.scanners.ApiListingReferenceScanner scan-41 - Scanning for api listing references
+[2020-03-30 22:03:59.997]  INFO  org.apache.coyote.http11.Http11NioProtocol log-173 - Starting ProtocolHandler ["http-nio-8080"]
+[2020-03-30 22:04:00.082]  INFO  com.graduate.club.main.ClubApplication logStarted-61 - Started ClubApplication in 16.419 seconds (JVM running for 24.601)
+[2020-03-30 22:04:23.947]  INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] log-173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2020-03-30 22:09:08.497]  INFO  com.graduate.club.main.ClubApplication logStarting-55 - Starting ClubApplication on xiatian with PID 16312 (started by 夏天 in D:\Graduation Project\club)
+[2020-03-30 22:09:08.513]  INFO  com.graduate.club.main.ClubApplication logStartupProfileInfo-651 - No active profile set, falling back to default profiles: default
+[2020-03-30 22:09:15.498]  INFO  org.apache.coyote.http11.Http11NioProtocol log-173 - Initializing ProtocolHandler ["http-nio-8080"]
+[2020-03-30 22:09:15.500]  INFO  org.apache.catalina.core.StandardService log-173 - Starting service [Tomcat]
+[2020-03-30 22:09:15.500]  INFO  org.apache.catalina.core.StandardEngine log-173 - Starting Servlet engine: [Apache Tomcat/9.0.29]
+[2020-03-30 22:09:15.763]  INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] log-173 - Initializing Spring embedded WebApplicationContext
+[2020-03-30 22:09:17.231]  INFO  springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper start-120 - Context refreshed
+[2020-03-30 22:09:17.269]  INFO  springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper start-123 - Found 1 custom documentation plugin(s)
+[2020-03-30 22:09:17.303]  INFO  springfox.documentation.spring.web.scanners.ApiListingReferenceScanner scan-41 - Scanning for api listing references
+[2020-03-30 22:09:17.782]  INFO  org.apache.coyote.http11.Http11NioProtocol log-173 - Starting ProtocolHandler ["http-nio-8080"]
+[2020-03-30 22:09:17.855]  INFO  com.graduate.club.main.ClubApplication logStarted-61 - Started ClubApplication in 11.022 seconds (JVM running for 16.133)
+[2020-03-30 22:09:32.355]  INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] log-173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2020-03-30 22:16:55.959]  INFO  com.graduate.club.main.ClubApplication logStarting-55 - Starting ClubApplication on xiatian with PID 4036 (started by 夏天 in D:\Graduation Project\club)
+[2020-03-30 22:16:55.984]  INFO  com.graduate.club.main.ClubApplication logStartupProfileInfo-651 - No active profile set, falling back to default profiles: default
+[2020-03-30 22:17:07.218]  INFO  org.apache.coyote.http11.Http11NioProtocol log-173 - Initializing ProtocolHandler ["http-nio-8080"]
+[2020-03-30 22:17:07.219]  INFO  org.apache.catalina.core.StandardService log-173 - Starting service [Tomcat]
+[2020-03-30 22:17:07.220]  INFO  org.apache.catalina.core.StandardEngine log-173 - Starting Servlet engine: [Apache Tomcat/9.0.29]
+[2020-03-30 22:17:07.592]  INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] log-173 - Initializing Spring embedded WebApplicationContext
+[2020-03-30 22:17:09.250]  INFO  springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper start-120 - Context refreshed
+[2020-03-30 22:17:09.298]  INFO  springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper start-123 - Found 1 custom documentation plugin(s)
+[2020-03-30 22:17:09.342]  INFO  springfox.documentation.spring.web.scanners.ApiListingReferenceScanner scan-41 - Scanning for api listing references
+[2020-03-30 22:17:09.925]  INFO  org.apache.coyote.http11.Http11NioProtocol log-173 - Starting ProtocolHandler ["http-nio-8080"]
+[2020-03-30 22:17:10.056]  INFO  com.graduate.club.main.ClubApplication logStarted-61 - Started ClubApplication in 15.942 seconds (JVM running for 23.191)
+[2020-03-30 22:18:38.714]  INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] log-173 - Initializing Spring DispatcherServlet 'dispatcherServlet'

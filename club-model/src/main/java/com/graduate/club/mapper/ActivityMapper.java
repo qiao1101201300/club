@@ -12,5 +12,10 @@ public interface ActivityMapper extends BaseMapper<Activity>{
     @Select("select count(#{clubId}) from t_activity where clubid=#{clubid}")
     int sumActivity(String clubId);
 
+    /**
+     * 查询社团活动
+     * @param map
+     * @return
+     */
     List<Map<String,Object>> selectActivity(Map<String,Object> map);
 }

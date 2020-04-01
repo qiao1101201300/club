@@ -1,0 +1,171 @@
+[2020-02-23 18:40:23.640]  INFO  com.graduate.society.main.SocietyApplication logStarting-55 - Starting SocietyApplication on DESKTOP-7AGUOUO with PID 7928 (D:\java2\p1\graduate-society\society-server\target\classes started by 乔申 in D:\java2\p1\graduate-society)
+[2020-02-23 18:40:23.640]  INFO  com.graduate.society.main.SocietyApplication logStartupProfileInfo-651 - No active profile set, falling back to default profiles: default
+[2020-02-23 18:40:28.131]  INFO  org.apache.coyote.http11.Http11NioProtocol log-173 - Initializing ProtocolHandler ["http-nio-8080"]
+[2020-02-23 18:40:28.131]  INFO  org.apache.catalina.core.StandardService log-173 - Starting service [Tomcat]
+[2020-02-23 18:40:28.131]  INFO  org.apache.catalina.core.StandardEngine log-173 - Starting Servlet engine: [Apache Tomcat/9.0.29]
+[2020-02-23 18:40:28.427]  INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] log-173 - Initializing Spring embedded WebApplicationContext
+[2020-02-23 18:40:28.537]  INFO  com.graduate.society.filter.CheckLoginFilter init-50 - CheckLoginFilter init 初始化.......
+[2020-02-23 18:40:29.264]  INFO  org.apache.coyote.http11.Http11NioProtocol log-173 - Starting ProtocolHandler ["http-nio-8080"]
+[2020-02-23 18:40:29.298]  INFO  com.graduate.society.main.SocietyApplication logStarted-61 - Started SocietyApplication in 6.463 seconds (JVM running for 10.699)
+[2020-02-23 18:40:51.925]  INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] log-173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2020-02-23 18:40:52.113]  INFO  com.zaxxer.hikari.HikariDataSource getConnection-110 - HikariPool-1 - Starting...
+[2020-02-23 18:40:52.387]  INFO  com.zaxxer.hikari.HikariDataSource getConnection-123 - HikariPool-1 - Start completed.
+[2020-02-23 21:53:09.506]  INFO  com.graduate.society.main.SocietyApplication logStarting-55 - Starting SocietyApplication on DESKTOP-7AGUOUO with PID 2744 (D:\java2\p1\graduate-society\society-server\target\classes started by 乔申 in D:\java2\p1\graduate-society)
+[2020-02-23 21:53:09.514]  INFO  com.graduate.society.main.SocietyApplication logStartupProfileInfo-651 - No active profile set, falling back to default profiles: default
+[2020-02-23 21:53:14.184]  INFO  org.apache.coyote.http11.Http11NioProtocol log-173 - Initializing ProtocolHandler ["http-nio-8080"]
+[2020-02-23 21:53:14.185]  INFO  org.apache.catalina.core.StandardService log-173 - Starting service [Tomcat]
+[2020-02-23 21:53:14.185]  INFO  org.apache.catalina.core.StandardEngine log-173 - Starting Servlet engine: [Apache Tomcat/9.0.29]
+[2020-02-23 21:53:14.606]  INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] log-173 - Initializing Spring embedded WebApplicationContext
+[2020-02-23 21:53:14.736]  INFO  com.graduate.society.filter.CheckLoginFilter init-50 - CheckLoginFilter init 初始化.......
+[2020-02-23 21:53:15.597]  INFO  org.apache.coyote.http11.Http11NioProtocol log-173 - Starting ProtocolHandler ["http-nio-8080"]
+[2020-02-23 21:53:15.659]  INFO  com.graduate.society.main.SocietyApplication logStarted-61 - Started SocietyApplication in 6.982 seconds (JVM running for 11.401)
+[2020-02-23 21:54:19.287]  INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] log-173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2020-02-23 21:54:19.553]  INFO  com.zaxxer.hikari.HikariDataSource getConnection-110 - HikariPool-1 - Starting...
+[2020-02-23 21:54:19.885]  INFO  com.zaxxer.hikari.HikariDataSource getConnection-123 - HikariPool-1 - Start completed.
+[2020-02-23 21:56:12.203]  INFO  com.graduate.society.main.SocietyApplication logStarting-55 - Starting SocietyApplication on DESKTOP-7AGUOUO with PID 15000 (D:\java2\p1\graduate-society\society-server\target\classes started by 乔申 in D:\java2\p1\graduate-society)
+[2020-02-23 21:56:12.211]  INFO  com.graduate.society.main.SocietyApplication logStartupProfileInfo-651 - No active profile set, falling back to default profiles: default
+[2020-02-23 21:56:16.592]  INFO  org.apache.coyote.http11.Http11NioProtocol log-173 - Initializing ProtocolHandler ["http-nio-8080"]
+[2020-02-23 21:56:16.593]  INFO  org.apache.catalina.core.StandardService log-173 - Starting service [Tomcat]
+[2020-02-23 21:56:16.594]  INFO  org.apache.catalina.core.StandardEngine log-173 - Starting Servlet engine: [Apache Tomcat/9.0.29]
+[2020-02-23 21:56:16.907]  INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] log-173 - Initializing Spring embedded WebApplicationContext
+[2020-02-23 21:56:17.019]  INFO  com.graduate.society.filter.CheckLoginFilter init-50 - CheckLoginFilter init 初始化.......
+[2020-02-23 21:56:17.864]  INFO  org.apache.coyote.http11.Http11NioProtocol log-173 - Starting ProtocolHandler ["http-nio-8080"]
+[2020-02-23 21:56:17.911]  INFO  com.graduate.society.main.SocietyApplication logStarted-61 - Started SocietyApplication in 6.534 seconds (JVM running for 10.823)
+[2020-02-23 21:56:21.812]  INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] log-173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2020-02-23 21:56:21.996]  INFO  com.zaxxer.hikari.HikariDataSource getConnection-110 - HikariPool-1 - Starting...
+[2020-02-23 21:56:22.248]  INFO  com.zaxxer.hikari.HikariDataSource getConnection-123 - HikariPool-1 - Start completed.
+[2020-02-23 21:57:42.899]  INFO  com.graduate.society.main.SocietyApplication logStarting-55 - Starting SocietyApplication on DESKTOP-7AGUOUO with PID 11040 (D:\java2\p1\graduate-society\society-server\target\classes started by 乔申 in D:\java2\p1\graduate-society)
+[2020-02-23 21:57:42.911]  INFO  com.graduate.society.main.SocietyApplication logStartupProfileInfo-651 - No active profile set, falling back to default profiles: default
+[2020-02-23 21:57:48.896]  INFO  org.apache.coyote.http11.Http11NioProtocol log-173 - Initializing ProtocolHandler ["http-nio-8080"]
+[2020-02-23 21:57:48.898]  INFO  org.apache.catalina.core.StandardService log-173 - Starting service [Tomcat]
+[2020-02-23 21:57:48.899]  INFO  org.apache.catalina.core.StandardEngine log-173 - Starting Servlet engine: [Apache Tomcat/9.0.29]
+[2020-02-23 21:57:49.546]  INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] log-173 - Initializing Spring embedded WebApplicationContext
+[2020-02-23 21:57:49.697]  INFO  com.graduate.society.filter.CheckLoginFilter init-50 - CheckLoginFilter init 初始化.......
+[2020-02-23 21:57:50.733]  INFO  org.apache.coyote.http11.Http11NioProtocol log-173 - Starting ProtocolHandler ["http-nio-8080"]
+[2020-02-23 21:57:50.814]  INFO  com.graduate.society.main.SocietyApplication logStarted-61 - Started SocietyApplication in 8.765 seconds (JVM running for 14.664)
+[2020-02-23 21:58:06.250]  INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] log-173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2020-02-23 21:58:06.505]  INFO  com.zaxxer.hikari.HikariDataSource getConnection-110 - HikariPool-1 - Starting...
+[2020-02-23 21:58:06.866]  INFO  com.zaxxer.hikari.HikariDataSource getConnection-123 - HikariPool-1 - Start completed.
+[2020-02-23 21:58:35.292]  INFO  com.graduate.society.main.SocietyApplication logStarting-55 - Starting SocietyApplication on DESKTOP-7AGUOUO with PID 9836 (D:\java2\p1\graduate-society\society-server\target\classes started by 乔申 in D:\java2\p1\graduate-society)
+[2020-02-23 21:58:35.301]  INFO  com.graduate.society.main.SocietyApplication logStartupProfileInfo-651 - No active profile set, falling back to default profiles: default
+[2020-02-23 21:58:39.682]  INFO  org.apache.coyote.http11.Http11NioProtocol log-173 - Initializing ProtocolHandler ["http-nio-8080"]
+[2020-02-23 21:58:39.682]  INFO  org.apache.catalina.core.StandardService log-173 - Starting service [Tomcat]
+[2020-02-23 21:58:39.683]  INFO  org.apache.catalina.core.StandardEngine log-173 - Starting Servlet engine: [Apache Tomcat/9.0.29]
+[2020-02-23 21:58:40.041]  INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] log-173 - Initializing Spring embedded WebApplicationContext
+[2020-02-23 21:58:40.159]  INFO  com.graduate.society.filter.CheckLoginFilter init-50 - CheckLoginFilter init 初始化.......
+[2020-02-23 21:58:40.964]  INFO  org.apache.coyote.http11.Http11NioProtocol log-173 - Starting ProtocolHandler ["http-nio-8080"]
+[2020-02-23 21:58:41.017]  INFO  com.graduate.society.main.SocietyApplication logStarted-61 - Started SocietyApplication in 6.506 seconds (JVM running for 10.606)
+[2020-02-23 21:58:46.153]  INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] log-173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2020-02-23 21:58:46.468]  INFO  com.zaxxer.hikari.HikariDataSource getConnection-110 - HikariPool-1 - Starting...
+[2020-02-23 21:58:46.722]  INFO  com.zaxxer.hikari.HikariDataSource getConnection-123 - HikariPool-1 - Start completed.
+[2020-02-23 21:59:26.660]  INFO  com.graduate.society.main.SocietyApplication logStarting-55 - Starting SocietyApplication on DESKTOP-7AGUOUO with PID 15324 (D:\java2\p1\graduate-society\society-server\target\classes started by 乔申 in D:\java2\p1\graduate-society)
+[2020-02-23 21:59:26.672]  INFO  com.graduate.society.main.SocietyApplication logStartupProfileInfo-651 - No active profile set, falling back to default profiles: default
+[2020-02-23 21:59:31.771]  INFO  org.apache.coyote.http11.Http11NioProtocol log-173 - Initializing ProtocolHandler ["http-nio-8080"]
+[2020-02-23 21:59:31.772]  INFO  org.apache.catalina.core.StandardService log-173 - Starting service [Tomcat]
+[2020-02-23 21:59:31.773]  INFO  org.apache.catalina.core.StandardEngine log-173 - Starting Servlet engine: [Apache Tomcat/9.0.29]
+[2020-02-23 21:59:32.203]  INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] log-173 - Initializing Spring embedded WebApplicationContext
+[2020-02-23 21:59:32.342]  INFO  com.graduate.society.filter.CheckLoginFilter init-50 - CheckLoginFilter init 初始化.......
+[2020-02-23 21:59:33.160]  INFO  org.apache.coyote.http11.Http11NioProtocol log-173 - Starting ProtocolHandler ["http-nio-8080"]
+[2020-02-23 21:59:33.218]  INFO  com.graduate.society.main.SocietyApplication logStarted-61 - Started SocietyApplication in 7.806 seconds (JVM running for 12.32)
+[2020-02-23 21:59:47.959]  INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] log-173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2020-02-23 22:01:16.541]  INFO  com.graduate.society.main.SocietyApplication logStarting-55 - Starting SocietyApplication on DESKTOP-7AGUOUO with PID 5680 (D:\java2\p1\graduate-society\society-server\target\classes started by 乔申 in D:\java2\p1\graduate-society)
+[2020-02-23 22:01:16.549]  INFO  com.graduate.society.main.SocietyApplication logStartupProfileInfo-651 - No active profile set, falling back to default profiles: default
+[2020-02-23 22:01:22.694]  INFO  org.apache.coyote.http11.Http11NioProtocol log-173 - Initializing ProtocolHandler ["http-nio-8080"]
+[2020-02-23 22:01:22.695]  INFO  org.apache.catalina.core.StandardService log-173 - Starting service [Tomcat]
+[2020-02-23 22:01:22.695]  INFO  org.apache.catalina.core.StandardEngine log-173 - Starting Servlet engine: [Apache Tomcat/9.0.29]
+[2020-02-23 22:01:23.072]  INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] log-173 - Initializing Spring embedded WebApplicationContext
+[2020-02-23 22:01:23.208]  INFO  com.graduate.society.filter.CheckLoginFilter init-50 - CheckLoginFilter init 初始化.......
+[2020-02-23 22:01:24.315]  INFO  org.apache.coyote.http11.Http11NioProtocol log-173 - Starting ProtocolHandler ["http-nio-8080"]
+[2020-02-23 22:01:24.386]  INFO  com.graduate.society.main.SocietyApplication logStarted-61 - Started SocietyApplication in 8.872 seconds (JVM running for 12.912)
+[2020-02-23 22:01:26.533]  INFO  com.graduate.society.main.SocietyApplication logStarting-55 - Starting SocietyApplication on DESKTOP-7AGUOUO with PID 11632 (D:\java2\p1\graduate-society\society-server\target\classes started by 乔申 in D:\java2\p1\graduate-society)
+[2020-02-23 22:01:26.544]  INFO  com.graduate.society.main.SocietyApplication logStartupProfileInfo-651 - No active profile set, falling back to default profiles: default
+[2020-02-23 22:01:31.535]  INFO  org.apache.coyote.http11.Http11NioProtocol log-173 - Initializing ProtocolHandler ["http-nio-8080"]
+[2020-02-23 22:01:31.536]  INFO  org.apache.catalina.core.StandardService log-173 - Starting service [Tomcat]
+[2020-02-23 22:01:31.537]  INFO  org.apache.catalina.core.StandardEngine log-173 - Starting Servlet engine: [Apache Tomcat/9.0.29]
+[2020-02-23 22:01:31.970]  INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] log-173 - Initializing Spring embedded WebApplicationContext
+[2020-02-23 22:01:32.112]  INFO  com.graduate.society.filter.CheckLoginFilter init-50 - CheckLoginFilter init 初始化.......
+[2020-02-23 22:01:32.963]  INFO  org.apache.coyote.http11.Http11NioProtocol log-173 - Starting ProtocolHandler ["http-nio-8080"]
+[2020-02-23 22:01:32.991]  INFO  org.apache.coyote.http11.Http11NioProtocol log-173 - Pausing ProtocolHandler ["http-nio-8080"]
+[2020-02-23 22:01:32.992]  INFO  org.apache.catalina.core.StandardService log-173 - Stopping service [Tomcat]
+[2020-02-23 22:01:33.000]  INFO  org.apache.coyote.http11.Http11NioProtocol log-173 - Stopping ProtocolHandler ["http-nio-8080"]
+[2020-02-23 22:01:33.001]  INFO  org.apache.coyote.http11.Http11NioProtocol log-173 - Destroying ProtocolHandler ["http-nio-8080"]
+[2020-02-23 22:01:46.988]  INFO  com.graduate.society.main.SocietyApplication logStarting-55 - Starting SocietyApplication on DESKTOP-7AGUOUO with PID 6276 (D:\java2\p1\graduate-society\society-server\target\classes started by 乔申 in D:\java2\p1\graduate-society)
+[2020-02-23 22:01:46.996]  INFO  com.graduate.society.main.SocietyApplication logStartupProfileInfo-651 - No active profile set, falling back to default profiles: default
+[2020-02-23 22:01:51.947]  INFO  org.apache.coyote.http11.Http11NioProtocol log-173 - Initializing ProtocolHandler ["http-nio-8080"]
+[2020-02-23 22:01:51.950]  INFO  org.apache.catalina.core.StandardService log-173 - Starting service [Tomcat]
+[2020-02-23 22:01:51.951]  INFO  org.apache.catalina.core.StandardEngine log-173 - Starting Servlet engine: [Apache Tomcat/9.0.29]
+[2020-02-23 22:01:52.406]  INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] log-173 - Initializing Spring embedded WebApplicationContext
+[2020-02-23 22:01:52.567]  INFO  com.graduate.society.filter.CheckLoginFilter init-50 - CheckLoginFilter init 初始化.......
+[2020-02-23 22:01:53.551]  INFO  org.apache.coyote.http11.Http11NioProtocol log-173 - Starting ProtocolHandler ["http-nio-8080"]
+[2020-02-23 22:01:53.619]  INFO  com.graduate.society.main.SocietyApplication logStarted-61 - Started SocietyApplication in 7.483 seconds (JVM running for 11.722)
+[2020-02-23 22:02:35.213]  INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] log-173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2020-02-23 22:03:49.276]  INFO  com.graduate.society.main.SocietyApplication logStarting-55 - Starting SocietyApplication on DESKTOP-7AGUOUO with PID 14840 (D:\java2\p1\graduate-society\society-server\target\classes started by 乔申 in D:\java2\p1\graduate-society)
+[2020-02-23 22:03:49.286]  INFO  com.graduate.society.main.SocietyApplication logStartupProfileInfo-651 - No active profile set, falling back to default profiles: default
+[2020-02-23 22:03:53.693]  INFO  org.apache.coyote.http11.Http11NioProtocol log-173 - Initializing ProtocolHandler ["http-nio-8080"]
+[2020-02-23 22:03:53.694]  INFO  org.apache.catalina.core.StandardService log-173 - Starting service [Tomcat]
+[2020-02-23 22:03:53.694]  INFO  org.apache.catalina.core.StandardEngine log-173 - Starting Servlet engine: [Apache Tomcat/9.0.29]
+[2020-02-23 22:03:54.001]  INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] log-173 - Initializing Spring embedded WebApplicationContext
+[2020-02-23 22:03:54.125]  INFO  com.graduate.society.filter.CheckLoginFilter init-50 - CheckLoginFilter init 初始化.......
+[2020-02-23 22:03:54.948]  INFO  org.apache.coyote.http11.Http11NioProtocol log-173 - Starting ProtocolHandler ["http-nio-8080"]
+[2020-02-23 22:03:54.996]  INFO  com.graduate.society.main.SocietyApplication logStarted-61 - Started SocietyApplication in 6.562 seconds (JVM running for 10.412)
+[2020-02-23 22:04:00.542]  INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] log-173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2020-02-23 22:04:00.877]  INFO  com.zaxxer.hikari.HikariDataSource getConnection-110 - HikariPool-1 - Starting...
+[2020-02-23 22:04:01.111]  INFO  com.zaxxer.hikari.HikariDataSource getConnection-123 - HikariPool-1 - Start completed.
+[2020-02-23 22:14:30.900]  INFO  com.graduate.society.main.SocietyApplication logStarting-55 - Starting SocietyApplication on DESKTOP-7AGUOUO with PID 14004 (D:\java2\p1\graduate-society\society-server\target\classes started by 乔申 in D:\java2\p1\graduate-society)
+[2020-02-23 22:14:30.908]  INFO  com.graduate.society.main.SocietyApplication logStartupProfileInfo-651 - No active profile set, falling back to default profiles: default
+[2020-02-23 22:14:35.575]  INFO  org.apache.coyote.http11.Http11NioProtocol log-173 - Initializing ProtocolHandler ["http-nio-8080"]
+[2020-02-23 22:14:35.576]  INFO  org.apache.catalina.core.StandardService log-173 - Starting service [Tomcat]
+[2020-02-23 22:14:35.577]  INFO  org.apache.catalina.core.StandardEngine log-173 - Starting Servlet engine: [Apache Tomcat/9.0.29]
+[2020-02-23 22:14:35.897]  INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] log-173 - Initializing Spring embedded WebApplicationContext
+[2020-02-23 22:14:36.016]  INFO  com.graduate.society.filter.CheckLoginFilter init-50 - CheckLoginFilter init 初始化.......
+[2020-02-23 22:14:36.832]  INFO  org.apache.coyote.http11.Http11NioProtocol log-173 - Starting ProtocolHandler ["http-nio-8080"]
+[2020-02-23 22:14:36.881]  INFO  com.graduate.society.main.SocietyApplication logStarted-61 - Started SocietyApplication in 6.89 seconds (JVM running for 11.271)
+[2020-03-29 16:54:02.187]  INFO  com.graduate.club.main.ClubApplication logStarting-55 - Starting ClubApplication on xiatian with PID 1508 (started by 夏天 in D:\Graduation Project\club)
+[2020-03-29 16:54:02.198]  INFO  com.graduate.club.main.ClubApplication logStartupProfileInfo-651 - No active profile set, falling back to default profiles: default
+[2020-03-29 16:54:13.674]  INFO  org.apache.coyote.http11.Http11NioProtocol log-173 - Initializing ProtocolHandler ["http-nio-8080"]
+[2020-03-29 16:54:13.676]  INFO  org.apache.catalina.core.StandardService log-173 - Starting service [Tomcat]
+[2020-03-29 16:54:13.677]  INFO  org.apache.catalina.core.StandardEngine log-173 - Starting Servlet engine: [Apache Tomcat/9.0.29]
+[2020-03-29 16:54:14.008]  INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] log-173 - Initializing Spring embedded WebApplicationContext
+[2020-03-29 16:54:14.355]  INFO  com.graduate.club.filter.CheckLoginFilter init-59 - CheckLoginFilter init 初始化.......
+[2020-03-29 16:54:16.184]  INFO  springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper start-120 - Context refreshed
+[2020-03-29 16:54:16.226]  INFO  springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper start-123 - Found 1 custom documentation plugin(s)
+[2020-03-29 16:54:16.263]  INFO  springfox.documentation.spring.web.scanners.ApiListingReferenceScanner scan-41 - Scanning for api listing references
+[2020-03-29 16:54:16.311]  INFO  org.apache.coyote.http11.Http11NioProtocol log-173 - Starting ProtocolHandler ["http-nio-8080"]
+[2020-03-29 16:54:16.380]  INFO  com.graduate.club.main.ClubApplication logStarted-61 - Started ClubApplication in 15.878 seconds (JVM running for 24.753)
+[2020-03-29 16:54:22.061]  INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] log-173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2020-03-29 16:56:28.492]  INFO  com.graduate.club.main.ClubApplication logStarting-55 - Starting ClubApplication on xiatian with PID 5268 (started by 夏天 in D:\Graduation Project\club)
+[2020-03-29 16:56:28.508]  INFO  com.graduate.club.main.ClubApplication logStartupProfileInfo-651 - No active profile set, falling back to default profiles: default
+[2020-03-29 16:56:34.516]  INFO  org.apache.coyote.http11.Http11NioProtocol log-173 - Initializing ProtocolHandler ["http-nio-8080"]
+[2020-03-29 16:56:34.517]  INFO  org.apache.catalina.core.StandardService log-173 - Starting service [Tomcat]
+[2020-03-29 16:56:34.518]  INFO  org.apache.catalina.core.StandardEngine log-173 - Starting Servlet engine: [Apache Tomcat/9.0.29]
+[2020-03-29 16:56:34.744]  INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] log-173 - Initializing Spring embedded WebApplicationContext
+[2020-03-29 16:56:36.085]  INFO  springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper start-120 - Context refreshed
+[2020-03-29 16:56:36.136]  INFO  springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper start-123 - Found 1 custom documentation plugin(s)
+[2020-03-29 16:56:36.175]  INFO  springfox.documentation.spring.web.scanners.ApiListingReferenceScanner scan-41 - Scanning for api listing references
+[2020-03-29 16:56:36.225]  INFO  org.apache.coyote.http11.Http11NioProtocol log-173 - Starting ProtocolHandler ["http-nio-8080"]
+[2020-03-29 16:56:36.295]  INFO  com.graduate.club.main.ClubApplication logStarted-61 - Started ClubApplication in 9.663 seconds (JVM running for 15.515)
+[2020-03-29 16:57:01.019]  INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] log-173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2020-03-29 16:58:31.904]  INFO  com.graduate.club.main.ClubApplication logStarting-55 - Starting ClubApplication on xiatian with PID 11136 (started by 夏天 in D:\Graduation Project\club)
+[2020-03-29 16:58:31.916]  INFO  com.graduate.club.main.ClubApplication logStartupProfileInfo-651 - No active profile set, falling back to default profiles: default
+[2020-03-29 16:58:37.831]  INFO  org.apache.coyote.http11.Http11NioProtocol log-173 - Initializing ProtocolHandler ["http-nio-8080"]
+[2020-03-29 16:58:37.832]  INFO  org.apache.catalina.core.StandardService log-173 - Starting service [Tomcat]
+[2020-03-29 16:58:37.833]  INFO  org.apache.catalina.core.StandardEngine log-173 - Starting Servlet engine: [Apache Tomcat/9.0.29]
+[2020-03-29 16:58:38.046]  INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] log-173 - Initializing Spring embedded WebApplicationContext
+[2020-03-29 16:58:39.333]  INFO  springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper start-120 - Context refreshed
+[2020-03-29 16:58:39.371]  INFO  springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper start-123 - Found 1 custom documentation plugin(s)
+[2020-03-29 16:58:39.405]  INFO  springfox.documentation.spring.web.scanners.ApiListingReferenceScanner scan-41 - Scanning for api listing references
+[2020-03-29 16:58:40.182]  INFO  org.apache.coyote.http11.Http11NioProtocol log-173 - Starting ProtocolHandler ["http-nio-8080"]
+[2020-03-29 16:58:40.239]  INFO  com.graduate.club.main.ClubApplication logStarted-61 - Started ClubApplication in 9.695 seconds (JVM running for 14.215)
+[2020-03-29 16:58:53.953]  INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] log-173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2020-03-29 17:03:39.029]  INFO  com.graduate.club.main.ClubApplication logStarting-55 - Starting ClubApplication on xiatian with PID 13804 (started by 夏天 in D:\Graduation Project\club)
+[2020-03-29 17:03:39.041]  INFO  com.graduate.club.main.ClubApplication logStartupProfileInfo-651 - No active profile set, falling back to default profiles: default
+[2020-03-29 17:03:45.340]  INFO  org.apache.coyote.http11.Http11NioProtocol log-173 - Initializing ProtocolHandler ["http-nio-8080"]
+[2020-03-29 17:03:45.341]  INFO  org.apache.catalina.core.StandardService log-173 - Starting service [Tomcat]
+[2020-03-29 17:03:45.342]  INFO  org.apache.catalina.core.StandardEngine log-173 - Starting Servlet engine: [Apache Tomcat/9.0.29]
+[2020-03-29 17:03:45.568]  INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] log-173 - Initializing Spring embedded WebApplicationContext
+[2020-03-29 17:03:46.833]  INFO  springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper start-120 - Context refreshed
+[2020-03-29 17:03:46.871]  INFO  springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper start-123 - Found 1 custom documentation plugin(s)
+[2020-03-29 17:03:46.906]  INFO  springfox.documentation.spring.web.scanners.ApiListingReferenceScanner scan-41 - Scanning for api listing references
+[2020-03-29 17:03:47.363]  INFO  org.apache.coyote.http11.Http11NioProtocol log-173 - Starting ProtocolHandler ["http-nio-8080"]
+[2020-03-29 17:03:47.430]  INFO  com.graduate.club.main.ClubApplication logStarted-61 - Started ClubApplication in 10.148 seconds (JVM running for 14.661)
+[2020-03-29 17:04:13.936]  INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] log-173 - Initializing Spring DispatcherServlet 'dispatcherServlet'

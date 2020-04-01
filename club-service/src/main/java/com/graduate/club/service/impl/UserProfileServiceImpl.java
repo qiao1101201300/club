@@ -11,11 +11,11 @@ import javax.annotation.Resource;
 public class UserProfileServiceImpl extends BaseServiceImpl<UserProfile, UserProfileDao> implements UserProfileService {
 
     @Resource
-    private UserProfileDao userProfileDao;
+    private UserProfileDao userProfileDaoImpl;
 
     @Override
     public UserProfile selectByUserId(String userId) {
-        return userProfileDao.selectByUserId(userId);
+        return userProfileDaoImpl.selectByUserId(userId);
     }
 }
 

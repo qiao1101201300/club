@@ -2,6 +2,7 @@ package com.graduate.club.service.impl;
 
 import com.graduate.club.dao.ClubDao;
 import com.graduate.club.mapper.ClubMapper;
+import com.graduate.club.vo.PageVO;
 import com.graduate.club.vo.ResultVO;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,7 +32,7 @@ public class ClubServiceImpl extends BaseServiceImpl<Club, ClubDao> implements C
     }
 
     @Override
-    public ResultVO selectClubUserByClubid(String clubid,int status) {
+    public PageVO selectClubUserByClubid(String clubid, int status) {
         return clubDao.selectClubUserByClubid(clubid,status);
     }
 }

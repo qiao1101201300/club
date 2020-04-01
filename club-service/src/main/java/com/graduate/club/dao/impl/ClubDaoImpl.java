@@ -3,6 +3,7 @@ package com.graduate.club.dao.impl;
 import com.graduate.club.dao.ClubDao;
 import com.graduate.club.entity.Club;
 import com.graduate.club.mapper.ClubMapper;
+import com.graduate.club.vo.PageVO;
 import com.graduate.club.vo.ResultVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -27,7 +28,7 @@ public class ClubDaoImpl extends BaseDaoImpl<Club,ClubMapper> implements ClubDao
     }
 
     @Override
-    public ResultVO selectClubUserByClubid(String clubid,int status) {
+    public PageVO selectClubUserByClubid(String clubid, int status) {
         return clubMapper.selectClubUserByClubid(clubid,status);
     }
 

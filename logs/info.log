@@ -26,3 +26,36 @@
 [2020-04-01 18:07:44.007]  INFO  s.documentation.spring.web.readers.operation.CachingOperationNameGenerator startingWith-40 - Generating unique operation named: loginUsingPOST_1
 [2020-04-01 18:07:44.042]  INFO  org.apache.coyote.http11.Http11NioProtocol log-173 - Starting ProtocolHandler ["http-nio-8080"]
 [2020-04-01 18:07:44.089]  INFO  com.graduate.club.main.ClubApplication logStarted-61 - Started ClubApplication in 6.641 seconds (JVM running for 8.448)
+[2020-04-01 18:35:17.191]  INFO  com.graduate.club.main.ClubApplication logStarting-55 - Starting ClubApplication on xiatian with PID 12248 (started by 夏天 in D:\Graduation Project\club)
+[2020-04-01 18:35:17.203]  INFO  com.graduate.club.main.ClubApplication logStartupProfileInfo-651 - No active profile set, falling back to default profiles: default
+[2020-04-01 18:35:27.714]  INFO  org.apache.coyote.http11.Http11NioProtocol log-173 - Initializing ProtocolHandler ["http-nio-8080"]
+[2020-04-01 18:35:27.716]  INFO  org.apache.catalina.core.StandardService log-173 - Starting service [Tomcat]
+[2020-04-01 18:35:27.717]  INFO  org.apache.catalina.core.StandardEngine log-173 - Starting Servlet engine: [Apache Tomcat/9.0.29]
+[2020-04-01 18:35:28.113]  INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] log-173 - Initializing Spring embedded WebApplicationContext
+[2020-04-01 18:35:31.132]  INFO  springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper start-120 - Context refreshed
+[2020-04-01 18:35:31.198]  INFO  springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper start-123 - Found 1 custom documentation plugin(s)
+[2020-04-01 18:35:31.230]  INFO  springfox.documentation.spring.web.scanners.ApiListingReferenceScanner scan-41 - Scanning for api listing references
+[2020-04-01 18:35:32.154]  INFO  s.documentation.spring.web.readers.operation.CachingOperationNameGenerator startingWith-40 - Generating unique operation named: createUsingPOST_1
+[2020-04-01 18:35:32.255]  INFO  s.documentation.spring.web.readers.operation.CachingOperationNameGenerator startingWith-40 - Generating unique operation named: createUsingPOST_2
+[2020-04-01 18:35:32.291]  INFO  s.documentation.spring.web.readers.operation.CachingOperationNameGenerator startingWith-40 - Generating unique operation named: updateUsingPOST_1
+[2020-04-01 18:35:32.317]  INFO  s.documentation.spring.web.readers.operation.CachingOperationNameGenerator startingWith-40 - Generating unique operation named: createUsingPOST_3
+[2020-04-01 18:35:32.325]  INFO  s.documentation.spring.web.readers.operation.CachingOperationNameGenerator startingWith-40 - Generating unique operation named: loginUsingPOST_1
+[2020-04-01 18:35:32.405]  INFO  org.apache.coyote.http11.Http11NioProtocol log-173 - Starting ProtocolHandler ["http-nio-8080"]
+[2020-04-01 18:35:32.497]  INFO  com.graduate.club.main.ClubApplication logStarted-61 - Started ClubApplication in 18.401 seconds (JVM running for 26.874)
+[2020-04-01 18:35:57.761]  INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] log-173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2020-04-01 19:38:41.753]  INFO  com.graduate.club.main.ClubApplication logStarting-55 - Starting ClubApplication on xiatian with PID 7880 (started by 夏天 in D:\Graduation Project\club)
+[2020-04-01 19:38:41.767]  INFO  com.graduate.club.main.ClubApplication logStartupProfileInfo-651 - No active profile set, falling back to default profiles: default
+[2020-04-01 19:38:47.686]  INFO  org.apache.coyote.http11.Http11NioProtocol log-173 - Initializing ProtocolHandler ["http-nio-8080"]
+[2020-04-01 19:38:47.687]  INFO  org.apache.catalina.core.StandardService log-173 - Starting service [Tomcat]
+[2020-04-01 19:38:47.688]  INFO  org.apache.catalina.core.StandardEngine log-173 - Starting Servlet engine: [Apache Tomcat/9.0.29]
+[2020-04-01 19:38:48.004]  INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] log-173 - Initializing Spring embedded WebApplicationContext
+[2020-04-01 19:38:49.198]  INFO  springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper start-120 - Context refreshed
+[2020-04-01 19:38:49.235]  INFO  springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper start-123 - Found 1 custom documentation plugin(s)
+[2020-04-01 19:38:49.267]  INFO  springfox.documentation.spring.web.scanners.ApiListingReferenceScanner scan-41 - Scanning for api listing references
+[2020-04-01 19:38:49.729]  INFO  s.documentation.spring.web.readers.operation.CachingOperationNameGenerator startingWith-40 - Generating unique operation named: createUsingPOST_1
+[2020-04-01 19:38:49.786]  INFO  s.documentation.spring.web.readers.operation.CachingOperationNameGenerator startingWith-40 - Generating unique operation named: createUsingPOST_2
+[2020-04-01 19:38:49.806]  INFO  s.documentation.spring.web.readers.operation.CachingOperationNameGenerator startingWith-40 - Generating unique operation named: updateUsingPOST_1
+[2020-04-01 19:38:49.844]  INFO  s.documentation.spring.web.readers.operation.CachingOperationNameGenerator startingWith-40 - Generating unique operation named: createUsingPOST_3
+[2020-04-01 19:38:49.858]  INFO  s.documentation.spring.web.readers.operation.CachingOperationNameGenerator startingWith-40 - Generating unique operation named: loginUsingPOST_1
+[2020-04-01 19:38:49.933]  INFO  org.apache.coyote.http11.Http11NioProtocol log-173 - Starting ProtocolHandler ["http-nio-8080"]
+[2020-04-01 19:38:50.007]  INFO  com.graduate.club.main.ClubApplication logStarted-61 - Started ClubApplication in 9.537 seconds (JVM running for 14.886)

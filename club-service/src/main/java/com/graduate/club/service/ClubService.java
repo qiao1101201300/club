@@ -1,6 +1,7 @@
 package com.graduate.club.service;
 
 import com.graduate.club.entity.Club;
+import com.graduate.club.vo.PageVO;
 import com.graduate.club.vo.ResultVO;
 
 import java.util.List;
@@ -12,5 +13,5 @@ public interface ClubService extends BaseService<Club> {
     Club selectClubByUserId(String userId);
 
     //根据社团id查询社团人数
-    ResultVO selectClubUserByClubid(String clubid,int status);
+    PageVO selectClubUserByClubid(String clubid, int status);
 }

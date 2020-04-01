@@ -6,7 +6,9 @@ import com.graduate.club.exception.ServerException;
 import com.graduate.club.service.ActivityService;
 import com.graduate.club.service.ClubService;
 import com.graduate.club.service.UserService;
+import com.graduate.club.util.ResultUtils;
 import com.graduate.club.vo.MyClubVO;
+import com.graduate.club.vo.PageVO;
 import com.graduate.club.vo.ResultVO;
 import com.graduate.club.vo.UserVO;
 import io.swagger.annotations.Api;
@@ -38,7 +40,7 @@ public class ClubApi {
     public ResultVO selectClubUserByClubid(@ApiParam(name = "clubid",value = "社团id",required = true) String  clubid,
                                            @ApiParam(name = "status",value = "用户在社团中状态",required = true)  Integer status){
         //查询社团用户数量
-        ResultVO resultVO = clubService.selectClubUserByClubid(clubid, status);
-        return resultVO;
+        PageVO pageVO = clubService.selectClubUserByClubid(clubid, status);
+        return ResultUtils.success(pageVO);
     }
 }
