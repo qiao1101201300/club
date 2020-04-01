@@ -147,6 +147,24 @@
         where id = #{id,jdbcType=VARCHAR}
     </update>
     <select id="selectAll" resultMap="BaseResultMap">
-        select <include refid="Base_Column_List"/> from t_news
+        select
+        <include refid="Base_Column_List"/>
+        from t_news
+    </select>
+    <select id="selectNews" parameterType="map" resultType="map">
+        select t.id, t.`name`, a.name userName, b.name adminName, c.name clubName, `status`, content, create_at,
+        update_at
+        from t_news t
+        join t_user_profile a on t.userid = a.userid
+        join t_admin b on t.adminid = b.id
+        join t_club c on t.clubid = c.id
+        <where>
+            <if test="name != null and name != ''">
+                t.name like %#{name,jdbcType=VARCHAR}%
+            </if>
+            <if test="status != null">
+                and t.status = #{status}
+            </if>
+        </where>
     </select>
 </mapper>

@@ -22,3 +22,576 @@
 [2020-03-29 10:49:06.801]  DEBUG org.hibernate.validator.internal.engine.ValidatorFactoryImpl logValidatorFactoryScopedConfiguration-580 - HV000234: Using org.hibernate.validator.internal.util.ExecutableParameterNameProvider as ValidatorFactory-scoped parameter name provider.
 [2020-03-29 10:49:06.801]  DEBUG org.hibernate.validator.internal.engine.ValidatorFactoryImpl logValidatorFactoryScopedConfiguration-581 - HV000234: Using org.hibernate.validator.internal.engine.DefaultClockProvider as ValidatorFactory-scoped clock provider.
 [2020-03-29 10:49:06.801]  DEBUG org.hibernate.validator.internal.engine.ValidatorFactoryImpl logValidatorFactoryScopedConfiguration-582 - HV000234: Using org.hibernate.validator.internal.engine.scripting.DefaultScriptEvaluatorFactory as ValidatorFactory-scoped script evaluator factory.
+[2020-04-01 18:07:38.227]  DEBUG com.graduate.club.main.ClubApplication logStarting-56 - Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+[2020-04-01 18:07:38.521]  DEBUG org.hibernate.validator.messageinterpolation.ResourceBundleMessageInterpolator buildExpressionFactory-89 - Loaded expression factory via original TCCL
+[2020-04-01 18:07:38.551]  DEBUG org.hibernate.validator.internal.engine.ValidatorFactoryImpl logValidatorFactoryScopedConfiguration-578 - HV000234: Using org.hibernate.validator.messageinterpolation.ResourceBundleMessageInterpolator as ValidatorFactory-scoped message interpolator.
+[2020-04-01 18:07:38.551]  DEBUG org.hibernate.validator.internal.engine.ValidatorFactoryImpl logValidatorFactoryScopedConfiguration-579 - HV000234: Using org.hibernate.validator.internal.engine.resolver.TraverseAllTraversableResolver as ValidatorFactory-scoped traversable resolver.
+[2020-04-01 18:07:38.551]  DEBUG org.hibernate.validator.internal.engine.ValidatorFactoryImpl logValidatorFactoryScopedConfiguration-580 - HV000234: Using org.hibernate.validator.internal.util.ExecutableParameterNameProvider as ValidatorFactory-scoped parameter name provider.
+[2020-04-01 18:07:38.551]  DEBUG org.hibernate.validator.internal.engine.ValidatorFactoryImpl logValidatorFactoryScopedConfiguration-581 - HV000234: Using org.hibernate.validator.internal.engine.DefaultClockProvider as ValidatorFactory-scoped clock provider.
+[2020-04-01 18:07:38.552]  DEBUG org.hibernate.validator.internal.engine.ValidatorFactoryImpl logValidatorFactoryScopedConfiguration-582 - HV000234: Using org.hibernate.validator.internal.engine.scripting.DefaultScriptEvaluatorFactory as ValidatorFactory-scoped script evaluator factory.
+[2020-04-01 18:07:41.398]  DEBUG com.zaxxer.hikari.HikariConfig attemptFromContextLoader-900 - Driver class com.mysql.cj.jdbc.Driver found in Thread context class loader sun.misc.Launcher$AppClassLoader@18b4aac2
+[2020-04-01 18:07:43.270]  DEBUG org.hibernate.validator.internal.engine.resolver.TraversableResolvers getDefault-60 - Cannot find javax.persistence.Persistence on classpath. Assuming non JPA 2 environment. All properties will per default be traversable.
+[2020-04-01 18:07:43.271]  DEBUG org.hibernate.validator.messageinterpolation.ResourceBundleMessageInterpolator buildExpressionFactory-89 - Loaded expression factory via original TCCL
+[2020-04-01 18:07:43.281]  DEBUG org.hibernate.validator.internal.engine.resolver.TraversableResolvers getDefault-60 - Cannot find javax.persistence.Persistence on classpath. Assuming non JPA 2 environment. All properties will per default be traversable.
+[2020-04-01 18:07:43.283]  DEBUG org.hibernate.validator.internal.engine.ConfigurationImpl messageInterpolator-148 - Setting custom MessageInterpolator of type org.springframework.validation.beanvalidation.LocaleContextMessageInterpolator
+[2020-04-01 18:07:43.285]  DEBUG org.hibernate.validator.internal.engine.ConfigurationImpl constraintValidatorFactory-180 - Setting custom ConstraintValidatorFactory of type org.springframework.validation.beanvalidation.SpringConstraintValidatorFactory
+[2020-04-01 18:07:43.295]  DEBUG org.hibernate.validator.internal.engine.ConfigurationImpl parameterNameProvider-194 - Setting custom ParameterNameProvider of type org.springframework.validation.beanvalidation.LocalValidatorFactoryBean$1
+[2020-04-01 18:07:43.297]  DEBUG org.hibernate.validator.internal.xml.config.ValidationXmlParser getValidationXmlInputStream-120 - Trying to load META-INF/validation.xml for XML based Validator configuration.
+[2020-04-01 18:07:43.297]  DEBUG org.hibernate.validator.internal.xml.config.ResourceLoaderHelper getResettableInputStreamForPath-53 - Trying to load META-INF/validation.xml via user class loader
+[2020-04-01 18:07:43.298]  DEBUG org.hibernate.validator.internal.xml.config.ResourceLoaderHelper getResettableInputStreamForPath-60 - Trying to load META-INF/validation.xml via TCCL
+[2020-04-01 18:07:43.299]  DEBUG org.hibernate.validator.internal.xml.config.ResourceLoaderHelper getResettableInputStreamForPath-66 - Trying to load META-INF/validation.xml via Hibernate Validator's class loader
+[2020-04-01 18:07:43.300]  DEBUG org.hibernate.validator.internal.xml.config.ValidationXmlParser getValidationXmlInputStream-127 - No META-INF/validation.xml found. Using annotation based configuration only.
+[2020-04-01 18:07:43.309]  DEBUG org.hibernate.validator.internal.engine.ValidatorFactoryImpl logValidatorFactoryScopedConfiguration-578 - HV000234: Using org.springframework.validation.beanvalidation.LocaleContextMessageInterpolator as ValidatorFactory-scoped message interpolator.
+[2020-04-01 18:07:43.309]  DEBUG org.hibernate.validator.internal.engine.ValidatorFactoryImpl logValidatorFactoryScopedConfiguration-579 - HV000234: Using org.hibernate.validator.internal.engine.resolver.TraverseAllTraversableResolver as ValidatorFactory-scoped traversable resolver.
+[2020-04-01 18:07:43.310]  DEBUG org.hibernate.validator.internal.engine.ValidatorFactoryImpl logValidatorFactoryScopedConfiguration-580 - HV000234: Using org.hibernate.validator.internal.util.ExecutableParameterNameProvider as ValidatorFactory-scoped parameter name provider.
+[2020-04-01 18:07:43.310]  DEBUG org.hibernate.validator.internal.engine.ValidatorFactoryImpl logValidatorFactoryScopedConfiguration-581 - HV000234: Using org.hibernate.validator.internal.engine.DefaultClockProvider as ValidatorFactory-scoped clock provider.
+[2020-04-01 18:07:43.310]  DEBUG org.hibernate.validator.internal.engine.ValidatorFactoryImpl logValidatorFactoryScopedConfiguration-582 - HV000234: Using org.hibernate.validator.internal.engine.scripting.DefaultScriptEvaluatorFactory as ValidatorFactory-scoped script evaluator factory.
+[2020-04-01 18:07:43.757]  DEBUG springfox.documentation.spring.web.readers.operation.OperationModelsProvider collectFromReturnType-76 - Adding return parameter of type Lcom/graduate/club/vo/ResultVO;
+[2020-04-01 18:07:43.758]  DEBUG springfox.documentation.spring.web.readers.operation.OperationModelsProvider collectParameters-83 - Reading parameters models for handlerMethod |create|
+[2020-04-01 18:07:43.761]  DEBUG springfox.documentation.spring.web.readers.operation.OperationModelsProvider collectParameters-90 - Adding input parameter of type Lcom/graduate/club/entity/Activity;
+[2020-04-01 18:07:43.761]  DEBUG springfox.documentation.spring.web.readers.operation.OperationModelsProvider collectParameters-94 - Finished reading parameters models for handlerMethod |create|
+[2020-04-01 18:07:43.764]  DEBUG springfox.documentation.swagger.readers.operation.SwaggerOperationModelsProvider collectApiResponses-84 - Reading parameters models for handlerMethod |create|
+[2020-04-01 18:07:43.800]  DEBUG springfox.documentation.schema.property.OptimizedModelPropertiesProvider propertiesFor-122 - Reading property id
+[2020-04-01 18:07:43.804]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setId
+[2020-04-01 18:07:43.806]  DEBUG springfox.documentation.schema.property.ObjectMapperBeanPropertyNamingStrategy nameForDeserialization-76 - Name 'id' renamed to 'id'
+[2020-04-01 18:07:43.806]  DEBUG springfox.documentation.schema.property.OptimizedModelPropertiesProvider beanModelProperty-290 - Adding property id to model
+[2020-04-01 18:07:43.807]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setId
+[2020-04-01 18:07:43.807]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setId
+[2020-04-01 18:07:43.807]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setId
+[2020-04-01 18:07:43.810]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setId
+[2020-04-01 18:07:43.813]  DEBUG springfox.documentation.schema.property.OptimizedModelPropertiesProvider propertiesFor-122 - Reading property createAt
+[2020-04-01 18:07:43.813]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setCreateAt
+[2020-04-01 18:07:43.813]  DEBUG springfox.documentation.schema.property.ObjectMapperBeanPropertyNamingStrategy nameForDeserialization-76 - Name 'createAt' renamed to 'createAt'
+[2020-04-01 18:07:43.813]  DEBUG springfox.documentation.schema.property.OptimizedModelPropertiesProvider beanModelProperty-290 - Adding property createAt to model
+[2020-04-01 18:07:43.813]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setCreateAt
+[2020-04-01 18:07:43.814]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setCreateAt
+[2020-04-01 18:07:43.814]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setCreateAt
+[2020-04-01 18:07:43.814]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setCreateAt
+[2020-04-01 18:07:43.814]  DEBUG springfox.documentation.schema.property.OptimizedModelPropertiesProvider propertiesFor-122 - Reading property updateAt
+[2020-04-01 18:07:43.814]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setUpdateAt
+[2020-04-01 18:07:43.814]  DEBUG springfox.documentation.schema.property.ObjectMapperBeanPropertyNamingStrategy nameForDeserialization-76 - Name 'updateAt' renamed to 'updateAt'
+[2020-04-01 18:07:43.815]  DEBUG springfox.documentation.schema.property.OptimizedModelPropertiesProvider beanModelProperty-290 - Adding property updateAt to model
+[2020-04-01 18:07:43.815]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setUpdateAt
+[2020-04-01 18:07:43.815]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setUpdateAt
+[2020-04-01 18:07:43.815]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setUpdateAt
+[2020-04-01 18:07:43.815]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setUpdateAt
+[2020-04-01 18:07:43.815]  DEBUG springfox.documentation.schema.property.OptimizedModelPropertiesProvider propertiesFor-122 - Reading property name
+[2020-04-01 18:07:43.816]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setName
+[2020-04-01 18:07:43.816]  DEBUG springfox.documentation.schema.property.ObjectMapperBeanPropertyNamingStrategy nameForDeserialization-76 - Name 'name' renamed to 'name'
+[2020-04-01 18:07:43.816]  DEBUG springfox.documentation.schema.property.OptimizedModelPropertiesProvider beanModelProperty-290 - Adding property name to model
+[2020-04-01 18:07:43.816]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setName
+[2020-04-01 18:07:43.816]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setName
+[2020-04-01 18:07:43.816]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setName
+[2020-04-01 18:07:43.817]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setName
+[2020-04-01 18:07:43.817]  DEBUG springfox.documentation.schema.property.OptimizedModelPropertiesProvider propertiesFor-122 - Reading property status
+[2020-04-01 18:07:43.817]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setStatus
+[2020-04-01 18:07:43.817]  DEBUG springfox.documentation.schema.property.ObjectMapperBeanPropertyNamingStrategy nameForDeserialization-76 - Name 'status' renamed to 'status'
+[2020-04-01 18:07:43.817]  DEBUG springfox.documentation.schema.property.OptimizedModelPropertiesProvider beanModelProperty-290 - Adding property status to model
+[2020-04-01 18:07:43.817]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setStatus
+[2020-04-01 18:07:43.818]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setStatus
+[2020-04-01 18:07:43.818]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setStatus
+[2020-04-01 18:07:43.818]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setStatus
+[2020-04-01 18:07:43.818]  DEBUG springfox.documentation.schema.property.OptimizedModelPropertiesProvider propertiesFor-122 - Reading property clubid
+[2020-04-01 18:07:43.818]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setClubid
+[2020-04-01 18:07:43.818]  DEBUG springfox.documentation.schema.property.ObjectMapperBeanPropertyNamingStrategy nameForDeserialization-76 - Name 'clubid' renamed to 'clubid'
+[2020-04-01 18:07:43.818]  DEBUG springfox.documentation.schema.property.OptimizedModelPropertiesProvider beanModelProperty-290 - Adding property clubid to model
+[2020-04-01 18:07:43.818]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setClubid
+[2020-04-01 18:07:43.819]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setClubid
+[2020-04-01 18:07:43.819]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setClubid
+[2020-04-01 18:07:43.819]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setClubid
+[2020-04-01 18:07:43.819]  DEBUG springfox.documentation.schema.property.OptimizedModelPropertiesProvider propertiesFor-122 - Reading property introduction
+[2020-04-01 18:07:43.819]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setIntroduction
+[2020-04-01 18:07:43.819]  DEBUG springfox.documentation.schema.property.ObjectMapperBeanPropertyNamingStrategy nameForDeserialization-76 - Name 'introduction' renamed to 'introduction'
+[2020-04-01 18:07:43.819]  DEBUG springfox.documentation.schema.property.OptimizedModelPropertiesProvider beanModelProperty-290 - Adding property introduction to model
+[2020-04-01 18:07:43.820]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setIntroduction
+[2020-04-01 18:07:43.820]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setIntroduction
+[2020-04-01 18:07:43.820]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setIntroduction
+[2020-04-01 18:07:43.820]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setIntroduction
+[2020-04-01 18:07:43.820]  DEBUG springfox.documentation.schema.property.OptimizedModelPropertiesProvider propertiesFor-122 - Reading property userid
+[2020-04-01 18:07:43.820]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setUserid
+[2020-04-01 18:07:43.820]  DEBUG springfox.documentation.schema.property.ObjectMapperBeanPropertyNamingStrategy nameForDeserialization-76 - Name 'userid' renamed to 'userid'
+[2020-04-01 18:07:43.820]  DEBUG springfox.documentation.schema.property.OptimizedModelPropertiesProvider beanModelProperty-290 - Adding property userid to model
+[2020-04-01 18:07:43.821]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setUserid
+[2020-04-01 18:07:43.821]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setUserid
+[2020-04-01 18:07:43.821]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setUserid
+[2020-04-01 18:07:43.821]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setUserid
+[2020-04-01 18:07:43.821]  DEBUG springfox.documentation.schema.property.OptimizedModelPropertiesProvider propertiesFor-122 - Reading property img
+[2020-04-01 18:07:43.822]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setImg
+[2020-04-01 18:07:43.822]  DEBUG springfox.documentation.schema.property.ObjectMapperBeanPropertyNamingStrategy nameForDeserialization-76 - Name 'img' renamed to 'img'
+[2020-04-01 18:07:43.822]  DEBUG springfox.documentation.schema.property.OptimizedModelPropertiesProvider beanModelProperty-290 - Adding property img to model
+[2020-04-01 18:07:43.822]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setImg
+[2020-04-01 18:07:43.822]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setImg
+[2020-04-01 18:07:43.823]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setImg
+[2020-04-01 18:07:43.823]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setImg
+[2020-04-01 18:07:43.823]  DEBUG springfox.documentation.schema.property.OptimizedModelPropertiesProvider propertiesFor-122 - Reading property scaleNum
+[2020-04-01 18:07:43.823]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setScaleNum
+[2020-04-01 18:07:43.824]  DEBUG springfox.documentation.schema.property.ObjectMapperBeanPropertyNamingStrategy nameForDeserialization-76 - Name 'scaleNum' renamed to 'scaleNum'
+[2020-04-01 18:07:43.824]  DEBUG springfox.documentation.schema.property.OptimizedModelPropertiesProvider beanModelProperty-290 - Adding property scaleNum to model
+[2020-04-01 18:07:43.824]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setScaleNum
+[2020-04-01 18:07:43.824]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setScaleNum
+[2020-04-01 18:07:43.824]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setScaleNum
+[2020-04-01 18:07:43.824]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setScaleNum
+[2020-04-01 18:07:43.824]  DEBUG springfox.documentation.schema.property.OptimizedModelPropertiesProvider propertiesFor-122 - Reading property actualNum
+[2020-04-01 18:07:43.825]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setActualNum
+[2020-04-01 18:07:43.825]  DEBUG springfox.documentation.schema.property.ObjectMapperBeanPropertyNamingStrategy nameForDeserialization-76 - Name 'actualNum' renamed to 'actualNum'
+[2020-04-01 18:07:43.825]  DEBUG springfox.documentation.schema.property.OptimizedModelPropertiesProvider beanModelProperty-290 - Adding property actualNum to model
+[2020-04-01 18:07:43.825]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setActualNum
+[2020-04-01 18:07:43.825]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setActualNum
+[2020-04-01 18:07:43.825]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setActualNum
+[2020-04-01 18:07:43.825]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setActualNum
+[2020-04-01 18:07:43.825]  DEBUG springfox.documentation.schema.property.OptimizedModelPropertiesProvider propertiesFor-122 - Reading property openDate
+[2020-04-01 18:07:43.826]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setOpenDate
+[2020-04-01 18:07:43.826]  DEBUG springfox.documentation.schema.property.ObjectMapperBeanPropertyNamingStrategy nameForDeserialization-76 - Name 'openDate' renamed to 'openDate'
+[2020-04-01 18:07:43.826]  DEBUG springfox.documentation.schema.property.OptimizedModelPropertiesProvider beanModelProperty-290 - Adding property openDate to model
+[2020-04-01 18:07:43.826]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setOpenDate
+[2020-04-01 18:07:43.826]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setOpenDate
+[2020-04-01 18:07:43.826]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setOpenDate
+[2020-04-01 18:07:43.826]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setOpenDate
+[2020-04-01 18:07:43.826]  DEBUG springfox.documentation.schema.property.OptimizedModelPropertiesProvider propertiesFor-122 - Reading property closeDate
+[2020-04-01 18:07:43.827]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setCloseDate
+[2020-04-01 18:07:43.827]  DEBUG springfox.documentation.schema.property.ObjectMapperBeanPropertyNamingStrategy nameForDeserialization-76 - Name 'closeDate' renamed to 'closeDate'
+[2020-04-01 18:07:43.827]  DEBUG springfox.documentation.schema.property.OptimizedModelPropertiesProvider beanModelProperty-290 - Adding property closeDate to model
+[2020-04-01 18:07:43.827]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setCloseDate
+[2020-04-01 18:07:43.827]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setCloseDate
+[2020-04-01 18:07:43.827]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setCloseDate
+[2020-04-01 18:07:43.827]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setCloseDate
+[2020-04-01 18:07:43.827]  DEBUG springfox.documentation.schema.property.OptimizedModelPropertiesProvider propertiesFor-122 - Reading property approver
+[2020-04-01 18:07:43.828]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setApprover
+[2020-04-01 18:07:43.828]  DEBUG springfox.documentation.schema.property.ObjectMapperBeanPropertyNamingStrategy nameForDeserialization-76 - Name 'approver' renamed to 'approver'
+[2020-04-01 18:07:43.828]  DEBUG springfox.documentation.schema.property.OptimizedModelPropertiesProvider beanModelProperty-290 - Adding property approver to model
+[2020-04-01 18:07:43.828]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setApprover
+[2020-04-01 18:07:43.828]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setApprover
+[2020-04-01 18:07:43.828]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setApprover
+[2020-04-01 18:07:43.828]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setApprover
+[2020-04-01 18:07:43.850]  DEBUG springfox.documentation.schema.DefaultModelProvider modelFor-86 - Inferred 14 properties. Properties found actualNum, approver, closeDate, clubid, createAt, id, img, introduction, name, openDate, scaleNum, status, updateAt, userid
+[2020-04-01 18:07:43.851]  DEBUG springfox.documentation.spring.web.scanners.ApiModelReader read-69 - Generated parameter model id: Activity, name: Activity, schema: {} models
+[2020-04-01 18:07:43.852]  DEBUG springfox.documentation.spring.web.scanners.ApiModelReader mergeModelMap-87 - Adding a new model with key Activity
+[2020-04-01 18:07:43.855]  DEBUG springfox.documentation.schema.property.OptimizedModelPropertiesProvider propertiesFor-122 - Reading property code
+[2020-04-01 18:07:43.856]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-70 - Evaluating unwrapped getter for member getCode
+[2020-04-01 18:07:43.856]  DEBUG springfox.documentation.schema.property.ObjectMapperBeanPropertyNamingStrategy nameForSerialization-60 - Name 'code' renamed to 'code'
+[2020-04-01 18:07:43.856]  DEBUG springfox.documentation.schema.property.OptimizedModelPropertiesProvider beanModelProperty-290 - Adding property code to model
+[2020-04-01 18:07:43.856]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-70 - Evaluating unwrapped getter for member getCode
+[2020-04-01 18:07:43.856]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-70 - Evaluating unwrapped getter for member getCode
+[2020-04-01 18:07:43.856]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-70 - Evaluating unwrapped getter for member getCode
+[2020-04-01 18:07:43.856]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-70 - Evaluating unwrapped getter for member getCode
+[2020-04-01 18:07:43.856]  DEBUG springfox.documentation.schema.property.OptimizedModelPropertiesProvider propertiesFor-122 - Reading property message
+[2020-04-01 18:07:43.857]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-70 - Evaluating unwrapped getter for member getMessage
+[2020-04-01 18:07:43.857]  DEBUG springfox.documentation.schema.property.ObjectMapperBeanPropertyNamingStrategy nameForSerialization-60 - Name 'message' renamed to 'message'
+[2020-04-01 18:07:43.857]  DEBUG springfox.documentation.schema.property.OptimizedModelPropertiesProvider beanModelProperty-290 - Adding property message to model
+[2020-04-01 18:07:43.857]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-70 - Evaluating unwrapped getter for member getMessage
+[2020-04-01 18:07:43.857]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-70 - Evaluating unwrapped getter for member getMessage
+[2020-04-01 18:07:43.857]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-70 - Evaluating unwrapped getter for member getMessage
+[2020-04-01 18:07:43.857]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-70 - Evaluating unwrapped getter for member getMessage
+[2020-04-01 18:07:43.857]  DEBUG springfox.documentation.schema.property.OptimizedModelPropertiesProvider propertiesFor-122 - Reading property data
+[2020-04-01 18:07:43.858]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-70 - Evaluating unwrapped getter for member getData
+[2020-04-01 18:07:43.858]  DEBUG springfox.documentation.schema.property.ObjectMapperBeanPropertyNamingStrategy nameForSerialization-60 - Name 'data' renamed to 'data'
+[2020-04-01 18:07:43.858]  DEBUG springfox.documentation.schema.property.OptimizedModelPropertiesProvider beanModelProperty-290 - Adding property data to model
+[2020-04-01 18:07:43.858]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-70 - Evaluating unwrapped getter for member getData
+[2020-04-01 18:07:43.858]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-70 - Evaluating unwrapped getter for member getData
+[2020-04-01 18:07:43.858]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-70 - Evaluating unwrapped getter for member getData
+[2020-04-01 18:07:43.858]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-70 - Evaluating unwrapped getter for member getData
+[2020-04-01 18:07:43.858]  DEBUG springfox.documentation.schema.DefaultModelProvider modelFor-86 - Inferred 3 properties. Properties found code, data, message
+[2020-04-01 18:07:43.859]  DEBUG springfox.documentation.spring.web.scanners.ApiModelReader read-69 - Generated parameter model id: ResultVO, name: ResultVO, schema: {} models
+[2020-04-01 18:07:43.859]  DEBUG springfox.documentation.spring.web.scanners.ApiModelReader mergeModelMap-87 - Adding a new model with key ResultVO
+[2020-04-01 18:07:43.874]  DEBUG s.documentation.spring.web.readers.operation.OperationResponseClassReader apply-64 - Setting spring response class to:ResultVO
+[2020-04-01 18:07:43.876]  DEBUG springfox.documentation.swagger.readers.operation.OperationAuthReader apply-99 - Authorization count 0 for method create
+[2020-04-01 18:07:43.877]  DEBUG s.documentation.swagger.readers.operation.SwaggerOperationResponseClassReader apply-73 - Setting response class to:ResultVO
+[2020-04-01 18:07:43.904]  DEBUG springfox.documentation.spring.web.readers.operation.OperationModelsProvider collectFromReturnType-76 - Adding return parameter of type Lcom/graduate/club/vo/ResultVO;
+[2020-04-01 18:07:43.904]  DEBUG springfox.documentation.spring.web.readers.operation.OperationModelsProvider collectParameters-83 - Reading parameters models for handlerMethod |delete|
+[2020-04-01 18:07:43.905]  DEBUG springfox.documentation.spring.web.readers.operation.OperationModelsProvider collectParameters-90 - Adding input parameter of type Lcom/graduate/club/entity/Activity;
+[2020-04-01 18:07:43.905]  DEBUG springfox.documentation.spring.web.readers.operation.OperationModelsProvider collectParameters-94 - Finished reading parameters models for handlerMethod |delete|
+[2020-04-01 18:07:43.905]  DEBUG springfox.documentation.swagger.readers.operation.SwaggerOperationModelsProvider collectApiResponses-84 - Reading parameters models for handlerMethod |delete|
+[2020-04-01 18:07:43.905]  DEBUG springfox.documentation.spring.web.scanners.ApiModelReader read-69 - Generated parameter model id: Activity, name: Activity, schema: {} models
+[2020-04-01 18:07:43.905]  DEBUG springfox.documentation.spring.web.scanners.ApiModelReader read-69 - Generated parameter model id: ResultVO, name: ResultVO, schema: {} models
+[2020-04-01 18:07:43.906]  DEBUG s.documentation.spring.web.readers.operation.OperationResponseClassReader apply-64 - Setting spring response class to:ResultVO
+[2020-04-01 18:07:43.907]  DEBUG springfox.documentation.swagger.readers.operation.OperationAuthReader apply-99 - Authorization count 0 for method delete
+[2020-04-01 18:07:43.907]  DEBUG s.documentation.swagger.readers.operation.SwaggerOperationResponseClassReader apply-73 - Setting response class to:ResultVO
+[2020-04-01 18:07:43.908]  DEBUG springfox.documentation.spring.web.readers.operation.OperationModelsProvider collectFromReturnType-76 - Adding return parameter of type Lcom/graduate/club/vo/ResultVO;
+[2020-04-01 18:07:43.908]  DEBUG springfox.documentation.spring.web.readers.operation.OperationModelsProvider collectParameters-83 - Reading parameters models for handlerMethod |selectActivity|
+[2020-04-01 18:07:43.908]  DEBUG springfox.documentation.spring.web.readers.operation.OperationModelsProvider collectParameters-90 - Adding input parameter of type Lcom/graduate/club/vo/ActivityVO;
+[2020-04-01 18:07:43.908]  DEBUG springfox.documentation.spring.web.readers.operation.OperationModelsProvider collectParameters-94 - Finished reading parameters models for handlerMethod |selectActivity|
+[2020-04-01 18:07:43.908]  DEBUG springfox.documentation.swagger.readers.operation.SwaggerOperationModelsProvider collectApiResponses-84 - Reading parameters models for handlerMethod |selectActivity|
+[2020-04-01 18:07:43.911]  DEBUG springfox.documentation.schema.property.OptimizedModelPropertiesProvider propertiesFor-122 - Reading property openDate
+[2020-04-01 18:07:43.911]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setOpenDate
+[2020-04-01 18:07:43.911]  DEBUG springfox.documentation.schema.property.ObjectMapperBeanPropertyNamingStrategy nameForDeserialization-76 - Name 'openDate' renamed to 'openDate'
+[2020-04-01 18:07:43.911]  DEBUG springfox.documentation.schema.property.OptimizedModelPropertiesProvider beanModelProperty-290 - Adding property openDate to model
+[2020-04-01 18:07:43.912]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setOpenDate
+[2020-04-01 18:07:43.912]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setOpenDate
+[2020-04-01 18:07:43.912]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setOpenDate
+[2020-04-01 18:07:43.912]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setOpenDate
+[2020-04-01 18:07:43.912]  DEBUG springfox.documentation.schema.property.OptimizedModelPropertiesProvider propertiesFor-122 - Reading property closeDate
+[2020-04-01 18:07:43.912]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setCloseDate
+[2020-04-01 18:07:43.912]  DEBUG springfox.documentation.schema.property.ObjectMapperBeanPropertyNamingStrategy nameForDeserialization-76 - Name 'closeDate' renamed to 'closeDate'
+[2020-04-01 18:07:43.912]  DEBUG springfox.documentation.schema.property.OptimizedModelPropertiesProvider beanModelProperty-290 - Adding property closeDate to model
+[2020-04-01 18:07:43.912]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setCloseDate
+[2020-04-01 18:07:43.912]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setCloseDate
+[2020-04-01 18:07:43.913]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setCloseDate
+[2020-04-01 18:07:43.913]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setCloseDate
+[2020-04-01 18:07:43.913]  DEBUG springfox.documentation.schema.property.OptimizedModelPropertiesProvider propertiesFor-122 - Reading property name
+[2020-04-01 18:07:43.913]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setName
+[2020-04-01 18:07:43.913]  DEBUG springfox.documentation.schema.property.ObjectMapperBeanPropertyNamingStrategy nameForDeserialization-76 - Name 'name' renamed to 'name'
+[2020-04-01 18:07:43.913]  DEBUG springfox.documentation.schema.property.OptimizedModelPropertiesProvider beanModelProperty-290 - Adding property name to model
+[2020-04-01 18:07:43.913]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setName
+[2020-04-01 18:07:43.913]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setName
+[2020-04-01 18:07:43.913]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setName
+[2020-04-01 18:07:43.913]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setName
+[2020-04-01 18:07:43.913]  DEBUG springfox.documentation.schema.property.OptimizedModelPropertiesProvider propertiesFor-122 - Reading property userid
+[2020-04-01 18:07:43.914]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setUserid
+[2020-04-01 18:07:43.914]  DEBUG springfox.documentation.schema.property.ObjectMapperBeanPropertyNamingStrategy nameForDeserialization-76 - Name 'userid' renamed to 'userid'
+[2020-04-01 18:07:43.914]  DEBUG springfox.documentation.schema.property.OptimizedModelPropertiesProvider beanModelProperty-290 - Adding property userid to model
+[2020-04-01 18:07:43.914]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setUserid
+[2020-04-01 18:07:43.914]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setUserid
+[2020-04-01 18:07:43.914]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setUserid
+[2020-04-01 18:07:43.914]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setUserid
+[2020-04-01 18:07:43.914]  DEBUG springfox.documentation.schema.property.OptimizedModelPropertiesProvider propertiesFor-122 - Reading property status
+[2020-04-01 18:07:43.914]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setStatus
+[2020-04-01 18:07:43.914]  DEBUG springfox.documentation.schema.property.ObjectMapperBeanPropertyNamingStrategy nameForDeserialization-76 - Name 'status' renamed to 'status'
+[2020-04-01 18:07:43.915]  DEBUG springfox.documentation.schema.property.OptimizedModelPropertiesProvider beanModelProperty-290 - Adding property status to model
+[2020-04-01 18:07:43.915]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setStatus
+[2020-04-01 18:07:43.915]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setStatus
+[2020-04-01 18:07:43.915]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setStatus
+[2020-04-01 18:07:43.915]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setStatus
+[2020-04-01 18:07:43.915]  DEBUG springfox.documentation.schema.property.OptimizedModelPropertiesProvider propertiesFor-122 - Reading property pageSize
+[2020-04-01 18:07:43.915]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setPageSize
+[2020-04-01 18:07:43.915]  DEBUG springfox.documentation.schema.property.ObjectMapperBeanPropertyNamingStrategy nameForDeserialization-76 - Name 'pageSize' renamed to 'pageSize'
+[2020-04-01 18:07:43.915]  DEBUG springfox.documentation.schema.property.OptimizedModelPropertiesProvider beanModelProperty-290 - Adding property pageSize to model
+[2020-04-01 18:07:43.916]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setPageSize
+[2020-04-01 18:07:43.916]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setPageSize
+[2020-04-01 18:07:43.916]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setPageSize
+[2020-04-01 18:07:43.916]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setPageSize
+[2020-04-01 18:07:43.916]  DEBUG springfox.documentation.schema.property.OptimizedModelPropertiesProvider propertiesFor-122 - Reading property pageNum
+[2020-04-01 18:07:43.916]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setPageNum
+[2020-04-01 18:07:43.917]  DEBUG springfox.documentation.schema.property.ObjectMapperBeanPropertyNamingStrategy nameForDeserialization-76 - Name 'pageNum' renamed to 'pageNum'
+[2020-04-01 18:07:43.917]  DEBUG springfox.documentation.schema.property.OptimizedModelPropertiesProvider beanModelProperty-290 - Adding property pageNum to model
+[2020-04-01 18:07:43.917]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setPageNum
+[2020-04-01 18:07:43.917]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setPageNum
+[2020-04-01 18:07:43.917]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setPageNum
+[2020-04-01 18:07:43.917]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setPageNum
+[2020-04-01 18:07:43.917]  DEBUG springfox.documentation.schema.DefaultModelProvider modelFor-86 - Inferred 7 properties. Properties found closeDate, name, openDate, pageNum, pageSize, status, userid
+[2020-04-01 18:07:43.917]  DEBUG springfox.documentation.spring.web.scanners.ApiModelReader read-69 - Generated parameter model id: ActivityVO, name: ActivityVO, schema: {} models
+[2020-04-01 18:07:43.917]  DEBUG springfox.documentation.spring.web.scanners.ApiModelReader mergeModelMap-87 - Adding a new model with key ActivityVO
+[2020-04-01 18:07:43.918]  DEBUG springfox.documentation.spring.web.scanners.ApiModelReader read-69 - Generated parameter model id: ResultVO, name: ResultVO, schema: {} models
+[2020-04-01 18:07:43.918]  DEBUG s.documentation.spring.web.readers.operation.OperationResponseClassReader apply-64 - Setting spring response class to:ResultVO
+[2020-04-01 18:07:43.919]  DEBUG springfox.documentation.swagger.readers.operation.OperationAuthReader apply-99 - Authorization count 0 for method selectActivity
+[2020-04-01 18:07:43.919]  DEBUG s.documentation.swagger.readers.operation.SwaggerOperationResponseClassReader apply-73 - Setting response class to:ResultVO
+[2020-04-01 18:07:43.920]  DEBUG springfox.documentation.spring.web.readers.operation.OperationModelsProvider collectFromReturnType-76 - Adding return parameter of type Lcom/graduate/club/vo/ResultVO;
+[2020-04-01 18:07:43.920]  DEBUG springfox.documentation.spring.web.readers.operation.OperationModelsProvider collectParameters-83 - Reading parameters models for handlerMethod |update|
+[2020-04-01 18:07:43.920]  DEBUG springfox.documentation.spring.web.readers.operation.OperationModelsProvider collectParameters-90 - Adding input parameter of type Lcom/graduate/club/entity/Activity;
+[2020-04-01 18:07:43.920]  DEBUG springfox.documentation.spring.web.readers.operation.OperationModelsProvider collectParameters-94 - Finished reading parameters models for handlerMethod |update|
+[2020-04-01 18:07:43.920]  DEBUG springfox.documentation.swagger.readers.operation.SwaggerOperationModelsProvider collectApiResponses-84 - Reading parameters models for handlerMethod |update|
+[2020-04-01 18:07:43.920]  DEBUG springfox.documentation.spring.web.scanners.ApiModelReader read-69 - Generated parameter model id: Activity, name: Activity, schema: {} models
+[2020-04-01 18:07:43.921]  DEBUG springfox.documentation.spring.web.scanners.ApiModelReader read-69 - Generated parameter model id: ResultVO, name: ResultVO, schema: {} models
+[2020-04-01 18:07:43.921]  DEBUG s.documentation.spring.web.readers.operation.OperationResponseClassReader apply-64 - Setting spring response class to:ResultVO
+[2020-04-01 18:07:43.922]  DEBUG springfox.documentation.swagger.readers.operation.OperationAuthReader apply-99 - Authorization count 0 for method update
+[2020-04-01 18:07:43.922]  DEBUG s.documentation.swagger.readers.operation.SwaggerOperationResponseClassReader apply-73 - Setting response class to:ResultVO
+[2020-04-01 18:07:43.955]  DEBUG springfox.documentation.spring.web.readers.operation.OperationModelsProvider collectFromReturnType-76 - Adding return parameter of type Lcom/graduate/club/vo/ResultVO;
+[2020-04-01 18:07:43.956]  DEBUG springfox.documentation.spring.web.readers.operation.OperationModelsProvider collectParameters-83 - Reading parameters models for handlerMethod |create|
+[2020-04-01 18:07:43.956]  DEBUG springfox.documentation.spring.web.readers.operation.OperationModelsProvider collectParameters-90 - Adding input parameter of type Lcom/graduate/club/entity/Admin;
+[2020-04-01 18:07:43.956]  DEBUG springfox.documentation.spring.web.readers.operation.OperationModelsProvider collectParameters-94 - Finished reading parameters models for handlerMethod |create|
+[2020-04-01 18:07:43.956]  DEBUG springfox.documentation.swagger.readers.operation.SwaggerOperationModelsProvider collectApiResponses-84 - Reading parameters models for handlerMethod |create|
+[2020-04-01 18:07:43.957]  DEBUG springfox.documentation.schema.property.OptimizedModelPropertiesProvider propertiesFor-122 - Reading property id
+[2020-04-01 18:07:43.957]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setId
+[2020-04-01 18:07:43.957]  DEBUG springfox.documentation.schema.property.ObjectMapperBeanPropertyNamingStrategy nameForDeserialization-76 - Name 'id' renamed to 'id'
+[2020-04-01 18:07:43.957]  DEBUG springfox.documentation.schema.property.OptimizedModelPropertiesProvider beanModelProperty-290 - Adding property id to model
+[2020-04-01 18:07:43.957]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setId
+[2020-04-01 18:07:43.957]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setId
+[2020-04-01 18:07:43.957]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setId
+[2020-04-01 18:07:43.957]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setId
+[2020-04-01 18:07:43.957]  DEBUG springfox.documentation.schema.property.OptimizedModelPropertiesProvider propertiesFor-122 - Reading property createAt
+[2020-04-01 18:07:43.958]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setCreateAt
+[2020-04-01 18:07:43.958]  DEBUG springfox.documentation.schema.property.ObjectMapperBeanPropertyNamingStrategy nameForDeserialization-76 - Name 'createAt' renamed to 'createAt'
+[2020-04-01 18:07:43.958]  DEBUG springfox.documentation.schema.property.OptimizedModelPropertiesProvider beanModelProperty-290 - Adding property createAt to model
+[2020-04-01 18:07:43.958]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setCreateAt
+[2020-04-01 18:07:43.958]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setCreateAt
+[2020-04-01 18:07:43.958]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setCreateAt
+[2020-04-01 18:07:43.958]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setCreateAt
+[2020-04-01 18:07:43.958]  DEBUG springfox.documentation.schema.property.OptimizedModelPropertiesProvider propertiesFor-122 - Reading property updateAt
+[2020-04-01 18:07:43.958]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setUpdateAt
+[2020-04-01 18:07:43.958]  DEBUG springfox.documentation.schema.property.ObjectMapperBeanPropertyNamingStrategy nameForDeserialization-76 - Name 'updateAt' renamed to 'updateAt'
+[2020-04-01 18:07:43.959]  DEBUG springfox.documentation.schema.property.OptimizedModelPropertiesProvider beanModelProperty-290 - Adding property updateAt to model
+[2020-04-01 18:07:43.959]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setUpdateAt
+[2020-04-01 18:07:43.959]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setUpdateAt
+[2020-04-01 18:07:43.959]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setUpdateAt
+[2020-04-01 18:07:43.959]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setUpdateAt
+[2020-04-01 18:07:43.959]  DEBUG springfox.documentation.schema.property.OptimizedModelPropertiesProvider propertiesFor-122 - Reading property name
+[2020-04-01 18:07:43.959]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setName
+[2020-04-01 18:07:43.959]  DEBUG springfox.documentation.schema.property.ObjectMapperBeanPropertyNamingStrategy nameForDeserialization-76 - Name 'name' renamed to 'name'
+[2020-04-01 18:07:43.959]  DEBUG springfox.documentation.schema.property.OptimizedModelPropertiesProvider beanModelProperty-290 - Adding property name to model
+[2020-04-01 18:07:43.959]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setName
+[2020-04-01 18:07:43.959]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setName
+[2020-04-01 18:07:43.959]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setName
+[2020-04-01 18:07:43.960]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setName
+[2020-04-01 18:07:43.960]  DEBUG springfox.documentation.schema.property.OptimizedModelPropertiesProvider propertiesFor-122 - Reading property username
+[2020-04-01 18:07:43.960]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setUsername
+[2020-04-01 18:07:43.960]  DEBUG springfox.documentation.schema.property.ObjectMapperBeanPropertyNamingStrategy nameForDeserialization-76 - Name 'username' renamed to 'username'
+[2020-04-01 18:07:43.960]  DEBUG springfox.documentation.schema.property.OptimizedModelPropertiesProvider beanModelProperty-290 - Adding property username to model
+[2020-04-01 18:07:43.960]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setUsername
+[2020-04-01 18:07:43.960]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setUsername
+[2020-04-01 18:07:43.960]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setUsername
+[2020-04-01 18:07:43.960]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setUsername
+[2020-04-01 18:07:43.960]  DEBUG springfox.documentation.schema.property.OptimizedModelPropertiesProvider propertiesFor-122 - Reading property password
+[2020-04-01 18:07:43.960]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setPassword
+[2020-04-01 18:07:43.961]  DEBUG springfox.documentation.schema.property.ObjectMapperBeanPropertyNamingStrategy nameForDeserialization-76 - Name 'password' renamed to 'password'
+[2020-04-01 18:07:43.961]  DEBUG springfox.documentation.schema.property.OptimizedModelPropertiesProvider beanModelProperty-290 - Adding property password to model
+[2020-04-01 18:07:43.961]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setPassword
+[2020-04-01 18:07:43.961]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setPassword
+[2020-04-01 18:07:43.961]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setPassword
+[2020-04-01 18:07:43.961]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setPassword
+[2020-04-01 18:07:43.961]  DEBUG springfox.documentation.schema.property.OptimizedModelPropertiesProvider propertiesFor-122 - Reading property status
+[2020-04-01 18:07:43.961]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setStatus
+[2020-04-01 18:07:43.961]  DEBUG springfox.documentation.schema.property.ObjectMapperBeanPropertyNamingStrategy nameForDeserialization-76 - Name 'status' renamed to 'status'
+[2020-04-01 18:07:43.961]  DEBUG springfox.documentation.schema.property.OptimizedModelPropertiesProvider beanModelProperty-290 - Adding property status to model
+[2020-04-01 18:07:43.961]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setStatus
+[2020-04-01 18:07:43.961]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setStatus
+[2020-04-01 18:07:43.962]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setStatus
+[2020-04-01 18:07:43.962]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setStatus
+[2020-04-01 18:07:43.962]  DEBUG springfox.documentation.schema.DefaultModelProvider modelFor-86 - Inferred 7 properties. Properties found createAt, id, name, password, status, updateAt, username
+[2020-04-01 18:07:43.962]  DEBUG springfox.documentation.spring.web.scanners.ApiModelReader read-69 - Generated parameter model id: Admin, name: Admin, schema: {} models
+[2020-04-01 18:07:43.962]  DEBUG springfox.documentation.spring.web.scanners.ApiModelReader mergeModelMap-87 - Adding a new model with key Admin
+[2020-04-01 18:07:43.962]  DEBUG springfox.documentation.spring.web.scanners.ApiModelReader read-69 - Generated parameter model id: ResultVO, name: ResultVO, schema: {} models
+[2020-04-01 18:07:43.962]  DEBUG springfox.documentation.spring.web.scanners.ApiModelReader mergeModelMap-87 - Adding a new model with key ResultVO
+[2020-04-01 18:07:43.963]  DEBUG s.documentation.spring.web.readers.operation.OperationResponseClassReader apply-64 - Setting spring response class to:ResultVO
+[2020-04-01 18:07:43.963]  DEBUG springfox.documentation.swagger.readers.operation.OperationAuthReader apply-99 - Authorization count 0 for method create
+[2020-04-01 18:07:43.963]  DEBUG s.documentation.swagger.readers.operation.SwaggerOperationResponseClassReader apply-73 - Setting response class to:ResultVO
+[2020-04-01 18:07:43.964]  DEBUG springfox.documentation.spring.web.readers.operation.OperationModelsProvider collectFromReturnType-76 - Adding return parameter of type Lcom/graduate/club/vo/ResultVO;
+[2020-04-01 18:07:43.964]  DEBUG springfox.documentation.spring.web.readers.operation.OperationModelsProvider collectParameters-83 - Reading parameters models for handlerMethod |login|
+[2020-04-01 18:07:43.965]  DEBUG springfox.documentation.spring.web.readers.operation.OperationModelsProvider collectParameters-90 - Adding input parameter of type Lcom/graduate/club/entity/Admin;
+[2020-04-01 18:07:43.965]  DEBUG springfox.documentation.spring.web.readers.operation.OperationModelsProvider collectParameters-94 - Finished reading parameters models for handlerMethod |login|
+[2020-04-01 18:07:43.965]  DEBUG springfox.documentation.swagger.readers.operation.SwaggerOperationModelsProvider collectApiResponses-84 - Reading parameters models for handlerMethod |login|
+[2020-04-01 18:07:43.965]  DEBUG springfox.documentation.spring.web.scanners.ApiModelReader read-69 - Generated parameter model id: Admin, name: Admin, schema: {} models
+[2020-04-01 18:07:43.965]  DEBUG springfox.documentation.spring.web.scanners.ApiModelReader read-69 - Generated parameter model id: ResultVO, name: ResultVO, schema: {} models
+[2020-04-01 18:07:43.966]  DEBUG s.documentation.spring.web.readers.operation.OperationResponseClassReader apply-64 - Setting spring response class to:ResultVO
+[2020-04-01 18:07:43.967]  DEBUG springfox.documentation.swagger.readers.operation.OperationAuthReader apply-99 - Authorization count 0 for method login
+[2020-04-01 18:07:43.967]  DEBUG s.documentation.swagger.readers.operation.SwaggerOperationResponseClassReader apply-73 - Setting response class to:ResultVO
+[2020-04-01 18:07:43.968]  DEBUG springfox.documentation.spring.web.readers.operation.OperationModelsProvider collectFromReturnType-76 - Adding return parameter of type Lcom/graduate/club/vo/ResultVO;
+[2020-04-01 18:07:43.968]  DEBUG springfox.documentation.spring.web.readers.operation.OperationModelsProvider collectParameters-83 - Reading parameters models for handlerMethod |selectClubUserByClubid|
+[2020-04-01 18:07:43.968]  DEBUG springfox.documentation.spring.web.readers.operation.OperationModelsProvider collectParameters-94 - Finished reading parameters models for handlerMethod |selectClubUserByClubid|
+[2020-04-01 18:07:43.969]  DEBUG springfox.documentation.swagger.readers.operation.SwaggerOperationModelsProvider collectApiResponses-84 - Reading parameters models for handlerMethod |selectClubUserByClubid|
+[2020-04-01 18:07:43.969]  DEBUG springfox.documentation.spring.web.scanners.ApiModelReader read-69 - Generated parameter model id: ResultVO, name: ResultVO, schema: {} models
+[2020-04-01 18:07:43.969]  DEBUG springfox.documentation.spring.web.scanners.ApiModelReader mergeModelMap-87 - Adding a new model with key ResultVO
+[2020-04-01 18:07:43.970]  DEBUG s.documentation.spring.web.readers.operation.OperationResponseClassReader apply-64 - Setting spring response class to:ResultVO
+[2020-04-01 18:07:43.971]  DEBUG springfox.documentation.swagger.readers.operation.OperationAuthReader apply-99 - Authorization count 0 for method selectClubUserByClubid
+[2020-04-01 18:07:43.972]  DEBUG s.documentation.swagger.readers.operation.SwaggerOperationResponseClassReader apply-73 - Setting response class to:ResultVO
+[2020-04-01 18:07:43.976]  DEBUG springfox.documentation.swagger.readers.operation.VendorExtensionsReader apply-59 - Extension count 1 for method selectClubUserByClubid
+[2020-04-01 18:07:43.976]  DEBUG springfox.documentation.spring.web.readers.operation.OperationModelsProvider collectFromReturnType-76 - Adding return parameter of type Lcom/graduate/club/vo/ResultVO;
+[2020-04-01 18:07:43.976]  DEBUG springfox.documentation.spring.web.readers.operation.OperationModelsProvider collectParameters-83 - Reading parameters models for handlerMethod |getAllClubType|
+[2020-04-01 18:07:43.977]  DEBUG springfox.documentation.spring.web.readers.operation.OperationModelsProvider collectParameters-94 - Finished reading parameters models for handlerMethod |getAllClubType|
+[2020-04-01 18:07:43.977]  DEBUG springfox.documentation.swagger.readers.operation.SwaggerOperationModelsProvider collectApiResponses-84 - Reading parameters models for handlerMethod |getAllClubType|
+[2020-04-01 18:07:43.977]  DEBUG springfox.documentation.spring.web.scanners.ApiModelReader read-69 - Generated parameter model id: ResultVO, name: ResultVO, schema: {} models
+[2020-04-01 18:07:43.977]  DEBUG springfox.documentation.spring.web.scanners.ApiModelReader mergeModelMap-87 - Adding a new model with key ResultVO
+[2020-04-01 18:07:43.977]  DEBUG s.documentation.spring.web.readers.operation.OperationResponseClassReader apply-64 - Setting spring response class to:ResultVO
+[2020-04-01 18:07:43.977]  DEBUG springfox.documentation.swagger.readers.operation.OperationAuthReader apply-99 - Authorization count 0 for method getAllClubType
+[2020-04-01 18:07:43.978]  DEBUG s.documentation.swagger.readers.operation.SwaggerOperationResponseClassReader apply-73 - Setting response class to:ResultVO
+[2020-04-01 18:07:43.979]  DEBUG springfox.documentation.spring.web.readers.operation.OperationModelsProvider collectFromReturnType-76 - Adding return parameter of type Lcom/graduate/club/vo/ResultVO;
+[2020-04-01 18:07:43.979]  DEBUG springfox.documentation.spring.web.readers.operation.OperationModelsProvider collectParameters-83 - Reading parameters models for handlerMethod |create|
+[2020-04-01 18:07:43.980]  DEBUG springfox.documentation.spring.web.readers.operation.OperationModelsProvider collectParameters-90 - Adding input parameter of type Lcom/graduate/club/entity/News;
+[2020-04-01 18:07:43.980]  DEBUG springfox.documentation.spring.web.readers.operation.OperationModelsProvider collectParameters-94 - Finished reading parameters models for handlerMethod |create|
+[2020-04-01 18:07:43.980]  DEBUG springfox.documentation.swagger.readers.operation.SwaggerOperationModelsProvider collectApiResponses-84 - Reading parameters models for handlerMethod |create|
+[2020-04-01 18:07:43.980]  DEBUG springfox.documentation.schema.property.OptimizedModelPropertiesProvider propertiesFor-122 - Reading property id
+[2020-04-01 18:07:43.981]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setId
+[2020-04-01 18:07:43.981]  DEBUG springfox.documentation.schema.property.ObjectMapperBeanPropertyNamingStrategy nameForDeserialization-76 - Name 'id' renamed to 'id'
+[2020-04-01 18:07:43.981]  DEBUG springfox.documentation.schema.property.OptimizedModelPropertiesProvider beanModelProperty-290 - Adding property id to model
+[2020-04-01 18:07:43.981]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setId
+[2020-04-01 18:07:43.981]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setId
+[2020-04-01 18:07:43.981]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setId
+[2020-04-01 18:07:43.981]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setId
+[2020-04-01 18:07:43.981]  DEBUG springfox.documentation.schema.property.OptimizedModelPropertiesProvider propertiesFor-122 - Reading property createAt
+[2020-04-01 18:07:43.981]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setCreateAt
+[2020-04-01 18:07:43.981]  DEBUG springfox.documentation.schema.property.ObjectMapperBeanPropertyNamingStrategy nameForDeserialization-76 - Name 'createAt' renamed to 'createAt'
+[2020-04-01 18:07:43.981]  DEBUG springfox.documentation.schema.property.OptimizedModelPropertiesProvider beanModelProperty-290 - Adding property createAt to model
+[2020-04-01 18:07:43.981]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setCreateAt
+[2020-04-01 18:07:43.982]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setCreateAt
+[2020-04-01 18:07:43.982]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setCreateAt
+[2020-04-01 18:07:43.982]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setCreateAt
+[2020-04-01 18:07:43.982]  DEBUG springfox.documentation.schema.property.OptimizedModelPropertiesProvider propertiesFor-122 - Reading property updateAt
+[2020-04-01 18:07:43.982]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setUpdateAt
+[2020-04-01 18:07:43.982]  DEBUG springfox.documentation.schema.property.ObjectMapperBeanPropertyNamingStrategy nameForDeserialization-76 - Name 'updateAt' renamed to 'updateAt'
+[2020-04-01 18:07:43.982]  DEBUG springfox.documentation.schema.property.OptimizedModelPropertiesProvider beanModelProperty-290 - Adding property updateAt to model
+[2020-04-01 18:07:43.982]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setUpdateAt
+[2020-04-01 18:07:43.982]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setUpdateAt
+[2020-04-01 18:07:43.982]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setUpdateAt
+[2020-04-01 18:07:43.982]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setUpdateAt
+[2020-04-01 18:07:43.983]  DEBUG springfox.documentation.schema.property.OptimizedModelPropertiesProvider propertiesFor-122 - Reading property name
+[2020-04-01 18:07:43.983]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setName
+[2020-04-01 18:07:43.983]  DEBUG springfox.documentation.schema.property.ObjectMapperBeanPropertyNamingStrategy nameForDeserialization-76 - Name 'name' renamed to 'name'
+[2020-04-01 18:07:43.983]  DEBUG springfox.documentation.schema.property.OptimizedModelPropertiesProvider beanModelProperty-290 - Adding property name to model
+[2020-04-01 18:07:43.983]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setName
+[2020-04-01 18:07:43.983]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setName
+[2020-04-01 18:07:43.983]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setName
+[2020-04-01 18:07:43.983]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setName
+[2020-04-01 18:07:43.983]  DEBUG springfox.documentation.schema.property.OptimizedModelPropertiesProvider propertiesFor-122 - Reading property userid
+[2020-04-01 18:07:43.983]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setUserid
+[2020-04-01 18:07:43.983]  DEBUG springfox.documentation.schema.property.ObjectMapperBeanPropertyNamingStrategy nameForDeserialization-76 - Name 'userid' renamed to 'userid'
+[2020-04-01 18:07:43.984]  DEBUG springfox.documentation.schema.property.OptimizedModelPropertiesProvider beanModelProperty-290 - Adding property userid to model
+[2020-04-01 18:07:43.984]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setUserid
+[2020-04-01 18:07:43.984]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setUserid
+[2020-04-01 18:07:43.984]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setUserid
+[2020-04-01 18:07:43.984]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setUserid
+[2020-04-01 18:07:43.984]  DEBUG springfox.documentation.schema.property.OptimizedModelPropertiesProvider propertiesFor-122 - Reading property adminid
+[2020-04-01 18:07:43.984]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setAdminid
+[2020-04-01 18:07:43.984]  DEBUG springfox.documentation.schema.property.ObjectMapperBeanPropertyNamingStrategy nameForDeserialization-76 - Name 'adminid' renamed to 'adminid'
+[2020-04-01 18:07:43.984]  DEBUG springfox.documentation.schema.property.OptimizedModelPropertiesProvider beanModelProperty-290 - Adding property adminid to model
+[2020-04-01 18:07:43.984]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setAdminid
+[2020-04-01 18:07:43.984]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setAdminid
+[2020-04-01 18:07:43.984]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setAdminid
+[2020-04-01 18:07:43.985]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setAdminid
+[2020-04-01 18:07:43.985]  DEBUG springfox.documentation.schema.property.OptimizedModelPropertiesProvider propertiesFor-122 - Reading property clubid
+[2020-04-01 18:07:43.985]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setClubid
+[2020-04-01 18:07:43.985]  DEBUG springfox.documentation.schema.property.ObjectMapperBeanPropertyNamingStrategy nameForDeserialization-76 - Name 'clubid' renamed to 'clubid'
+[2020-04-01 18:07:43.985]  DEBUG springfox.documentation.schema.property.OptimizedModelPropertiesProvider beanModelProperty-290 - Adding property clubid to model
+[2020-04-01 18:07:43.985]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setClubid
+[2020-04-01 18:07:43.985]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setClubid
+[2020-04-01 18:07:43.985]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setClubid
+[2020-04-01 18:07:43.985]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setClubid
+[2020-04-01 18:07:43.985]  DEBUG springfox.documentation.schema.property.OptimizedModelPropertiesProvider propertiesFor-122 - Reading property status
+[2020-04-01 18:07:43.985]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setStatus
+[2020-04-01 18:07:43.986]  DEBUG springfox.documentation.schema.property.ObjectMapperBeanPropertyNamingStrategy nameForDeserialization-76 - Name 'status' renamed to 'status'
+[2020-04-01 18:07:43.986]  DEBUG springfox.documentation.schema.property.OptimizedModelPropertiesProvider beanModelProperty-290 - Adding property status to model
+[2020-04-01 18:07:43.986]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setStatus
+[2020-04-01 18:07:43.986]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setStatus
+[2020-04-01 18:07:43.986]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setStatus
+[2020-04-01 18:07:43.986]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setStatus
+[2020-04-01 18:07:43.986]  DEBUG springfox.documentation.schema.property.OptimizedModelPropertiesProvider propertiesFor-122 - Reading property content
+[2020-04-01 18:07:43.986]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setContent
+[2020-04-01 18:07:43.986]  DEBUG springfox.documentation.schema.property.ObjectMapperBeanPropertyNamingStrategy nameForDeserialization-76 - Name 'content' renamed to 'content'
+[2020-04-01 18:07:43.986]  DEBUG springfox.documentation.schema.property.OptimizedModelPropertiesProvider beanModelProperty-290 - Adding property content to model
+[2020-04-01 18:07:43.986]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setContent
+[2020-04-01 18:07:43.986]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setContent
+[2020-04-01 18:07:43.986]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setContent
+[2020-04-01 18:07:43.987]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setContent
+[2020-04-01 18:07:43.987]  DEBUG springfox.documentation.schema.DefaultModelProvider modelFor-86 - Inferred 9 properties. Properties found adminid, clubid, content, createAt, id, name, status, updateAt, userid
+[2020-04-01 18:07:43.987]  DEBUG springfox.documentation.spring.web.scanners.ApiModelReader read-69 - Generated parameter model id: News, name: News, schema: {} models
+[2020-04-01 18:07:43.987]  DEBUG springfox.documentation.spring.web.scanners.ApiModelReader mergeModelMap-87 - Adding a new model with key News
+[2020-04-01 18:07:43.987]  DEBUG springfox.documentation.spring.web.scanners.ApiModelReader read-69 - Generated parameter model id: ResultVO, name: ResultVO, schema: {} models
+[2020-04-01 18:07:43.987]  DEBUG springfox.documentation.spring.web.scanners.ApiModelReader mergeModelMap-87 - Adding a new model with key ResultVO
+[2020-04-01 18:07:43.988]  DEBUG s.documentation.spring.web.readers.operation.OperationResponseClassReader apply-64 - Setting spring response class to:ResultVO
+[2020-04-01 18:07:43.988]  DEBUG springfox.documentation.swagger.readers.operation.OperationAuthReader apply-99 - Authorization count 0 for method create
+[2020-04-01 18:07:43.988]  DEBUG s.documentation.swagger.readers.operation.SwaggerOperationResponseClassReader apply-73 - Setting response class to:ResultVO
+[2020-04-01 18:07:43.989]  DEBUG springfox.documentation.spring.web.readers.operation.OperationModelsProvider collectFromReturnType-76 - Adding return parameter of type Lcom/graduate/club/vo/ResultVO;
+[2020-04-01 18:07:43.989]  DEBUG springfox.documentation.spring.web.readers.operation.OperationModelsProvider collectParameters-83 - Reading parameters models for handlerMethod |selectNews|
+[2020-04-01 18:07:43.989]  DEBUG springfox.documentation.spring.web.readers.operation.OperationModelsProvider collectParameters-90 - Adding input parameter of type Lcom/graduate/club/vo/NewsVO;
+[2020-04-01 18:07:43.989]  DEBUG springfox.documentation.spring.web.readers.operation.OperationModelsProvider collectParameters-94 - Finished reading parameters models for handlerMethod |selectNews|
+[2020-04-01 18:07:43.989]  DEBUG springfox.documentation.swagger.readers.operation.SwaggerOperationModelsProvider collectApiResponses-84 - Reading parameters models for handlerMethod |selectNews|
+[2020-04-01 18:07:43.990]  DEBUG springfox.documentation.schema.property.OptimizedModelPropertiesProvider propertiesFor-122 - Reading property name
+[2020-04-01 18:07:43.990]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setName
+[2020-04-01 18:07:43.990]  DEBUG springfox.documentation.schema.property.ObjectMapperBeanPropertyNamingStrategy nameForDeserialization-76 - Name 'name' renamed to 'name'
+[2020-04-01 18:07:43.990]  DEBUG springfox.documentation.schema.property.OptimizedModelPropertiesProvider beanModelProperty-290 - Adding property name to model
+[2020-04-01 18:07:43.990]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setName
+[2020-04-01 18:07:43.990]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setName
+[2020-04-01 18:07:43.990]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setName
+[2020-04-01 18:07:43.990]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setName
+[2020-04-01 18:07:43.990]  DEBUG springfox.documentation.schema.property.OptimizedModelPropertiesProvider propertiesFor-122 - Reading property status
+[2020-04-01 18:07:43.990]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setStatus
+[2020-04-01 18:07:43.991]  DEBUG springfox.documentation.schema.property.ObjectMapperBeanPropertyNamingStrategy nameForDeserialization-76 - Name 'status' renamed to 'status'
+[2020-04-01 18:07:43.991]  DEBUG springfox.documentation.schema.property.OptimizedModelPropertiesProvider beanModelProperty-290 - Adding property status to model
+[2020-04-01 18:07:43.991]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setStatus
+[2020-04-01 18:07:43.991]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setStatus
+[2020-04-01 18:07:43.991]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setStatus
+[2020-04-01 18:07:43.991]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setStatus
+[2020-04-01 18:07:43.991]  DEBUG springfox.documentation.schema.property.OptimizedModelPropertiesProvider propertiesFor-122 - Reading property pageNum
+[2020-04-01 18:07:43.991]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setPageNum
+[2020-04-01 18:07:43.991]  DEBUG springfox.documentation.schema.property.ObjectMapperBeanPropertyNamingStrategy nameForDeserialization-76 - Name 'pageNum' renamed to 'pageNum'
+[2020-04-01 18:07:43.991]  DEBUG springfox.documentation.schema.property.OptimizedModelPropertiesProvider beanModelProperty-290 - Adding property pageNum to model
+[2020-04-01 18:07:43.991]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setPageNum
+[2020-04-01 18:07:43.991]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setPageNum
+[2020-04-01 18:07:43.991]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setPageNum
+[2020-04-01 18:07:43.992]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setPageNum
+[2020-04-01 18:07:43.992]  DEBUG springfox.documentation.schema.property.OptimizedModelPropertiesProvider propertiesFor-122 - Reading property pageSize
+[2020-04-01 18:07:43.992]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setPageSize
+[2020-04-01 18:07:43.992]  DEBUG springfox.documentation.schema.property.ObjectMapperBeanPropertyNamingStrategy nameForDeserialization-76 - Name 'pageSize' renamed to 'pageSize'
+[2020-04-01 18:07:43.992]  DEBUG springfox.documentation.schema.property.OptimizedModelPropertiesProvider beanModelProperty-290 - Adding property pageSize to model
+[2020-04-01 18:07:43.992]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setPageSize
+[2020-04-01 18:07:43.992]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setPageSize
+[2020-04-01 18:07:43.992]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setPageSize
+[2020-04-01 18:07:43.992]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setPageSize
+[2020-04-01 18:07:43.992]  DEBUG springfox.documentation.schema.DefaultModelProvider modelFor-86 - Inferred 4 properties. Properties found name, pageNum, pageSize, status
+[2020-04-01 18:07:43.992]  DEBUG springfox.documentation.spring.web.scanners.ApiModelReader read-69 - Generated parameter model id: NewsVO, name: NewsVO, schema: {} models
+[2020-04-01 18:07:43.993]  DEBUG springfox.documentation.spring.web.scanners.ApiModelReader mergeModelMap-87 - Adding a new model with key NewsVO
+[2020-04-01 18:07:43.993]  DEBUG springfox.documentation.spring.web.scanners.ApiModelReader read-69 - Generated parameter model id: ResultVO, name: ResultVO, schema: {} models
+[2020-04-01 18:07:43.993]  DEBUG s.documentation.spring.web.readers.operation.OperationResponseClassReader apply-64 - Setting spring response class to:ResultVO
+[2020-04-01 18:07:43.994]  DEBUG springfox.documentation.swagger.readers.operation.OperationAuthReader apply-99 - Authorization count 0 for method selectNews
+[2020-04-01 18:07:43.994]  DEBUG s.documentation.swagger.readers.operation.SwaggerOperationResponseClassReader apply-73 - Setting response class to:ResultVO
+[2020-04-01 18:07:43.994]  DEBUG springfox.documentation.spring.web.readers.operation.OperationModelsProvider collectFromReturnType-76 - Adding return parameter of type Lcom/graduate/club/vo/ResultVO;
+[2020-04-01 18:07:43.995]  DEBUG springfox.documentation.spring.web.readers.operation.OperationModelsProvider collectParameters-83 - Reading parameters models for handlerMethod |update|
+[2020-04-01 18:07:43.995]  DEBUG springfox.documentation.spring.web.readers.operation.OperationModelsProvider collectParameters-90 - Adding input parameter of type Lcom/graduate/club/entity/News;
+[2020-04-01 18:07:43.995]  DEBUG springfox.documentation.spring.web.readers.operation.OperationModelsProvider collectParameters-94 - Finished reading parameters models for handlerMethod |update|
+[2020-04-01 18:07:43.995]  DEBUG springfox.documentation.swagger.readers.operation.SwaggerOperationModelsProvider collectApiResponses-84 - Reading parameters models for handlerMethod |update|
+[2020-04-01 18:07:43.995]  DEBUG springfox.documentation.spring.web.scanners.ApiModelReader read-69 - Generated parameter model id: News, name: News, schema: {} models
+[2020-04-01 18:07:43.995]  DEBUG springfox.documentation.spring.web.scanners.ApiModelReader read-69 - Generated parameter model id: ResultVO, name: ResultVO, schema: {} models
+[2020-04-01 18:07:43.996]  DEBUG s.documentation.spring.web.readers.operation.OperationResponseClassReader apply-64 - Setting spring response class to:ResultVO
+[2020-04-01 18:07:43.996]  DEBUG springfox.documentation.swagger.readers.operation.OperationAuthReader apply-99 - Authorization count 0 for method update
+[2020-04-01 18:07:43.996]  DEBUG s.documentation.swagger.readers.operation.SwaggerOperationResponseClassReader apply-73 - Setting response class to:ResultVO
+[2020-04-01 18:07:43.998]  DEBUG springfox.documentation.spring.web.readers.operation.OperationModelsProvider collectFromReturnType-76 - Adding return parameter of type Lcom/graduate/club/vo/ResultVO;
+[2020-04-01 18:07:43.998]  DEBUG springfox.documentation.spring.web.readers.operation.OperationModelsProvider collectParameters-83 - Reading parameters models for handlerMethod |create|
+[2020-04-01 18:07:43.998]  DEBUG springfox.documentation.spring.web.readers.operation.OperationModelsProvider collectParameters-90 - Adding input parameter of type Lcom/graduate/club/vo/UserVO;
+[2020-04-01 18:07:43.998]  DEBUG springfox.documentation.spring.web.readers.operation.OperationModelsProvider collectParameters-94 - Finished reading parameters models for handlerMethod |create|
+[2020-04-01 18:07:43.998]  DEBUG springfox.documentation.swagger.readers.operation.SwaggerOperationModelsProvider collectApiResponses-84 - Reading parameters models for handlerMethod |create|
+[2020-04-01 18:07:43.998]  DEBUG springfox.documentation.spring.web.scanners.ApiModelReader read-69 - Generated parameter model id: ResultVO, name: ResultVO, schema: {} models
+[2020-04-01 18:07:43.998]  DEBUG springfox.documentation.spring.web.scanners.ApiModelReader mergeModelMap-87 - Adding a new model with key ResultVO
+[2020-04-01 18:07:43.999]  DEBUG springfox.documentation.schema.property.OptimizedModelPropertiesProvider propertiesFor-122 - Reading property username
+[2020-04-01 18:07:43.999]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setUsername
+[2020-04-01 18:07:43.999]  DEBUG springfox.documentation.schema.property.ObjectMapperBeanPropertyNamingStrategy nameForDeserialization-76 - Name 'username' renamed to 'username'
+[2020-04-01 18:07:43.999]  DEBUG springfox.documentation.schema.property.OptimizedModelPropertiesProvider beanModelProperty-290 - Adding property username to model
+[2020-04-01 18:07:43.999]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setUsername
+[2020-04-01 18:07:43.999]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setUsername
+[2020-04-01 18:07:43.999]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setUsername
+[2020-04-01 18:07:43.999]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setUsername
+[2020-04-01 18:07:44.000]  DEBUG springfox.documentation.schema.property.OptimizedModelPropertiesProvider propertiesFor-122 - Reading property password
+[2020-04-01 18:07:44.000]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setPassword
+[2020-04-01 18:07:44.000]  DEBUG springfox.documentation.schema.property.ObjectMapperBeanPropertyNamingStrategy nameForDeserialization-76 - Name 'password' renamed to 'password'
+[2020-04-01 18:07:44.000]  DEBUG springfox.documentation.schema.property.OptimizedModelPropertiesProvider beanModelProperty-290 - Adding property password to model
+[2020-04-01 18:07:44.000]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setPassword
+[2020-04-01 18:07:44.000]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setPassword
+[2020-04-01 18:07:44.000]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setPassword
+[2020-04-01 18:07:44.000]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setPassword
+[2020-04-01 18:07:44.000]  DEBUG springfox.documentation.schema.property.OptimizedModelPropertiesProvider propertiesFor-122 - Reading property userid
+[2020-04-01 18:07:44.000]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setUserid
+[2020-04-01 18:07:44.000]  DEBUG springfox.documentation.schema.property.ObjectMapperBeanPropertyNamingStrategy nameForDeserialization-76 - Name 'userid' renamed to 'userid'
+[2020-04-01 18:07:44.000]  DEBUG springfox.documentation.schema.property.OptimizedModelPropertiesProvider beanModelProperty-290 - Adding property userid to model
+[2020-04-01 18:07:44.001]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setUserid
+[2020-04-01 18:07:44.001]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setUserid
+[2020-04-01 18:07:44.001]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setUserid
+[2020-04-01 18:07:44.001]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setUserid
+[2020-04-01 18:07:44.001]  DEBUG springfox.documentation.schema.property.OptimizedModelPropertiesProvider propertiesFor-122 - Reading property random
+[2020-04-01 18:07:44.001]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setRandom
+[2020-04-01 18:07:44.001]  DEBUG springfox.documentation.schema.property.ObjectMapperBeanPropertyNamingStrategy nameForDeserialization-76 - Name 'random' renamed to 'random'
+[2020-04-01 18:07:44.001]  DEBUG springfox.documentation.schema.property.OptimizedModelPropertiesProvider beanModelProperty-290 - Adding property random to model
+[2020-04-01 18:07:44.001]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setRandom
+[2020-04-01 18:07:44.001]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setRandom
+[2020-04-01 18:07:44.001]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setRandom
+[2020-04-01 18:07:44.001]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setRandom
+[2020-04-01 18:07:44.001]  DEBUG springfox.documentation.schema.property.OptimizedModelPropertiesProvider propertiesFor-122 - Reading property status
+[2020-04-01 18:07:44.002]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setStatus
+[2020-04-01 18:07:44.002]  DEBUG springfox.documentation.schema.property.ObjectMapperBeanPropertyNamingStrategy nameForDeserialization-76 - Name 'status' renamed to 'status'
+[2020-04-01 18:07:44.002]  DEBUG springfox.documentation.schema.property.OptimizedModelPropertiesProvider beanModelProperty-290 - Adding property status to model
+[2020-04-01 18:07:44.002]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setStatus
+[2020-04-01 18:07:44.002]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setStatus
+[2020-04-01 18:07:44.002]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setStatus
+[2020-04-01 18:07:44.002]  DEBUG springfox.documentation.schema.property.bean.BeanModelProperty paramOrReturnType-73 - Evaluating unwrapped setter for member setStatus
+[2020-04-01 18:07:44.002]  DEBUG springfox.documentation.schema.DefaultModelProvider modelFor-86 - Inferred 5 properties. Properties found password, random, status, userid, username
+[2020-04-01 18:07:44.002]  DEBUG springfox.documentation.spring.web.scanners.ApiModelReader read-69 - Generated parameter model id: UserVO, name: UserVO, schema: {} models
+[2020-04-01 18:07:44.002]  DEBUG springfox.documentation.spring.web.scanners.ApiModelReader mergeModelMap-87 - Adding a new model with key UserVO
+[2020-04-01 18:07:44.003]  DEBUG s.documentation.spring.web.readers.operation.OperationResponseClassReader apply-64 - Setting spring response class to:ResultVO
+[2020-04-01 18:07:44.003]  DEBUG springfox.documentation.swagger.readers.operation.OperationAuthReader apply-99 - Authorization count 0 for method create
+[2020-04-01 18:07:44.003]  DEBUG s.documentation.swagger.readers.operation.SwaggerOperationResponseClassReader apply-73 - Setting response class to:ResultVO
+[2020-04-01 18:07:44.004]  DEBUG springfox.documentation.spring.web.readers.operation.OperationModelsProvider collectFromReturnType-76 - Adding return parameter of type Lcom/graduate/club/vo/ResultVO;
+[2020-04-01 18:07:44.004]  DEBUG springfox.documentation.spring.web.readers.operation.OperationModelsProvider collectParameters-83 - Reading parameters models for handlerMethod |login|
+[2020-04-01 18:07:44.004]  DEBUG springfox.documentation.spring.web.readers.operation.OperationModelsProvider collectParameters-90 - Adding input parameter of type Lcom/graduate/club/vo/UserVO;
+[2020-04-01 18:07:44.005]  DEBUG springfox.documentation.spring.web.readers.operation.OperationModelsProvider collectParameters-94 - Finished reading parameters models for handlerMethod |login|
+[2020-04-01 18:07:44.005]  DEBUG springfox.documentation.swagger.readers.operation.SwaggerOperationModelsProvider collectApiResponses-84 - Reading parameters models for handlerMethod |login|
+[2020-04-01 18:07:44.005]  DEBUG springfox.documentation.spring.web.scanners.ApiModelReader read-69 - Generated parameter model id: ResultVO, name: ResultVO, schema: {} models
+[2020-04-01 18:07:44.005]  DEBUG springfox.documentation.spring.web.scanners.ApiModelReader read-69 - Generated parameter model id: UserVO, name: UserVO, schema: {} models
+[2020-04-01 18:07:44.006]  DEBUG s.documentation.spring.web.readers.operation.OperationResponseClassReader apply-64 - Setting spring response class to:ResultVO
+[2020-04-01 18:07:44.006]  DEBUG springfox.documentation.swagger.readers.operation.OperationAuthReader apply-99 - Authorization count 0 for method login
+[2020-04-01 18:07:44.006]  DEBUG s.documentation.swagger.readers.operation.SwaggerOperationResponseClassReader apply-73 - Setting response class to:ResultVO
+[2020-04-01 18:07:44.007]  DEBUG springfox.documentation.swagger.readers.operation.VendorExtensionsReader apply-59 - Extension count 1 for method login
+[2020-04-01 18:07:44.008]  DEBUG springfox.documentation.spring.web.readers.operation.OperationModelsProvider collectFromReturnType-76 - Adding return parameter of type Lcom/graduate/club/vo/ResultVO;
+[2020-04-01 18:07:44.008]  DEBUG springfox.documentation.spring.web.readers.operation.OperationModelsProvider collectParameters-83 - Reading parameters models for handlerMethod |selectMyClub|
+[2020-04-01 18:07:44.008]  DEBUG springfox.documentation.spring.web.readers.operation.OperationModelsProvider collectParameters-94 - Finished reading parameters models for handlerMethod |selectMyClub|
+[2020-04-01 18:07:44.008]  DEBUG springfox.documentation.swagger.readers.operation.SwaggerOperationModelsProvider collectApiResponses-84 - Reading parameters models for handlerMethod |selectMyClub|
+[2020-04-01 18:07:44.008]  DEBUG springfox.documentation.spring.web.scanners.ApiModelReader read-69 - Generated parameter model id: ResultVO, name: ResultVO, schema: {} models
+[2020-04-01 18:07:44.008]  DEBUG springfox.documentation.spring.web.scanners.ApiModelReader mergeModelMap-87 - Adding a new model with key ResultVO
+[2020-04-01 18:07:44.009]  DEBUG s.documentation.spring.web.readers.operation.OperationResponseClassReader apply-64 - Setting spring response class to:ResultVO
+[2020-04-01 18:07:44.009]  DEBUG springfox.documentation.swagger.readers.operation.OperationAuthReader apply-99 - Authorization count 0 for method selectMyClub
+[2020-04-01 18:07:44.009]  DEBUG s.documentation.swagger.readers.operation.SwaggerOperationResponseClassReader apply-73 - Setting response class to:ResultVO
+[2020-04-01 18:07:44.010]  DEBUG springfox.documentation.swagger.readers.operation.VendorExtensionsReader apply-59 - Extension count 1 for method selectMyClub

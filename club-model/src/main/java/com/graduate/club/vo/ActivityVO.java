@@ -16,7 +16,7 @@ public class ActivityVO {
     private Date closeDate;
     private String name;
     private String userid;
-    private int status;
+    private Integer status;
     private int pageSize = 10;
-    private int pageNum = 0;
+    private int pageNum = 1;
 }

@@ -52,7 +52,7 @@ public class ActivityServiceImpl extends BaseServiceImpl<Activity, ActivityDao> 
         List<Map<String, Object>> list = activityDao.selectActivity(map);
         PageInfo<Map<String, Object>> pageInfoList = new PageInfo<>(list);
         PageVO page = new PageVO();
-        BeanUtils.copyProperties(list, page);
+        BeanUtils.copyProperties(activityVO, page);
         page.setQuery(list);
         page.setTotal((int) pageInfoList.getTotal());
         return page;

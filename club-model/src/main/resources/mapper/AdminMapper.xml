@@ -123,6 +123,14 @@
         where id = #{id,jdbcType=VARCHAR}
     </update>
     <select id="selectAll" resultMap="BaseResultMap">
-        select <include refid="Base_Column_List"/> from t_admin
+        select
+        <include refid="Base_Column_List"/>
+        from t_admin
+    </select>
+    <select id="getUserByUserName" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from t_admin
+        where username = #{username,jdbcType=VARCHAR} and status = #{status}
     </select>
 </mapper>

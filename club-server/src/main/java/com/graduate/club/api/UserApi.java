@@ -17,15 +17,15 @@ import javax.validation.Valid;
 
 @RestController
 @RequestMapping("/api/user")
-@Api(value = "用户管理",tags ="UserApi" )
+@Api(value = "用户管理", tags = "UserApi")
 @Slf4j
 public class UserApi {
     @Autowired
     private UserService userService;
 
     @ApiOperation(value = "用户登陆")
-    @RequestMapping(value = "login",method = RequestMethod.POST)
-    public ResultVO login(@ApiParam(value = "UserVo") UserVO userVO) {
+    @RequestMapping(value = "login", method = RequestMethod.POST)
+    public ResultVO login(@ApiParam(value = "UserVO") @RequestBody @Valid UserVO userVO) {
         User user = new User();
         BeanUtils.copyProperties(userVO, user);
         return userService.login(user);

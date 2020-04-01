@@ -49,7 +49,7 @@ public class UserServiceImpl extends BaseServiceImpl<User, UserDao> implements U
             }
             UserProfile userProfile = userProfileService.selectByUserId(user1.getId());
             String password = AesUtils.Decrypt(user1.getPassword(), aesKey);
-            password = MD5Utils.hmacMd5(password, user.getRandom());
+            password = MD5Utils.md5(password);
             if (!user.getPassword().equals(password)) {
                 return ResultUtils.error(ResultEnum.PASSWORD_ERROR);
             }
@@ -75,6 +75,7 @@ public class UserServiceImpl extends BaseServiceImpl<User, UserDao> implements U
         }
         try {
             user.setPassword(AesUtils.Encrypt(user.getPassword(), aesKey));
+            user.setStatus(Constants.UserStatus.NORMAL);
             boolean b = insertSelective(user);
             return b ? ResultUtils.success() : ResultUtils.error(ResultEnum.ERROR);
         } catch (Exception e) {

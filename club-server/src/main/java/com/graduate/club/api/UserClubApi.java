@@ -38,6 +38,4 @@ public class UserClubApi {
         return resultVO;
     }
 
-
-
 }
