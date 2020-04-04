@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/api/review")
+@RequestMapping("/api/userprofile")
 @Api(value = "用户个人信息", tags = "UserProfileApi")
 @Slf4j
 public class UserProfileApi {

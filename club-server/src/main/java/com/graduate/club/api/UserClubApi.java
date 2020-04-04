@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.*;
 import javax.validation.Valid;
 
 @RestController
-@RequestMapping("/api/review")
+@RequestMapping("/api/userClub")
 @Api(value = "用户社团", tags = "UserClubApi")
 @Slf4j
 public class UserClubApi {

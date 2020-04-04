@@ -21,7 +21,7 @@ import org.springframework.web.bind.annotation.RestController;
 import javax.validation.Valid;
 
 @RestController
-@RequestMapping("/api/review")
+@RequestMapping("/api/useractivity")
 @Api(value = "用户评论", tags = "UserActivityApi")
 @Slf4j
 public class UserActivityApi {
