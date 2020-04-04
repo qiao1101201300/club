@@ -5,6 +5,7 @@ import com.graduate.club.vo.PageVO;
 import com.graduate.club.vo.ResultVO;
 
 import java.util.List;
+import java.util.Map;
 
 public interface ClubDao extends BaseDao<Club> {
     //查询全部社团
@@ -14,4 +15,5 @@ public interface ClubDao extends BaseDao<Club> {
     //根据社团id查询社团人数
     PageVO selectClubUserByClubid(String cludid, int status);
 
+    List<Map<String, Object>> selectByMap(Map<String, Object> map);
 }

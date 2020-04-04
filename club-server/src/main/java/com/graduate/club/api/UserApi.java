@@ -1,7 +1,11 @@
 package com.graduate.club.api;
 
 import com.graduate.club.entity.User;
+import com.graduate.club.enums.ResultEnum;
 import com.graduate.club.service.UserService;
+import com.graduate.club.util.Constants;
+import com.graduate.club.util.ResultUtils;
+import com.graduate.club.util.StringUtils;
 import com.graduate.club.vo.ResultVO;
 import com.graduate.club.vo.UserVO;
 import io.swagger.annotations.Api;
@@ -35,5 +39,15 @@ public class UserApi {
         User user = new User();
         BeanUtils.copyProperties(userVO, user);
         return userService.create(user);
+    }
+
+    @PostMapping("delete")
+    public ResultVO delete(@RequestBody User user) {
+        if (StringUtils.isBlank(user.getId())) {
+            return ResultUtils.error(ResultEnum.PARAM_ERROR.getCode(), "评审id不能为空");
+        }
+        user.setStatus(Constants.UserStatus.FORBID);
+        boolean b = userService.updateByPrimaryKey(user);
+        return b ? ResultUtils.success() : ResultUtils.error(ResultEnum.ERROR);
     }
 }

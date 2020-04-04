@@ -163,4 +163,35 @@
     <select id="selectByUserId" parameterType="String" resultMap="BaseResultMap">
         select <include refid="Base_Column_List"/> from  t_user_profile where userid = #{userId,jdbcType=VARCHAR}
     </select>
+    <select id="updateByUserId" parameterType="com.graduate.club.entity.UserProfile">
+        <!--@mbg.generated-->
+        update t_user_profile
+        <set>
+            <if test="name != null">
+                `name` = #{name,jdbcType=VARCHAR},
+            </if>
+            <if test="level != null">
+                `level` = #{level,jdbcType=INTEGER},
+            </if>
+            <if test="cardno != null">
+                cardno = #{cardno,jdbcType=VARCHAR},
+            </if>
+            <if test="classname != null">
+                classname = #{classname,jdbcType=VARCHAR},
+            </if>
+            <if test="phone != null">
+                phone = #{phone,jdbcType=VARCHAR},
+            </if>
+            <if test="introduction != null">
+                introduction = #{introduction,jdbcType=LONGVARCHAR},
+            </if>
+            <if test="createAt != null">
+                create_at = #{createAt,jdbcType=TIMESTAMP},
+            </if>
+            <if test="updateAt != null">
+                update_at = #{updateAt,jdbcType=TIMESTAMP},
+            </if>
+        </set>
+        where userid = #{userid,jdbcType=VARCHAR}
+    </select>
 </mapper>

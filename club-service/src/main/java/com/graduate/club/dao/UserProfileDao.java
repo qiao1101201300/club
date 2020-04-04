@@ -6,5 +6,6 @@ public interface UserProfileDao extends BaseDao<UserProfile>{
 
     UserProfile selectByUserId(String userid);
 
+    boolean updateByUserId(UserProfile userProfile);
 }
 

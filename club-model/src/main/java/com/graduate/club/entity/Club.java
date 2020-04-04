@@ -1,23 +1,24 @@
 package com.graduate.club.entity;
 
+import java.util.Date;
 import lombok.Data;
 
 @Data
 public class Club extends BaseEntity {
-
     /**
      * 创始人id
      */
     private String userid;
 
     /**
-     * 审批人（admin id）
-     */
-    private String adminid;
-    /**
      * 社团负责人
      */
     private String principalid;
+
+    /**
+     * 审批人（admin id）
+     */
+    private String adminid;
 
     /**
      * 社团名称
@@ -45,7 +46,7 @@ public class Club extends BaseEntity {
     private String sign;
 
     /**
-     * 社团规模
+     * 社团规模(社团当前人数)
      */
     private Integer scaleNum;
 

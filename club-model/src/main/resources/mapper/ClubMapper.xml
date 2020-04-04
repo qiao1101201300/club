@@ -5,6 +5,7 @@
         <!--@mbg.generated-->
         <id column="id" jdbcType="VARCHAR" property="id"/>
         <result column="userid" jdbcType="VARCHAR" property="userid"/>
+        <result column="principalid" jdbcType="VARCHAR" property="principalid"/>
         <result column="adminid" jdbcType="VARCHAR" property="adminid"/>
         <result column="name" jdbcType="VARCHAR" property="name"/>
         <result column="status" jdbcType="INTEGER" property="status"/>
@@ -18,8 +19,8 @@
     </resultMap>
     <sql id="Base_Column_List">
         <!--@mbg.generated-->
-        id, userid, adminid, `name`, `status`, `type`, star, sign, scale_num, reason, create_at,
-        update_at
+        id, userid, principalid, adminid, `name`, `status`, `type`, star, sign, scale_num,
+        reason, create_at, update_at
     </sql>
     <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
         <!--@mbg.generated-->
@@ -35,14 +36,14 @@
     </delete>
     <insert id="insert" parameterType="com.graduate.club.entity.Club">
         <!--@mbg.generated-->
-        insert into t_club (id, userid, adminid,
-        `name`, `status`, `type`,
-        star, sign, scale_num,
+        insert into t_club (id, userid, principalid,
+        adminid, `name`, `status`,
+        `type`, star, sign, scale_num,
         reason, create_at, update_at
         )
-        values (#{id,jdbcType=VARCHAR}, #{userid,jdbcType=VARCHAR}, #{adminid,jdbcType=VARCHAR},
-        #{name,jdbcType=VARCHAR}, #{status,jdbcType=INTEGER}, #{type,jdbcType=INTEGER},
-        #{star,jdbcType=INTEGER}, #{sign,jdbcType=VARCHAR}, #{scaleNum,jdbcType=INTEGER},
+        values (#{id,jdbcType=VARCHAR}, #{userid,jdbcType=VARCHAR}, #{principalid,jdbcType=VARCHAR},
+        #{adminid,jdbcType=VARCHAR}, #{name,jdbcType=VARCHAR}, #{status,jdbcType=INTEGER},
+        #{type,jdbcType=INTEGER}, #{star,jdbcType=INTEGER}, #{sign,jdbcType=VARCHAR}, #{scaleNum,jdbcType=INTEGER},
         #{reason,jdbcType=LONGVARCHAR}, #{createAt,jdbcType=TIMESTAMP}, #{updateAt,jdbcType=TIMESTAMP}
         )
     </insert>
@@ -55,6 +56,9 @@
             </if>
             <if test="userid != null">
                 userid,
+            </if>
+            <if test="principalid != null">
+                principalid,
             </if>
             <if test="adminid != null">
                 adminid,
@@ -93,6 +97,9 @@
             </if>
             <if test="userid != null">
                 #{userid,jdbcType=VARCHAR},
+            </if>
+            <if test="principalid != null">
+                #{principalid,jdbcType=VARCHAR},
             </if>
             <if test="adminid != null">
                 #{adminid,jdbcType=VARCHAR},
@@ -133,6 +140,9 @@
             <if test="userid != null">
                 userid = #{userid,jdbcType=VARCHAR},
             </if>
+            <if test="principalid != null">
+                principalid = #{principalid,jdbcType=VARCHAR},
+            </if>
             <if test="adminid != null">
                 adminid = #{adminid,jdbcType=VARCHAR},
             </if>
@@ -170,6 +180,7 @@
         <!--@mbg.generated-->
         update t_club
         set userid = #{userid,jdbcType=VARCHAR},
+        principalid = #{principalid,jdbcType=VARCHAR},
         adminid = #{adminid,jdbcType=VARCHAR},
         `name` = #{name,jdbcType=VARCHAR},
         `status` = #{status,jdbcType=INTEGER},
@@ -183,6 +194,27 @@
         where id = #{id,jdbcType=VARCHAR}
     </update>
     <select id="selectAll" resultMap="BaseResultMap">
-        select <include refid="Base_Column_List"/> from t_club
+        select
+        <include refid="Base_Column_List"/>
+        from t_club
+    </select>
+    <select id="selectByMap" resultType="map" parameterType="map">
+        select t.id,a.name userName,c.name principalName,b.name adminName,t.`name`,
+               t.`status`,t.`type`,t.star,t.sign,t.scale_num,t.reason,t.create_at
+        from t_club t
+        join t_user_profile a on t.principalid = a.id
+        join t_admin b on t.adminid = b.id
+        join t_user_profile c on t.userid = c.id
+        <where>
+            <if test="clubName !=null ">
+               t.name like concat('%',#{clubName,jdbcType=VARCHAR},'%')
+            </if>
+            <if test="principalName !=null ">
+               and c.name like concat('%',#{principalName,jdbcType=VARCHAR},'%')
+            </if>
+            <if test="star !=null ">
+               and t.star = #{star,jdbcType=INTEGER}
+            </if>
+        </where>
     </select>
 </mapper>

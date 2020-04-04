@@ -50,13 +50,10 @@ public class ActivityApi {
     }
 
     @PostMapping("delete")
-    public ResultVO delete(@RequestBody String param) {
-        JSONObject jsonObject = JSONObject.parseObject(param);
-        if (StringUtils.isBlank(jsonObject.getString("id"))) {
+    public ResultVO delete(@RequestBody Activity activity) {
+        if (StringUtils.isBlank(activity.getId())) {
             return ResultUtils.error(ResultEnum.PARAM_ERROR.getCode(), "活动id不能为空");
         }
-        Activity activity = new Activity();
-        activity.setId(jsonObject.getString("id"));
         activity.setStatus(Constants.Status.DELECT);
         boolean b = activityService.updateByPrimaryKeySelective(activity);
         return b ? ResultUtils.success() : ResultUtils.error(ResultEnum.ERROR);

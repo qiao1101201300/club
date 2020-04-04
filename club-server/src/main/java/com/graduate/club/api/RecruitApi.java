@@ -18,6 +18,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.validation.Valid;
+
 @RestController
 @RequestMapping("/api/recruit")
 @Api(value = "社团招聘", tags = "RecruitApi")
@@ -27,7 +29,7 @@ public class RecruitApi {
     private RecruitService recruitService;
 
     @PostMapping("create")
-    public ResultVO create(@RequestBody Recruit recruit) {
+    public ResultVO create(@RequestBody @Valid Recruit recruit) {
         recruit.setStatus(Constants.Status.INIT);
         boolean flag = recruitService.insertSelective(recruit);
         return flag ? ResultUtils.success() : ResultUtils.error(ResultEnum.ERROR);
@@ -48,13 +50,10 @@ public class RecruitApi {
         return ResultUtils.success(page);
     }
     @PostMapping("delete")
-    public ResultVO delete(@RequestBody String param){
-        JSONObject jsonObject = JSONObject.parseObject(param);
-        if (StringUtils.isBlank(jsonObject.getString("id"))) {
+    public ResultVO delete(@RequestBody Recruit recruit){
+        if (StringUtils.isBlank(recruit.getId())) {
             return ResultUtils.error(ResultEnum.PARAM_ERROR.getCode(), "招聘id不能为空");
         }
-        Recruit recruit = new Recruit();
-        recruit.setId(jsonObject.getString("id"));
         recruit.setStatus(Constants.Status.DELECT);
         boolean flag = recruitService.updateByPrimaryKey(recruit);
         return flag ? ResultUtils.success() : ResultUtils.error(ResultEnum.ERROR);

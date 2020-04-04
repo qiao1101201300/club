@@ -18,6 +18,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.validation.Valid;
+
 @RestController
 @RequestMapping("/api/department")
 @Api(value = "社团部门", tags = "DepartmentApi")
@@ -27,7 +29,7 @@ public class DepartmentApi {
     private DepartmentService departmentService;
 
     @PostMapping("create")
-    public ResultVO create(@RequestBody Department department) {
+    public ResultVO create(@RequestBody @Valid Department department) {
         department.setStatus(Constants.Status.SUCCESS);
         boolean b = departmentService.insertSelective(department);
         return b ? ResultUtils.success() : ResultUtils.error(ResultEnum.ERROR);
@@ -43,13 +45,10 @@ public class DepartmentApi {
     }
 
     @PostMapping("delete")
-    public ResultVO delete(@RequestBody String param) {
-        JSONObject jsonObject = JSONObject.parseObject(param);
-        if (StringUtils.isBlank(jsonObject.getString("id"))) {
-            return ResultUtils.error(ResultEnum.PARAM_ERROR.getCode(), "活动id不能为空");
+    public ResultVO delete(@RequestBody Department department) {
+        if (StringUtils.isBlank(department.getId())) {
+            return ResultUtils.error(ResultEnum.PARAM_ERROR.getCode(), "部门id不能为空");
         }
-        Department department = new Department();
-        department.setId(jsonObject.getString("id"));
         department.setStatus(Constants.Status.DELECT);
         boolean b = departmentService.updateByPrimaryKeySelective(department);
         return b ? ResultUtils.success() : ResultUtils.error(ResultEnum.ERROR);

@@ -43,17 +43,17 @@ public class UserActivityApi {
 
     @PostMapping("update")
     public ResultVO update(@RequestBody @Valid UserActivity userActivity) {
+        if (StringUtils.isBlank(userActivity.getId())){
+            return ResultUtils.error(ResultEnum.PARAM_ERROR.getCode(),"评审id不能为空");
+        }
         boolean flag = userActivityService.updateByPrimaryKeySelective(userActivity);
         return flag ? ResultUtils.success() : ResultUtils.error(ResultEnum.ERROR);
     }
     @PostMapping("delete")
-    public ResultVO delete(@RequestBody String param) {
-        JSONObject jsonObject = JSONObject.parseObject(param);
-        if (StringUtils.isBlank(jsonObject.getString("id"))) {
-            return ResultUtils.error(ResultEnum.PARAM_ERROR.getCode(), "活动id不能为空");
+    public ResultVO delete(@RequestBody UserActivity userActivity) {
+        if (StringUtils.isBlank(userActivity.getId())){
+            return ResultUtils.error(ResultEnum.PARAM_ERROR.getCode(),"评审id不能为空");
         }
-        UserActivity userActivity = new UserActivity();
-        userActivity.setId(jsonObject.getString("id"));
         userActivity.setStatus(Constants.Status.DELECT);
         boolean b = userActivityService.updateByPrimaryKeySelective(userActivity);
         return b ? ResultUtils.success() : ResultUtils.error(ResultEnum.ERROR);

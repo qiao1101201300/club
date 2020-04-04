@@ -60,12 +60,11 @@ public class ReviewApi {
         return flag ? ResultUtils.success() : ResultUtils.error(ResultEnum.ERROR);
     }
     @PostMapping("delete")
-    public ResultVO delete(@RequestBody String param){
-        JSONObject jsonObject = JSONObject.parseObject(param);
-        if (StringUtils.isBlank(jsonObject.getString("id"))) {
-            return ResultUtils.error(ResultEnum.PARAM_ERROR.getCode(), "活动id不能为空");
+    public ResultVO delete(@RequestBody Review review){
+        if (StringUtils.isBlank(review.getId())){
+            return ResultUtils.error(ResultEnum.PARAM_ERROR.getCode(),"评审id不能为空");
         }
-        boolean flag = reviewService.deleteByPrimaryKey(jsonObject.getString("id"));
+        boolean flag = reviewService.deleteByPrimaryKey(review.getId());
         return flag ? ResultUtils.success() : ResultUtils.error(ResultEnum.ERROR);
     }
 }

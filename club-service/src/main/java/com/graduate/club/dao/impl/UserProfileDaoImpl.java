@@ -13,7 +13,12 @@ public class UserProfileDaoImpl extends BaseDaoImpl<UserProfile, UserProfileMapp
     private UserProfileMapper userProfileMapper;
     @Override
     public UserProfile selectByUserId(String userid) {
-        return userProfileMapper.selectByPrimaryKey(userid);
+        return userProfileMapper.selectByUserId(userid);
+    }
+
+    @Override
+    public boolean updateByUserId(UserProfile userProfile) {
+        return userProfileMapper.updateByUserId(userProfile);
     }
 
 

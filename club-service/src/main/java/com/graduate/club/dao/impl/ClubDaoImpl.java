@@ -10,6 +10,7 @@ import org.springframework.stereotype.Repository;
 
 import javax.annotation.Resource;
 import java.util.List;
+import java.util.Map;
 
 @Repository
 public class ClubDaoImpl extends BaseDaoImpl<Club,ClubMapper> implements ClubDao {
@@ -32,5 +33,8 @@ public class ClubDaoImpl extends BaseDaoImpl<Club,ClubMapper> implements ClubDao
         return clubMapper.selectClubUserByClubid(clubid,status);
     }
 
-
+    @Override
+    public List<Map<String, Object>> selectByMap(Map<String, Object> map) {
+        return clubMapper.selectByMap(map);
+    }
 }
