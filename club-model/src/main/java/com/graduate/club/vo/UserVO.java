@@ -28,4 +28,7 @@ public class UserVO {
     private String random;
 
     private Integer status;
+
+    private int pageSize = 10;
+    private int pageNum = 1;
 }

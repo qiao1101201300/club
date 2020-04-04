@@ -3,8 +3,6 @@ package com.graduate.club.api;
 import com.graduate.club.entity.UserClub;
 import com.graduate.club.entity.UserProfile;
 import com.graduate.club.enums.ResultEnum;
-import com.graduate.club.service.ActivityService;
-import com.graduate.club.service.ClubService;
 import com.graduate.club.service.UserClubService;
 import com.graduate.club.util.Constants;
 import com.graduate.club.util.ResultUtils;

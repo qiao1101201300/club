@@ -10,6 +10,7 @@ public class Admin extends BaseEntity {
     /**
      * 管理员名称
      */
+    @NotBlank(message = "  姓名不能为空")
     private String name;
 
     /**

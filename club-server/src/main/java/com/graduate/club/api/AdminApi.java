@@ -1,11 +1,14 @@
 package com.graduate.club.api;
 
+import com.github.pagehelper.PageInfo;
 import com.graduate.club.entity.Admin;
 import com.graduate.club.enums.ResultEnum;
 import com.graduate.club.service.AdminService;
+import com.graduate.club.util.Constants;
 import com.graduate.club.util.ResultUtils;
 import com.graduate.club.util.StringUtils;
 import com.graduate.club.vo.ResultVO;
+import com.graduate.club.vo.UserVO;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiParam;
 import lombok.extern.slf4j.Slf4j;
@@ -32,10 +35,30 @@ public class AdminApi {
 
     @PostMapping("create")
     public ResultVO create(@RequestBody @Valid Admin admin) {
-        if (StringUtils.isBlank(admin.getName())) {
-            return ResultUtils.error(ResultEnum.USERNAME_EXISTS);
-        }
+
         return adminService.create(admin);
     }
 
+    @PostMapping("delete")
+    public ResultVO delete(@RequestBody Admin admin) {
+        if (StringUtils.isBlank(admin.getId())) {
+            return ResultUtils.error(ResultEnum.PARAM_ERROR.getCode(),"管理员id不能为空");
+        }
+        admin.setStatus(Constants.UserStatus.FORBID);
+        boolean b = adminService.updateByPrimaryKey(admin);
+        return b ? ResultUtils.success() : ResultUtils.error(ResultEnum.ERROR);
+    }
+    @PostMapping("update")
+    public ResultVO update(@RequestBody Admin admin) {
+        if (StringUtils.isBlank(admin.getId())) {
+            return ResultUtils.error(ResultEnum.PARAM_ERROR.getCode(),"管理员id不能为空");
+        }
+        boolean b = adminService.updateByPrimaryKey(admin);
+        return b ? ResultUtils.success() : ResultUtils.error(ResultEnum.ERROR);
+    }
+    @PostMapping("selectAll")
+    public ResultVO select(@RequestBody UserVO userVO){
+        PageInfo<Admin> adminPageInfo = adminService.selectList(userVO.getPageNum(), userVO.getPageSize());
+        return ResultUtils.success(adminPageInfo);
+    }
 }
