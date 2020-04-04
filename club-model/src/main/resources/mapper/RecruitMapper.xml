@@ -134,6 +134,33 @@
         where id = #{id,jdbcType=VARCHAR}
     </update>
     <select id="selectAll" resultMap="BaseResultMap">
-        select <include refid="Base_Column_List"/> from t_recruit
+        select
+        <include refid="Base_Column_List"/>
+        from t_recruit
+    </select>
+    <select id="selectByMap" parameterType="map" resultType="map">
+        select t.id, a.name clubName,a.star,b.name principalName, t.num, t.`status`, t.open_date, t.close_date
+        from t_recruit t
+        join t_club a on t.clubid = a.id
+        join t_user_profile b on a.principalid = b.id
+        <where>
+            <if test="openDate != null">
+                <![CDATA[
+                  t.open_date <= #{openDate,jdbcType=TIMESTAMP}
+                ]]>
+            </if>
+            <if test="closeDate != null">
+                <![CDATA[
+                  and t.close_date >= #{closeDate,jdbcType=TIMESTAMP}
+                ]]>
+            </if>
+            <if test="status != null ">
+                and t.status = #{status,jdbcType=INTEGER}
+            </if>
+            <if test="name !=null">
+                and a.name like concat('%',#{name,jdbcType=VARCHAR},'%')
+            </if>
+        </where>
+        order by t.create_date desc
     </select>
 </mapper>

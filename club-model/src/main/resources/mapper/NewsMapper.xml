@@ -160,11 +160,12 @@
         join t_club c on t.clubid = c.id
         <where>
             <if test="name != null and name != ''">
-                t.name like %#{name,jdbcType=VARCHAR}%
+                t.name like concat('%',#{name,jdbcType=VARCHAR},"%")
             </if>
             <if test="status != null">
                 and t.status = #{status}
             </if>
         </where>
+        order by t.create_date desc
     </select>
 </mapper>

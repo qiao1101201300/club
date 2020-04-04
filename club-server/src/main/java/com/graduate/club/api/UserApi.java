@@ -5,7 +5,6 @@ import com.graduate.club.service.UserService;
 import com.graduate.club.vo.ResultVO;
 import com.graduate.club.vo.UserVO;
 import io.swagger.annotations.Api;
-import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
 import lombok.extern.slf4j.Slf4j;

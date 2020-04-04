@@ -1,5 +1,6 @@
 package com.graduate.club.api;
 
+import com.alibaba.fastjson.JSONObject;
 import com.graduate.club.entity.Activity;
 import com.graduate.club.enums.ResultEnum;
 import com.graduate.club.service.ActivityService;
@@ -49,11 +50,13 @@ public class ActivityApi {
     }
 
     @PostMapping("delete")
-    public ResultVO delete(@RequestBody Activity activity) {
-
-        if (StringUtils.isBlank(activity.getId())) {
+    public ResultVO delete(@RequestBody String param) {
+        JSONObject jsonObject = JSONObject.parseObject(param);
+        if (StringUtils.isBlank(jsonObject.getString("id"))) {
             return ResultUtils.error(ResultEnum.PARAM_ERROR.getCode(), "活动id不能为空");
         }
+        Activity activity = new Activity();
+        activity.setId(jsonObject.getString("id"));
         activity.setStatus(Constants.Status.DELECT);
         boolean b = activityService.updateByPrimaryKeySelective(activity);
         return b ? ResultUtils.success() : ResultUtils.error(ResultEnum.ERROR);

@@ -1,20 +1,15 @@
 package com.graduate.club.api;
 
-import com.graduate.club.entity.Club;
-import com.graduate.club.entity.User;
-import com.graduate.club.entity.UserClub;
 import com.graduate.club.entity.UserProfile;
 import com.graduate.club.service.ActivityService;
 import com.graduate.club.service.ClubService;
 import com.graduate.club.service.UserClubService;
 import com.graduate.club.util.ResultUtils;
 import com.graduate.club.vo.ResultVO;
-import com.graduate.club.vo.UserVO;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;

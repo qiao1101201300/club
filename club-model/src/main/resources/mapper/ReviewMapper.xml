@@ -115,6 +115,26 @@
         where id = #{id,jdbcType=VARCHAR}
     </update>
     <select id="selectAll" resultMap="BaseResultMap">
-        select <include refid="Base_Column_List"/> from t_review
+        select
+        <include refid="Base_Column_List"/>
+        from t_review
+    </select>
+    <select id="selectByMap" parameterType="map" resultType="map">
+        select t.id,a.name clubName,b.name adminName,t.star
+        from t_review t
+        join t_club a on t.clubid = a.id
+        left join t_admin b on t.adminid = b.id
+        <where>
+            <if test="clubName != null ">
+                a.name like concat('%',#{name,jdbcType=VARCHAR},'%')
+            </if>
+            <if test="star != null ">
+                and t.star = #{star,jdbcType=INTEGER}
+            </if>
+            <if test="adminName != null ">
+                and b.name like concat('%',#{name,jdbcType=VARCHAR},'%')
+            </if>
+        </where>
+        order by t.create_date desc
     </select>
 </mapper>

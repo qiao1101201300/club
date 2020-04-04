@@ -232,7 +232,7 @@
             </if>
             <if test="name != null ">
                 <![CDATA[
-                  and t.name like %#{name,jdbcType=VARCHAR}%
+                  and t.name like concat('%',#{name,jdbcType=VARCHAR},'%')
                 ]]>
             </if>
         </where>

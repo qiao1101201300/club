@@ -7,6 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import javax.annotation.Resource;
+import java.util.List;
+import java.util.Map;
 
 @Repository
 public class RecruitDaoImpl extends BaseDaoImpl<Recruit, RecruitMapper> implements RecruitDao {
@@ -14,4 +16,8 @@ public class RecruitDaoImpl extends BaseDaoImpl<Recruit, RecruitMapper> implemen
     @Autowired
     private RecruitMapper recruitMapper;
 
+    @Override
+    public List<Map<String, Object>> selectByMap(Map<String, Object> map) {
+        return recruitMapper.selectByMap(map);
+    }
 }

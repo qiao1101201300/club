@@ -1,17 +1,15 @@
 package com.graduate.club.api;
 
 import com.alibaba.fastjson.JSONObject;
-import com.graduate.club.entity.Activity;
-import com.graduate.club.entity.News;
+import com.graduate.club.entity.Department;
 import com.graduate.club.enums.ResultEnum;
-import com.graduate.club.service.NewsService;
+import com.graduate.club.service.DepartmentService;
 import com.graduate.club.util.Constants;
 import com.graduate.club.util.ResultUtils;
 import com.graduate.club.util.StringUtils;
-import com.graduate.club.vo.NewsVO;
+import com.graduate.club.vo.DepartmentVO;
 import com.graduate.club.vo.PageVO;
 import com.graduate.club.vo.ResultVO;
-import com.sun.xml.internal.ws.addressing.model.ActionNotSupportedException;
 import io.swagger.annotations.Api;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,33 +19,26 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/api/news")
-@Api(value = "社团新闻", tags = "NewsApi")
+@RequestMapping("/api/department")
+@Api(value = "社团部门", tags = "DepartmentApi")
 @Slf4j
-public class NewsApi {
+public class DepartmentApi {
     @Autowired
-    private NewsService newsService;
-
-    @PostMapping("selectNews")
-    public ResultVO selectNews(@RequestBody NewsVO newsVO) {
-
-        PageVO pageVO = newsService.selectNews(newsVO);
-        return ResultUtils.success(pageVO);
-    }
+    private DepartmentService departmentService;
 
     @PostMapping("create")
-    public ResultVO create(@RequestBody News news) {
-        news.setStatus(Constants.Status.INIT);
-        boolean b = newsService.insertSelective(news);
+    public ResultVO create(@RequestBody Department department) {
+        department.setStatus(Constants.Status.SUCCESS);
+        boolean b = departmentService.insertSelective(department);
         return b ? ResultUtils.success() : ResultUtils.error(ResultEnum.ERROR);
     }
 
     @PostMapping("update")
-    public ResultVO update(@RequestBody News news) {
-        if (StringUtils.isBlank(news.getId())) {
-            return ResultUtils.error(ResultEnum.PARAM_ERROR.getCode(), "id不能为空");
+    public ResultVO update(@RequestBody Department department) {
+        if (StringUtils.isBlank(department.getId())) {
+            return ResultUtils.error(ResultEnum.PARAM_ERROR.getCode(), "部门id不能为空");
         }
-        boolean b = newsService.updateByPrimaryKey(news);
+        boolean b = departmentService.updateByPrimaryKeySelective(department);
         return b ? ResultUtils.success() : ResultUtils.error(ResultEnum.ERROR);
     }
 
@@ -57,10 +48,16 @@ public class NewsApi {
         if (StringUtils.isBlank(jsonObject.getString("id"))) {
             return ResultUtils.error(ResultEnum.PARAM_ERROR.getCode(), "活动id不能为空");
         }
-        News news = new News();
-        news.setId(jsonObject.getString("id"));
-        news.setStatus(Constants.Status.DELECT);
-        boolean b = newsService.updateByPrimaryKeySelective(news);
+        Department department = new Department();
+        department.setId(jsonObject.getString("id"));
+        department.setStatus(Constants.Status.DELECT);
+        boolean b = departmentService.updateByPrimaryKeySelective(department);
         return b ? ResultUtils.success() : ResultUtils.error(ResultEnum.ERROR);
+    }
+
+    @PostMapping("select")
+    public ResultVO select(@RequestBody DepartmentVO departmentVO) {
+        PageVO pageVO = departmentService.selectByMap(departmentVO);
+        return ResultUtils.success(pageVO);
     }
 }
