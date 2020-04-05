@@ -21,4 +21,8 @@ public final class Constants {
         public static final String COOKIE_USER = "USER";
         public static final String COOKIE_ADMIN = "ADMIN";
     }
+    public final class Level {
+        public static final int ORDINARYUSERS = 0;  //正常
+        public static final int ADMINISTRATOR = 1; // 禁止
+    }
 }

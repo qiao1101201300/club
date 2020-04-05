@@ -74,8 +74,13 @@ public class UserServiceImpl extends BaseServiceImpl<User, UserDao> implements U
             return ResultUtils.error(ResultEnum.USERNAME_EXISTS);
         }
         try {
+            user.setId(UUIDUtils.getUUID());
             user.setPassword(AesUtils.Encrypt(user.getPassword(), aesKey));
             user.setStatus(Constants.UserStatus.NORMAL);
+            UserProfile userProfile = new UserProfile();
+            userProfile.setUserid(user.getId());
+            userProfile.setLevel(Constants.Level.ORDINARYUSERS);
+            userProfileService.insertSelective(userProfile);
             boolean b = insertSelective(user);
             return b ? ResultUtils.success() : ResultUtils.error(ResultEnum.ERROR);
         } catch (Exception e) {

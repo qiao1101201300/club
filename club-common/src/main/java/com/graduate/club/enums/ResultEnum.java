@@ -21,7 +21,7 @@ public enum ResultEnum implements BaseEnum {
     PASSWORD_SAME_AS_OLDPASS(106, "新密码与原来密码相同"),
     USER_FORBID(107, "用户被禁用"),
     TOKEN_EXPIRED(108, "Token过期"),
-    USERNAME_NOT_EXISTS(110, "用户不存在"),
+    USERNAME_NOT_EXISTS(110, "用户未登记资料"),
 
     //参数校验相关
     PARAM_ERROR(301, "参数错误"),

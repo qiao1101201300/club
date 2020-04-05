@@ -35,7 +35,6 @@ public class AdminApi {
 
     @PostMapping("create")
     public ResultVO create(@RequestBody @Valid Admin admin) {
-
         return adminService.create(admin);
     }
 

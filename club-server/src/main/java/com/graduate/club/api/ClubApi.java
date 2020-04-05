@@ -1,8 +1,10 @@
 package com.graduate.club.api;
 
 import com.graduate.club.entity.Club;
+import com.graduate.club.entity.UserProfile;
 import com.graduate.club.enums.ResultEnum;
 import com.graduate.club.service.ClubService;
+import com.graduate.club.service.UserProfileService;
 import com.graduate.club.util.Constants;
 import com.graduate.club.util.ResultUtils;
 import com.graduate.club.util.StringUtils;
@@ -25,6 +27,8 @@ import javax.validation.Valid;
 public class ClubApi {
     @Autowired
     private ClubService clubService;
+    @Autowired
+    private UserProfileService userProfileService;
 
     @ApiOperation(value = "查询社团中的用户")
     @RequestMapping(value = "selectClubUser", method = RequestMethod.POST)
@@ -37,6 +41,13 @@ public class ClubApi {
 
     @PostMapping("create")
     public ResultVO create(@RequestBody @Valid Club club) {
+        club.setStatus(Constants.Status.INIT);
+        UserProfile userProfile = userProfileService.selectByUserId(club.getUserid());
+        if (userProfile == null){
+            return ResultUtils.error(ResultEnum.USERNAME_NOT_EXISTS);
+        }
+        userProfile.setLevel(Constants.Level.ADMINISTRATOR);
+        userProfileService.updateByUserId(userProfile);
         boolean b = clubService.insertSelective(club);
         return b ? ResultUtils.success() : ResultUtils.error(ResultEnum.ERROR);
     }
@@ -56,13 +67,16 @@ public class ClubApi {
             return ResultUtils.error(ResultEnum.PARAM_ERROR.getCode(), "部门id不能为空");
         }
         club.setStatus(Constants.Status.DELECT);
+        UserProfile userProfile = userProfileService.selectByUserId(club.getUserid());
+        userProfile.setLevel(Constants.Level.ORDINARYUSERS);
+        userProfileService.updateByUserId(userProfile);
         boolean b = clubService.updateByPrimaryKeySelective(club);
         return b ? ResultUtils.success() : ResultUtils.error(ResultEnum.ERROR);
     }
 
     @PostMapping("select")
-    public ResultVO select(@RequestBody ClubVO clubVO){
-        PageVO pageVO =clubService.selectByMap(clubVO);
+    public ResultVO select(@RequestBody ClubVO clubVO) {
+        PageVO pageVO = clubService.selectByMap(clubVO);
         return ResultUtils.success(pageVO);
     }
 }

@@ -163,7 +163,7 @@
     <select id="selectByUserId" parameterType="String" resultMap="BaseResultMap">
         select <include refid="Base_Column_List"/> from  t_user_profile where userid = #{userId,jdbcType=VARCHAR}
     </select>
-    <select id="updateByUserId" parameterType="com.graduate.club.entity.UserProfile">
+    <update id="updateByUserId" parameterType="com.graduate.club.entity.UserProfile">
         <!--@mbg.generated-->
         update t_user_profile
         <set>
@@ -193,5 +193,5 @@
             </if>
         </set>
         where userid = #{userid,jdbcType=VARCHAR}
-    </select>
+    </update>
 </mapper>

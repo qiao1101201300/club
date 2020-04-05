@@ -1,28 +1,34 @@
 package com.graduate.club.entity;
 
-import java.util.Date;
 import lombok.Data;
+
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 
 @Data
 public class Club extends BaseEntity {
     /**
      * 创始人id
      */
+    @NotBlank(message = "创始人id不能为空")
     private String userid;
 
     /**
      * 社团负责人
      */
+    @NotBlank(message = "社团负责人不能为空")
     private String principalid;
 
     /**
      * 审批人（admin id）
      */
+    @NotBlank(message = "审批人不能为空")
     private String adminid;
 
     /**
      * 社团名称
      */
+    @NotBlank(message = "社团名称不能为空")
     private String name;
 
     /**
@@ -33,6 +39,7 @@ public class Club extends BaseEntity {
     /**
      * 社团类型code
      */
+    @NotNull(message = "社团名称不能为空")
     private Integer type;
 
     /**

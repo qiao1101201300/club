@@ -18,14 +18,11 @@ public class UserVO {
     /**
      * 用户id
      */
-    @NotBlank
     private String userid;
 
     /**
      * 用户状态
      */
-    @NotBlank
-    private String random;
 
     private Integer status;
 

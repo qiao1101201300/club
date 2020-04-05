@@ -55,6 +55,7 @@ public class ClubServiceImpl extends BaseServiceImpl<Club, ClubDao> implements C
         if (clubVO.getStar() != null) {
             map.put("star", clubVO.getStar());
         }
+        map.put("status",clubVO.getStatus());
         PageHelper.startPage(clubVO.getPageNum(), clubVO.getPageSize() == 0 ? 10 : clubVO.getPageSize());
         List<Map<String, Object>> mapList = clubDao.selectByMap(map);
         PageInfo<Map<String, Object>> pageInfoList = new PageInfo<>(mapList);

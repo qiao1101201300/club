@@ -11,6 +11,7 @@ public class UserProfileDaoImpl extends BaseDaoImpl<UserProfile, UserProfileMapp
 
     @Autowired
     private UserProfileMapper userProfileMapper;
+
     @Override
     public UserProfile selectByUserId(String userid) {
         return userProfileMapper.selectByUserId(userid);
@@ -18,7 +19,7 @@ public class UserProfileDaoImpl extends BaseDaoImpl<UserProfile, UserProfileMapp
 
     @Override
     public boolean updateByUserId(UserProfile userProfile) {
-        return userProfileMapper.updateByUserId(userProfile);
+        return userProfileMapper.updateByUserId(userProfile) > 0;
     }
 
 

@@ -3,6 +3,7 @@ package com.graduate.club.api;
 import com.graduate.club.entity.UserProfile;
 import com.graduate.club.enums.ResultEnum;
 import com.graduate.club.service.UserProfileService;
+import com.graduate.club.util.Constants;
 import com.graduate.club.util.ResultUtils;
 import com.graduate.club.vo.ResultVO;
 import io.swagger.annotations.Api;
@@ -10,10 +11,7 @@ import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/userprofile")
@@ -32,12 +30,13 @@ public class UserProfileApi {
     }
 
     @PostMapping("create")
-    public ResultVO create(UserProfile userProfile) {
+    public ResultVO create(@RequestBody UserProfile userProfile) {
+        userProfile.setLevel(Constants.Level.ORDINARYUSERS);
         boolean b = userProfileService.insert(userProfile);
         return b ? ResultUtils.success() : ResultUtils.error(ResultEnum.ERROR);
     }
     @PostMapping("update")
-    public ResultVO update(UserProfile userProfile){
+    public ResultVO update(@RequestBody UserProfile userProfile){
         boolean b = userProfileService.updateByUserId(userProfile);
         return b ? ResultUtils.success() : ResultUtils.error(ResultEnum.ERROR);
     }
