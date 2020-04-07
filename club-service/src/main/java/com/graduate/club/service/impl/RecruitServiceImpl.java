@@ -46,4 +46,9 @@ public class RecruitServiceImpl extends BaseServiceImpl<Recruit, RecruitDao> imp
         page.setTotal((int) pageInfoList.getTotal());
         return page;
     }
+
+    @Override
+    public Recruit selectByClubId(String clubid) {
+        return recruitDao.selectByClubId(clubid);
+    }
 }

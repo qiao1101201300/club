@@ -43,7 +43,7 @@ public class UserClubApi {
     @PostMapping("create")
     public ResultVO create(@RequestBody @Valid UserClub userClub) {
         userClub.setStatus(Constants.Status.INIT);
-        boolean b = userClubService.insertSelective(userClub);
+        boolean b = userClubService.create(userClub);
         return b ? ResultUtils.success() : ResultUtils.error(ResultEnum.ERROR);
     }
 

@@ -163,4 +163,9 @@
         </where>
         order by t.create_date desc
     </select>
+    <select id="selectByClubId" resultType="string" resultMap="BaseResultMap">
+        select <include refid="Base_Column_List"/>
+        from t_recruit
+        where clubid = #{clubid,jdbcType=VARCHAR}
+    </select>
 </mapper>

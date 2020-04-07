@@ -9,4 +9,6 @@ import java.util.Map;
 public interface RecruitDao extends BaseDao<Recruit>{
 
     List<Map<String, Object>> selectByMap(Map<String, Object> map);
+
+    Recruit selectByClubId(String clubid);
 }

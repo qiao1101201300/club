@@ -6,9 +6,7 @@ import com.graduate.club.dao.impl.UserProfileDaoImpl;
 import com.graduate.club.entity.*;
 import com.graduate.club.enums.ResultEnum;
 import com.graduate.club.exception.ServerException;
-import com.graduate.club.service.ActivityService;
-import com.graduate.club.service.BaseService;
-import com.graduate.club.service.ClubService;
+import com.graduate.club.service.*;
 import com.graduate.club.util.ErrorUtils;
 import com.graduate.club.util.ResultUtils;
 import com.graduate.club.vo.MyClubVO;
@@ -20,7 +18,7 @@ import org.springframework.stereotype.Service;
 import javax.annotation.Resource;
 
 import com.graduate.club.mapper.UserClubMapper;
-import com.graduate.club.service.UserClubService;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -31,22 +29,23 @@ public class UserClubServiceImpl extends BaseServiceImpl<UserClub, UserClubDao> 
     @Autowired
     private UserClubMapper userClubMapper;
     @Autowired
-    private UserClubService userClubService;
+    private RecruitService recruitService;
     @Autowired
     private ActivityService activityService;
     @Autowired
     private ClubService clubService;
     @Autowired
-    private UserClubDao userClubDaoImpl;
+    private UserClubDao userClubDao;
 
     /**
      * 根据用户查询所有的社团
+     *
      * @param userId
      * @return
      */
     @Override
     public ResultVO selectMyClub(String userId) {
-        if (null == userId){
+        if (null == userId) {
             return ResultUtils.error(ResultEnum.ERROR);
         }
         try {
@@ -64,7 +63,7 @@ public class UserClubServiceImpl extends BaseServiceImpl<UserClub, UserClubDao> 
                 myClubVOs.add(myClubVO);
             }
             return ResultUtils.success(myClubVOs);
-        }catch (Exception e){
+        } catch (Exception e) {
             throw new ServerException(ResultEnum.ERROR.getCode(), ErrorUtils.getStackTrace(e));
         }
 
@@ -72,7 +71,16 @@ public class UserClubServiceImpl extends BaseServiceImpl<UserClub, UserClubDao> 
 
     @Override
     public ResultVO selectClubUser(UserProfile userProfile) {
-        return userClubDaoImpl.selectClubUser(userProfile);
+        return userClubDao.selectClubUser(userProfile);
+    }
+
+    @Override
+    @Transactional
+    public boolean create(UserClub userClub) {
+        Recruit recruit = recruitService.selectByClubId(userClub.getClubid());
+        recruit.setNum(recruit.getNum() - 1);
+        recruitService.updateByPrimaryKeySelective(recruit);
+        return userClubDao.insertSelective(userClub) > 0;
     }
 
 }

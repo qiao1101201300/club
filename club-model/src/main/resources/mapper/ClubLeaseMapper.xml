@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.graduate.club.mapper.ClubLeaseMapper">
+    <resultMap id="BaseResultMap" type="com.graduate.club.entity.ClubLease">
+        <!--@mbg.generated-->
+        <id column="id" jdbcType="VARCHAR" property="id"/>
+        <result column="clubid" jdbcType="VARCHAR" property="clubid"/>
+        <result column="status" jdbcType="INTEGER" property="status"/>
+        <result column="equipmentid" jdbcType="VARCHAR" property="equipmentid"/>
+        <result column="num" jdbcType="INTEGER" property="num"/>
+        <result column="create_at" jdbcType="TIMESTAMP" property="createAt"/>
+        <result column="update_at" jdbcType="TIMESTAMP" property="updateAt"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+        <!--@mbg.generated-->
+        id, clubid, `status`, equipmentid, num, create_at, update_at
+    </sql>
+    <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+        <!--@mbg.generated-->
+        select
+        <include refid="Base_Column_List"/>
+        from t_club_lease
+        where id = #{id,jdbcType=VARCHAR}
+    </select>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+        <!--@mbg.generated-->
+        delete from t_club_lease
+        where id = #{id,jdbcType=VARCHAR}
+    </delete>
+    <insert id="insert" parameterType="com.graduate.club.entity.ClubLease">
+        <!--@mbg.generated-->
+        insert into t_club_lease (id, clubid, `status`,
+        equipmentid, num, create_at,
+        update_at)
+        values (#{id,jdbcType=VARCHAR}, #{clubid,jdbcType=VARCHAR}, #{status,jdbcType=INTEGER},
+        #{equipmentid,jdbcType=VARCHAR}, #{num,jdbcType=INTEGER}, #{createAt,jdbcType=TIMESTAMP},
+        #{updateAt,jdbcType=TIMESTAMP})
+    </insert>
+    <insert id="insertSelective" parameterType="com.graduate.club.entity.ClubLease">
+        <!--@mbg.generated-->
+        insert into t_club_lease
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                id,
+            </if>
+            <if test="clubid != null">
+                clubid,
+            </if>
+            <if test="status != null">
+                `status`,
+            </if>
+            <if test="equipmentid != null">
+                equipmentid,
+            </if>
+            <if test="num != null">
+                num,
+            </if>
+            <if test="createAt != null">
+                create_at,
+            </if>
+            <if test="updateAt != null">
+                update_at,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                #{id,jdbcType=VARCHAR},
+            </if>
+            <if test="clubid != null">
+                #{clubid,jdbcType=VARCHAR},
+            </if>
+            <if test="status != null">
+                #{status,jdbcType=INTEGER},
+            </if>
+            <if test="equipmentid != null">
+                #{equipmentid,jdbcType=VARCHAR},
+            </if>
+            <if test="num != null">
+                #{num,jdbcType=INTEGER},
+            </if>
+            <if test="createAt != null">
+                #{createAt,jdbcType=TIMESTAMP},
+            </if>
+            <if test="updateAt != null">
+                #{updateAt,jdbcType=TIMESTAMP},
+            </if>
+        </trim>
+    </insert>
+    <update id="updateByPrimaryKeySelective" parameterType="com.graduate.club.entity.ClubLease">
+        <!--@mbg.generated-->
+        update t_club_lease
+        <set>
+            <if test="clubid != null">
+                clubid = #{clubid,jdbcType=VARCHAR},
+            </if>
+            <if test="status != null">
+                `status` = #{status,jdbcType=INTEGER},
+            </if>
+            <if test="equipmentid != null">
+                equipmentid = #{equipmentid,jdbcType=VARCHAR},
+            </if>
+            <if test="num != null">
+                num = #{num,jdbcType=INTEGER},
+            </if>
+            <if test="createAt != null">
+                create_at = #{createAt,jdbcType=TIMESTAMP},
+            </if>
+            <if test="updateAt != null">
+                update_at = #{updateAt,jdbcType=TIMESTAMP},
+            </if>
+        </set>
+        where id = #{id,jdbcType=VARCHAR}
+    </update>
+    <update id="updateByPrimaryKey" parameterType="com.graduate.club.entity.ClubLease">
+        <!--@mbg.generated-->
+        update t_club_lease
+        set clubid = #{clubid,jdbcType=VARCHAR},
+        `status` = #{status,jdbcType=INTEGER},
+        equipmentid = #{equipmentid,jdbcType=VARCHAR},
+        num = #{num,jdbcType=INTEGER},
+        create_at = #{createAt,jdbcType=TIMESTAMP},
+        update_at = #{updateAt,jdbcType=TIMESTAMP}
+        where id = #{id,jdbcType=VARCHAR}
+    </update>
+    <select id="selectByMap" parameterType="map" resultType="map">
+        select t.id,a.name clubName,b.name equipmantName,b.num
+        from t_club_lease t
+        join t_club a on t.clubid = a.id
+        join t_equipment b on t.equipmentid = b.name
+        <where>
+            <if test="clubName != null ">
+                a.name like concat('%',#{clubName,jdbcType=VARCHAR},'%')
+            </if>
+            <if test="clubLeaseName != null ">
+                and b.name like concat('%',#{clubLeaseName,jdbcType=VARCHAR},'%')
+            </if>
+        </where>
+    </select>
+</mapper>

@@ -20,4 +20,9 @@ public class RecruitDaoImpl extends BaseDaoImpl<Recruit, RecruitMapper> implemen
     public List<Map<String, Object>> selectByMap(Map<String, Object> map) {
         return recruitMapper.selectByMap(map);
     }
+
+    @Override
+    public Recruit selectByClubId(String clubid) {
+        return recruitMapper.selectByClubId(clubid);
+    }
 }
