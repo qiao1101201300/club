@@ -1,0 +1,165 @@
+[2020-04-05 16:10:25.012]  ERROR GlobalExceptionHandler exceptionGet-46 - [Unknown error] errMSg=org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public ResultVO com.graduate.club.api.UserApi.create(com.graduate.club.vo.UserVO): [Field error in object 'userVO' on field 'userid': rejected value [null]; codes [NotBlank.userVO.userid,NotBlank.userid,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userVO.userid,userid]; arguments []; default message [userid]]; default message [不能为空]]
+[2020-04-05 16:11:38.015]  ERROR GlobalExceptionHandler exceptionGet-29 - [Database operation error] msg=org.springframework.jdbc.BadSqlGrammarException:
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: Table 'club.user' doesn't exist
+### The error may exist in file [D:\java2\p1\club\club-model\target\classes\mapper\UserMapper.xml]
+### The error may involve com.graduate.club.mapper.UserMapper.getUserByUserName-Inline
+### The error occurred while setting parameters
+### SQL: select                            id, username, `password`, `status`, create_at, update_at               from user         where username=?
+### Cause: java.sql.SQLSyntaxErrorException: Table 'club.user' doesn't exist
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: Table 'club.user' doesn't exist
+[2020-04-05 16:17:56.051]  ERROR com.graduate.club.service.impl.UserServiceImpl create-82 - [create password encrypt error] password=Fer7OYsZmgY+BeaCFXY8dQ==
+[2020-04-05 16:17:56.059]  ERROR GlobalExceptionHandler exceptionGet-35 - [Server error] code=400,msg=ServerException(code=400, msg=org.springframework.jdbc.BadSqlGrammarException:
+### Error updating database.  Cause: java.sql.SQLSyntaxErrorException: Table 'club.user' doesn't exist
+### The error may exist in file [D:\java2\p1\club\club-model\target\classes\mapper\UserMapper.xml]
+### The error may involve com.graduate.club.mapper.UserMapper.insertSelective-Inline
+### The error occurred while setting parameters
+### SQL: insert into user          ( id,                                           username,                                           `password`,                                           `status`,                                           create_at,                                           update_at )           values ( ?,                                           ?,                                           ?,                                           ?,                                           ?,                                           ? )
+### Cause: java.sql.SQLSyntaxErrorException: Table 'club.user' doesn't exist
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: Table 'club.user' doesn't exist
+	at org.springframework.jdbc.support.SQLErrorCodeSQLExceptionTranslator.doTranslate(SQLErrorCodeSQLExceptionTranslator.java:235)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:72)
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:88)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:440)
+	at com.sun.proxy.$Proxy81.insert(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.insert(SqlSessionTemplate.java:271)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:62)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:93)
+	at com.sun.proxy.$Proxy82.insertSelective(Unknown Source)
+	at com.graduate.club.dao.impl.BaseDaoImpl.insertSelective(BaseDaoImpl.java:40)
+	at com.graduate.club.dao.impl.BaseDaoImpl$$FastClassBySpringCGLIB$$a9975391.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:769)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:747)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:139)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:747)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:689)
+	at com.graduate.club.dao.impl.UserDaoImpl$$EnhancerBySpringCGLIB$$34909096.insertSelective(<generated>)
+	at BaseServiceImpl.insertSelective(BaseServiceImpl.java:24)
+	at com.graduate.club.service.impl.UserServiceImpl.create(UserServiceImpl.java:79)
+	at com.graduate.club.api.UserApi.create(UserApi.java:41)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:888)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.executeChain(AbstractShiroFilter.java:449)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter$1.call(AbstractShiroFilter.java:365)
+	at org.apache.shiro.subject.support.SubjectCallable.doCall(SubjectCallable.java:90)
+	at org.apache.shiro.subject.support.SubjectCallable.call(SubjectCallable.java:83)
+	at org.apache.shiro.subject.support.DelegatingSubject.execute(DelegatingSubject.java:387)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.doFilterInternal(AbstractShiroFilter.java:362)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:526)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:860)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1591)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.sql.SQLSyntaxErrorException: Table 'club.user' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:370)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.execute(HikariProxyPreparedStatement.java)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.ibatis.logging.jdbc.PreparedStatementLogger.invoke(PreparedStatementLogger.java:59)
+	at com.sun.proxy.$Proxy132.execute(Unknown Source)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.update(PreparedStatementHandler.java:47)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.update(RoutingStatementHandler.java:74)
+	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:50)
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:117)
+	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:76)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:63)
+	at com.sun.proxy.$Proxy130.update(Unknown Source)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:197)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.insert(DefaultSqlSession.java:184)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:426)
+	... 78 more
+, data=null)
+[2020-04-05 16:52:31.521]  ERROR GlobalExceptionHandler exceptionGet-29 - [Database operation error] msg=org.springframework.jdbc.BadSqlGrammarException:
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'where userid = null' at line 3
+### The error may exist in file [D:\java2\p1\club\club-model\target\classes\mapper\UserProfileMapper.xml]
+### The error may involve com.graduate.club.mapper.UserProfileMapper.updateByUserId-Inline
+### The error occurred while setting parameters
+### SQL: update t_user_profile                    where userid = ?
+### Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'where userid = null' at line 3
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'where userid = null' at line 3
+[2020-04-05 16:53:59.406]  ERROR GlobalExceptionHandler exceptionGet-29 - [Database operation error] msg=org.springframework.jdbc.BadSqlGrammarException:
+### Error updating database.  Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'where userid = null' at line 3
+### The error may exist in file [D:\java2\p1\club\club-model\target\classes\mapper\UserProfileMapper.xml]
+### The error may involve com.graduate.club.mapper.UserProfileMapper.updateByUserId-Inline
+### The error occurred while setting parameters
+### SQL: update t_user_profile                    where userid = ?
+### Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'where userid = null' at line 3
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'where userid = null' at line 3
+[2020-04-05 17:00:46.760]  ERROR GlobalExceptionHandler exceptionGet-29 - [Database operation error] msg=org.springframework.jdbc.BadSqlGrammarException:
+### Error updating database.  Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'where userid = null' at line 3
+### The error may exist in file [D:\java2\p1\club\club-model\target\classes\mapper\UserProfileMapper.xml]
+### The error may involve com.graduate.club.mapper.UserProfileMapper.updateByUserId-Inline
+### The error occurred while setting parameters
+### SQL: update t_user_profile                    where userid = ?
+### Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'where userid = null' at line 3
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'where userid = null' at line 3
+[2020-04-05 17:07:26.876]  ERROR GlobalExceptionHandler exceptionGet-46 - [Unknown error] errMSg=org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported
+[2020-04-05 17:08:47.500]  ERROR GlobalExceptionHandler exceptionGet-46 - [Unknown error] errMSg=org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported
+[2020-04-05 17:08:50.515]  ERROR GlobalExceptionHandler exceptionGet-46 - [Unknown error] errMSg=org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public ResultVO com.graduate.club.api.AdminApi.select(com.graduate.club.vo.UserVO)
+[2020-04-05 17:14:47.830]  ERROR GlobalExceptionHandler exceptionGet-46 - [Unknown error] errMSg=org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Invalid numeric value: Leading zeroes not allowed; nested exception is com.fasterxml.jackson.core.JsonParseException: Invalid numeric value: Leading zeroes not allowed
+ at [Source: (PushbackInputStream); line: 6, column: 10]
+[2020-04-05 17:16:16.344]  ERROR GlobalExceptionHandler exceptionGet-46 - [Unknown error] errMSg=javax.validation.UnexpectedTypeException: HV000030: No validator could be found for constraint 'javax.validation.constraints.NotBlank' validating type 'java.lang.Integer'. Check configuration for 'type'
+[2020-04-05 17:19:09.796]  ERROR GlobalExceptionHandler exceptionGet-46 - [Unknown error] errMSg=org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public ResultVO com.graduate.club.api.ClubApi.create(com.graduate.club.entity.Club) with 5 errors: [Field error in object 'club' on field 'name': rejected value [null]; codes [NotBlank.club.name,NotBlank.name,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [club.name,name]; arguments []; default message [name]]; default message [社团名称不能为空]] [Field error in object 'club' on field 'principalid': rejected value [null]; codes [NotBlank.club.principalid,NotBlank.principalid,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [club.principalid,principalid]; arguments []; default message [principalid]]; default message [社团负责人不能为空]] [Field error in object 'club' on field 'userid': rejected value [null]; codes [NotBlank.club.userid,NotBlank.userid,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [club.userid,userid]; arguments []; default message [userid]]; default message [创始人id不能为空]] [Field error in object 'club' on field 'adminid': rejected value [null]; codes [NotBlank.club.adminid,NotBlank.adminid,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [club.adminid,adminid]; arguments []; default message [adminid]]; default message [审批人不能为空]] [Field error in object 'club' on field 'type': rejected value [null]; codes [NotNull.club.type,NotNull.type,NotNull.java.lang.Integer,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [club.type,type]; arguments []; default message [type]]; default message [社团名称不能为空]]

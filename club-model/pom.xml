@@ -3,8 +3,8 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>com.graduate.club</groupId>
-        <artifactId>graduate-club</artifactId>
+        <groupId>com.demo.club</groupId>
+        <artifactId>demo-club</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
     <artifactId>club-model</artifactId>
@@ -26,6 +26,9 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <classifier>exec</classifier>
+                </configuration>
             </plugin>
         </plugins>
     </build>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.demo.club.mapper.RoleMenuMapper">
+  <resultMap id="BaseResultMap" type="com.demo.club.entity.RoleMenu">
+    <!--@mbg.generated generated on Tue May 19 16:33:13 CST 2020.-->
+    <!--@Table t_role_menu-->
+    <id column="id" jdbcType="VARCHAR" property="id" />
+    <result column="role_id" jdbcType="VARCHAR" property="roleId" />
+    <result column="menu_id" jdbcType="VARCHAR" property="menuId" />
+    <result column="create_at" jdbcType="TIMESTAMP" property="createAt" />
+    <result column="update_at" jdbcType="TIMESTAMP" property="updateAt" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated generated on Tue May 19 16:33:13 CST 2020.-->
+    id, role_id, menu_id, create_at, update_at
+  </sql>
+</mapper>

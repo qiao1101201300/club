@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.demo.club.mapper.RoleMapper">
+    <resultMap id="BaseResultMap" type="com.demo.club.entity.Role">
+        <!--@mbg.generated generated on Tue May 19 16:33:06 CST 2020.-->
+        <!--@Table t_role-->
+        <id column="id" jdbcType="VARCHAR" property="id"/>
+        <result column="role_name" jdbcType="VARCHAR" property="roleName"/>
+        <result column="status" jdbcType="INTEGER" property="status"/>
+        <result column="create_at" jdbcType="TIMESTAMP" property="createAt"/>
+        <result column="update_at" jdbcType="TIMESTAMP" property="updateAt"/>
+    </resultMap>
+    <resultMap id="selectAllMenu" type="com.demo.club.entity.Role">
+        <id column="id" jdbcType="VARCHAR" property="id"/>
+        <result column="role_name" jdbcType="VARCHAR" property="roleName"/>
+        <result column="status" jdbcType="INTEGER" property="status"/>
+        <collection property="menuList" ofType="com.demo.club.entity.Menu">
+            <id column="menu_id" jdbcType="VARCHAR" property="id"/>
+            <result column="menu_name" jdbcType="VARCHAR" property="menuName"/>
+            <result column="parent_id" jdbcType="VARCHAR" property="parentId"/>
+            <result column="perms" jdbcType="VARCHAR" property="perms"/>
+        </collection>
+    </resultMap>
+    <sql id="Base_Column_List">
+        <!--@mbg.generated generated on Tue May 19 16:33:06 CST 2020.-->
+        id, role_name, `status`, create_at, update_at
+    </sql>
+    <select id="selectAllMenu" parameterType="String" resultMap="selectAllMenu">
+        select a.id, a.role_name, a.status,c.id menu_id, c.menu_name, c.parent_id, c.perms
+        from t_role a
+        join t_role_menu b on a.id = b.role_id
+        join t_menu c on b.menu_id = c.id
+        where a.id = #{id,jdbcType=VARCHAR}
+    </select>
+</mapper>
