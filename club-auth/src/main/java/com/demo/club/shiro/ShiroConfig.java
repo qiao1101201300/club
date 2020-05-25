@@ -9,19 +9,27 @@ import org.apache.shiro.web.mgt.DefaultWebSecurityManager;
 import org.apache.shiro.web.servlet.SimpleCookie;
 import org.crazycake.shiro.RedisManager;
 import org.crazycake.shiro.RedisSessionDAO;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import sun.net.httpserver.AuthFilter;
 
+import javax.servlet.Filter;
+import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
 @Configuration
 public class ShiroConfig {
 
-    private String host = "localhost";
-    private int port = 6379;
-    private String password = "123456";
-    private int timeout = 12;
+    @Value("${spring.redis.host}")
+    private String host;
+    @Value("${spring.redis.port}")
+    private int port;
+    @Value("${spring.redis.password}")
+    private String password;
+    @Value("${spring.redis.timeout}")
+    private int timeout;
 
     /**
      * 一.请求拦截
@@ -31,20 +39,22 @@ public class ShiroConfig {
      */
     @Bean
     public ShiroFilterFactoryBean shiroFilter(SecurityManager securityManager) {
-        ShiroFilterFactoryBean shiroFilterFactoryBean = new ShiroFilterFactoryBean();
-        shiroFilterFactoryBean.setSecurityManager(securityManager);
-        //拦截器.
-        Map<String, String> filterChainDefinitionMap = new LinkedHashMap<String, String>();
-        //注意过滤器配置顺序 不能颠倒
+        ShiroFilterFactoryBean shiroFilter = new ShiroFilterFactoryBean();
+        shiroFilter.setSecurityManager(securityManager);
+        //auth过滤
+        Map<String, Filter> filters = new HashMap<>();
+        filters.put("auth", new ShiroFilter());
+        shiroFilter.setFilters(filters);
+        Map<String, String> filterMap = new LinkedHashMap<>();
         //anon. 配置不会被拦截的请求 顺序判断
-        filterChainDefinitionMap.put("/web/logout", "anon");
-        filterChainDefinitionMap.put("/web/login", "anon");
+        filterMap.put("/api/user/logout", "anon");
+        filterMap.put("/api/user/login", "anon");
         //authc. 配置拦截的请求
-        filterChainDefinitionMap.put("/web/**", "authc");
+        filterMap.put("/web/**", "authc");
         //配置shiro默认登录界面地址，前后端分离中登录界面跳转应由前端路由控制，后台仅返回json数据
-        shiroFilterFactoryBean.setLoginUrl("/web/unauth");
-        shiroFilterFactoryBean.setFilterChainDefinitionMap(filterChainDefinitionMap);
-        return shiroFilterFactoryBean;
+        shiroFilter.setLoginUrl("/web/unauth");
+        shiroFilter.setFilterChainDefinitionMap(filterMap);
+        return shiroFilter;
     }
 
     /**
@@ -75,7 +85,7 @@ public class ShiroConfig {
     @Bean
     public ShiroRealm myShiroRealm() {
         ShiroRealm shiroRealm = new ShiroRealm();
-        shiroRealm.setCredentialsMatcher(hashedCredentialsMatcher());
+//        shiroRealm.setCredentialsMatcher(hashedCredentialsMatcher());
         return shiroRealm;
     }
 
@@ -99,7 +109,7 @@ public class ShiroConfig {
     @Bean
     public SessionManager sessionManager() {
         SessionManager mySessionManager = new SessionManager();
-//        mySessionManager.setSessionDAO(redisSessionDAO());
+        mySessionManager.setSessionDAO(redisSessionDAO());
         return mySessionManager;
     }
 
