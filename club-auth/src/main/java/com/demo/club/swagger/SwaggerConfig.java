@@ -16,7 +16,6 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 /**
  * Swagger配置
  */
-@EnableSwagger2
 @Configuration
 public class SwaggerConfig {
     /**
@@ -31,7 +30,7 @@ public class SwaggerConfig {
                 // 是否开启
                 .enable(swaggerEnabled).select()
                 // 扫描的路径包
-                .apis(RequestHandlerSelectors.basePackage("com.graduate.club"))
+                .apis(RequestHandlerSelectors.basePackage("com.demo.club"))
                 // 指定路径处理PathSelectors.any()代表所有的路径
                 .paths(PathSelectors.any()).build().pathMapping("/");
     }

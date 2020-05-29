@@ -2,11 +2,18 @@ package com.demo.club.shiro;
 
 import org.apache.shiro.authc.UsernamePasswordToken;
 
-public class ShiroToken extends UsernamePasswordToken {
+/**
+ * Shiro自定义token类
+ *
+ * @Author 大誌
+ * @Date 2019/3/31 10:58
+ * @Version 1.0
+ */
+public class AuthToken extends UsernamePasswordToken {
 
     private String token;
 
-    public ShiroToken(String token) {
+    public AuthToken(String token) {
         this.token = token;
     }
 

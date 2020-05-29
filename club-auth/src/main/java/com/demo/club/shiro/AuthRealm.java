@@ -7,6 +7,7 @@ import com.demo.club.entity.UserProfile;
 import com.demo.club.service.RoleService;
 import com.demo.club.service.UserProfileService;
 import com.demo.club.service.UserService;
+import com.demo.club.util.JwtUtils;
 import com.demo.club.util.RedisUtils;
 import com.demo.club.util.StringUtils;
 import org.apache.shiro.authc.*;
@@ -16,8 +17,12 @@ import org.apache.shiro.realm.AuthorizingRealm;
 import org.apache.shiro.subject.PrincipalCollection;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
 
-public class ShiroRealm extends AuthorizingRealm {
+import java.util.Map;
+
+@Component
+public class AuthRealm extends AuthorizingRealm {
     @Value("${aes.key}")
     private String aesKey;
     @Autowired
@@ -37,13 +42,15 @@ public class ShiroRealm extends AuthorizingRealm {
         //获取token，既前端传入的token
         String accessToken = (String) token.getPrincipal();
         //1. 根据accessToken，查询用户信息
-        String userid = (String) RedisUtils.get(accessToken);
+        Map<String, Object> jwtMap = JwtUtils.verifyToken(accessToken);
+        String userId = jwtMap.get("userid").toString();
+        String redisToken = (String) RedisUtils.get(userId);
         //2. token失效
-        if (StringUtils.isBlank(userid)) {
-            throw new IncorrectCredentialsException("token失效，请重新登录");
+        if (StringUtils.isBlank(redisToken) || !redisToken.equals(accessToken)) {
+            throw new ExpiredCredentialsException ("token失效，请重新登录");
         }
         //3. 调用数据库的方法, 从数据库中查询 username 对应的用户记录
-        User user = userService.selectByPrimaryKey(userid);
+        User user = userService.selectByPrimaryKey(userId);
         //4. 若用户不存在, 则可以抛出 UnknownAccountException 异常
         if (user == null) {
             throw new UnknownAccountException("用户不存在!");
@@ -65,6 +72,7 @@ public class ShiroRealm extends AuthorizingRealm {
         UserProfile userProfile = new UserProfile();
         userProfile.setUserid(user.getId());
         userProfile = userProfileService.selectOne(userProfile);
+
         //Integer userId = user.getUserId();
         //2.添加角色和权限
         SimpleAuthorizationInfo simpleAuthorizationInfo = new SimpleAuthorizationInfo();

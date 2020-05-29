@@ -35,7 +35,6 @@ public class RedisUtils {
      * @return true=设置成功；false=设置失败
      */
     public static boolean expire(final String key, final long timeout, final TimeUnit unit) {
-
         Boolean ret = redisTemplate.expire(key, timeout, unit);
         return ret != null && ret;
     }

@@ -6,6 +6,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import tk.mybatis.mapper.common.BaseMapper;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
 @Slf4j
@@ -13,6 +14,8 @@ public class BaseServiceImpl<T extends BaseEntity, I extends BaseMapper<T>> impl
 
     @Autowired
     private I mapper;
+    @Autowired
+    HttpServletRequest request;
 
     @Override
     public boolean insert(T t) {

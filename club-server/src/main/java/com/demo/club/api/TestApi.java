@@ -40,7 +40,7 @@ public class TestApi {
                 log.debug("--------关闭设备--------");
                 session.getBasicRemote().sendText(jsonObject2.toJSONString());
             }
-//            session.close();
+            session.close();
         } catch (DeploymentException e) {
             e.printStackTrace();
         } catch (IOException e) {

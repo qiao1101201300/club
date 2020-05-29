@@ -16,4 +16,6 @@ public final class Constants {
         public static final int INIT = 1; //审核
         public static final int SUCCESS = 2; //成功
     }
+
+    public static final String User = "user";
 }

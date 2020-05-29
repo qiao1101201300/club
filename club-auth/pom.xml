@@ -10,11 +10,7 @@
     <artifactId>club-auth</artifactId>
 
     <dependencies>
-        <dependency>
-            <groupId>org.crazycake</groupId>
-            <artifactId>shiro-redis</artifactId>
-            <version>2.4.2.1-RELEASE</version>
-        </dependency>
+        
         <dependency>
             <groupId>com.demo.club</groupId>
             <artifactId>club-common</artifactId>
