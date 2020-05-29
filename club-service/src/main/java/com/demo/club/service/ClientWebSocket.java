@@ -1,7 +1,6 @@
 package com.demo.club.service;
 
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Component;
 
 import javax.websocket.*;
@@ -12,7 +11,7 @@ import java.nio.ByteBuffer;
 import java.util.Map;
 
 @ClientEndpoint
-@Component(value = "ClientWebSocket")
+@Component
 @Slf4j
 public class ClientWebSocket {
     private byte[] bytes = new byte[0];
@@ -23,7 +22,6 @@ public class ClientWebSocket {
     }
 
     @OnMessage
-    @Async
     public void echoBinaryMessage(Session session, ByteBuffer buffer, boolean last) throws IOException {
         log.info("session={},buffer ={},last={}", session, buffer, last);
         try {

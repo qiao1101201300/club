@@ -1,5 +1,7 @@
 package com.demo.club.shiro;
 
+import com.demo.club.shiro.AuthFilter;
+import com.demo.club.shiro.AuthRealm;
 import com.demo.club.util.ConfigHelper;
 import com.demo.club.util.StringUtils;
 import com.github.pagehelper.util.StringUtil;
